@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seeing through the monsoon: mapping a Kinabatangan flood with radar · BorneoStack Research</title>
+<meta name="description" content="Northeast-monsoon floods arrive under thick cloud, exactly when optical satellites are blind. We map one documented flood on the lower Kinabatangan with Sentinel-1 radar and test the map against independent water data.">
+<link rel="canonical" href="https://borneostack.com/cs-kinabatangan-flood.html">
+<meta name="theme-color" content="#FAFAFA">
+<meta property="og:title" content="Seeing through the monsoon: mapping a Kinabatangan flood with radar · BorneoStack Research">
+<meta property="og:description" content="Northeast-monsoon floods arrive under thick cloud, exactly when optical satellites are blind. We map one documented flood on the lower Kinabatangan with Sentinel-1 radar and test the map against independent water data.">
+<meta property="og:image" content="https://borneostack.com/assets/og.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <!-- Icons: Lucide (ISC licence), stroke 1.75 -->
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 10v7"/><path d="M8.5 7v.01"/><path d="M12 7v10h2.2a5 5 0 0 0 0-10z"/></symbol>
+  </svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <defs><mask id="bs-river" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M19.00 13.27 L19.59 13.29 L20.18 13.31 L20.77 13.34 L21.34 13.37 L21.91 13.41 L22.47 13.46 L23.02 13.51 L23.56 13.57 L24.09 13.63 L24.62 13.69 L25.12 13.77 L25.62 13.84 L26.11 13.92 L26.58 14.01 L27.04 14.11 L27.48 14.20 L27.91 14.31 L28.32 14.41 L28.72 14.53 L29.10 14.64 L29.46 14.76 L29.80 14.89 L30.13 15.02 L30.43 15.16 L30.71 15.30 L30.97 15.44 L31.21 15.58 L31.42 15.73 L31.61 15.87 L31.77 16.02 L31.91 16.16 L32.02 16.30 L32.10 16.44 L32.16 16.56 L32.20 16.68 L32.22 16.79 L32.22 16.89 L32.21 16.99 L32.18 17.10 L32.14 17.20 L32.09 17.30 L32.03 17.39 L31.94 17.48 L31.83 17.58 L31.69 17.68 L31.52 17.79 L31.32 17.90 L31.10 18.01 L30.85 18.12 L30.57 18.23 L30.27 18.33 L29.95 18.44 L29.61 18.54 L29.25 18.64 L28.87 18.74 L28.48 18.84 L28.07 18.93 L27.64 19.03 L27.21 19.12 L26.76 19.21 L26.31 19.31 L25.84 19.40 L25.37 19.49 L24.89 19.59 L24.41 19.69 L23.92 19.79 L23.43 19.89 L22.94 19.99 L22.44 20.10 L21.95 20.22 L21.46 20.33 L20.97 20.46 L20.48 20.59 L20.00 20.72 L19.52 20.87 L19.05 21.02 L18.58 21.18 L18.12 21.35 L17.67 21.53 L17.24 21.72 L16.86 21.89 L16.51 22.07 L16.17 22.24 L15.84 22.42 L15.52 22.61 L15.22 22.80 L14.93 22.99 L14.65 23.19 L14.38 23.40 L14.12 23.61 L13.88 23.83 L13.65 24.06 L13.42 24.29 L13.22 24.53 L13.02 24.79 L12.84 25.05 L12.67 25.31 L12.51 25.59 L12.37 25.87 L12.25 26.16 L12.14 26.45 L12.05 26.75 L11.98 27.05 L11.92 27.35 L11.88 27.66 L11.85 27.96 L11.84 28.26 L11.84 28.56 L11.85 28.86 L11.88 29.15 L11.91 29.44 L11.96 29.73 L12.02 30.01 L12.08 30.29 L12.16 30.56 L12.24 30.83 L12.33 31.10 L12.42 31.36 L12.52 31.62 L12.61 31.86 L17.39 29.34 L17.28 29.19 L17.18 29.06 L17.09 28.94 L17.01 28.81 L16.94 28.70 L16.87 28.59 L16.80 28.48 L16.74 28.38 L16.69 28.28 L16.64 28.19 L16.60 28.10 L16.56 28.02 L16.53 27.94 L16.50 27.86 L16.47 27.79 L16.45 27.72 L16.43 27.64 L16.41 27.57 L16.40 27.49 L16.40 27.42 L16.40 27.33 L16.41 27.25 L16.42 27.15 L16.44 27.05 L16.48 26.95 L16.52 26.83 L16.58 26.71 L16.65 26.59 L16.73 26.45 L16.83 26.31 L16.95 26.17 L17.08 26.01 L17.23 25.86 L17.39 25.70 L17.58 25.54 L17.78 25.37 L18.00 25.20 L18.24 25.03 L18.50 24.85 L18.76 24.68 L19.09 24.49 L19.44 24.30 L19.80 24.12 L20.18 23.95 L20.57 23.77 L20.98 23.60 L21.41 23.44 L21.84 23.28 L22.28 23.12 L22.73 22.96 L23.18 22.81 L23.65 22.67 L24.11 22.52 L24.58 22.38 L25.05 22.23 L25.52 22.09 L25.98 21.95 L26.45 21.82 L26.91 21.68 L27.36 21.54 L27.81 21.40 L28.25 21.26 L28.69 21.11 L29.11 20.97 L29.52 20.82 L29.92 20.67 L30.31 20.52 L30.68 20.36 L31.04 20.19 L31.39 20.02 L31.71 19.84 L32.02 19.65 L32.32 19.45 L32.59 19.24 L32.84 19.01 L33.07 18.77 L33.27 18.50 L33.44 18.22 L33.57 17.91 L33.66 17.60 L33.69 17.29 L33.69 16.99 L33.65 16.69 L33.57 16.41 L33.46 16.15 L33.32 15.91 L33.15 15.68 L32.96 15.47 L32.75 15.28 L32.52 15.10 L32.28 14.94 L32.01 14.78 L31.73 14.64 L31.44 14.50 L31.12 14.38 L30.80 14.25 L30.45 14.14 L30.09 14.03 L29.72 13.93 L29.33 13.83 L28.92 13.74 L28.50 13.65 L28.07 13.57 L27.62 13.50 L27.16 13.43 L26.69 13.36 L26.20 13.30 L25.70 13.24 L25.19 13.19 L24.68 13.15 L24.15 13.11 L23.61 13.07 L23.06 13.04 L22.50 13.01 L21.94 12.98 L21.36 12.96 L20.78 12.95 L20.19 12.94 L19.60 12.93 L19.00 12.93Z" fill="#000"/></mask></defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <g mask="url(#bs-river)"><rect x="4" y="6" width="40" height="11" rx="2.2" fill="#065F46"/><rect x="4" y="18.5" width="40" height="11" rx="2.2" fill="#0F766E"/></g>
+      <rect x="4" y="31" width="40" height="11" rx="2.2" fill="#111827"/>
+    </symbol>
+  </svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="BorneoStack Research home">
+      <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__name">BorneoStack <span>Research</span></span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+<a href="research.html">Research</a>
+<a href="case-studies.html" aria-current="page">Case studies</a>
+<a href="publications.html">Publications</a>
+<a href="about.html">About</a>
+<a href="people.html">People</a>
+<a href="collaborate.html">Collaborate</a>
+<a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="icon-btn" href="https://github.com/Borneostack" target="_blank" rel="noopener" aria-label="BorneoStack on GitHub" data-tip="GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <button class="icon-btn nav__toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+</header>
+<main id="main">
+<section class="pagehead">
+  <canvas id="page-terrain" aria-hidden="true"></canvas>
+  <div class="wrap"><p class="crumbs"><a href="case-studies.html">Case studies</a></p><h1>Seeing through the monsoon: mapping a Kinabatangan flood with radar</h1><p>Northeast-monsoon floods arrive under thick cloud, exactly when optical satellites are blind. We map one documented flood on the lower Kinabatangan with Sentinel-1 radar and test the map against independent water data.</p></div>
+</section>
+<section class="section"><div class="wrap cs-layout">
+  <article class="prose">
+    <figure class="cs-plate" data-plate="kinabatangan"><canvas aria-hidden="true"></canvas><figcaption><b>Lower Kinabatangan floodplain · 10 m contours</b><span data-coords></span></figcaption></figure>
+    <h2>The question</h2><p>How far did a single documented monsoon flood spread across the lower Kinabatangan floodplain, and how well can free radar data map it under full cloud cover?</p>
+    <div class="cs-photos"><figure class="photo"><img src="assets/people/scene-field-station.webp" alt="Telemetry station on a Kinabatangan tributary" loading="lazy" decoding="async"><figcaption><span>Telemetry station on a Kinabatangan tributary</span></figcaption></figure><figure class="photo"><img src="assets/people/scene-kinabatangan-boat.webp" alt="Retrieving a water-level logger" loading="lazy" decoding="async"><figcaption><span>Retrieving a water-level logger</span></figcaption></figure></div>
+    <h2>Why it matters</h2><ul><li>The Kinabatangan is Sabah’s longest river, and its lower floodplain holds villages, oil palm estates and the Lower Kinabatangan Wildlife Sanctuary side by side.</li><li>Floods there peak in the Northeast Monsoon, when cloud hides the ground from optical satellites for weeks. Radar sees through cloud.</li><li>An open, repeatable flood map is the first building block for any early-warning model we later train.</li></ul>
+    <h2>Data</h2>
+    <table class="datatable"><thead><tr><th>Dataset</th><th>Role</th><th>Licence</th></tr></thead><tbody><tr><td>Sentinel-1 GRD (IW, VV/VH)</td><td>Radar backscatter before, during and after the event</td><td>Copernicus, free and open</td></tr><tr><td>Copernicus DEM GLO-30</td><td>Terrain and height above nearest drainage</td><td>Copernicus, free</td></tr><tr><td>JRC Global Surface Water</td><td>Permanent water mask and independent check</td><td>European Commission JRC, CC BY 4.0</td></tr><tr><td>Sentinel-2 L2A</td><td>Clear-sky check scenes where available</td><td>Copernicus, free and open</td></tr></tbody></table>
+    <h2>Method</h2><ol class="steps"><li><span>Pick one flood event documented in a public bulletin or news report, and cite its date.</span></li><li><span>Pre-process Sentinel-1 scenes: orbit file, thermal noise removal, calibration, speckle filter, terrain correction.</span></li><li><span>Detect open water with a change-detection threshold against a dry-season reference, then mask permanent water and steep terrain.</span></li><li><span>Check the result against JRC water and any cloud-free Sentinel-2 scene; report agreement with a confusion matrix.</span></li><li><span>Publish the notebook, the flood polygon and every parameter, so anyone can re-run it.</span></li></ol>
+    <h2>Limits</h2><p>Radar misses water under dense forest canopy and can confuse wet smooth surfaces with water. The note reports both.</p>
+    <div class="callout"><strong>Reproduce it.</strong> The repository, notebook and exact parameters will be linked here with a fixed commit when the write-up is published. Nothing on this page is a result yet.</div>
+  </article>
+  <aside class="cs-aside" aria-label="Case study facts">
+    <div class="program__meta"><span class="status status--active">In progress</span></div>
+    <dl>
+      <div><dt>Timeline</dt><dd>Started Nov 2026 · write-up planned Q1 2027</dd></div>
+      <div><dt>Deliverables</dt><dd>Flood-extent map (GeoTIFF + GeoJSON)<br>Reproducible notebook<br>Short technical note with limits</dd></div>
+      <div><dt>Label</dt><dd>Lab study (self-funded)</dd></div>
+      <div><dt>Lead</dt><dd>Dale Jeffrey</dd></div>
+    </dl>
+    <a class="link-btn" href="https://github.com/Borneostack" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg> Code on GitHub</a>
+    <a class="link-btn link-btn--primary" href="contact.html"><svg aria-hidden="true"><use href="#i-mail"/></svg> Discuss this study</a>
+  </aside>
+</div></section><section class="cta-band" aria-label="Next step"><div class="wrap cta-band__inner">
+  <div><h2>Hold data that could test this study?</h2><p>Field records, gauge readings and local knowledge make every map better. Credit and data rights are agreed in writing first.</p></div>
+  <div class="hero__cta"><a class="btn btn--primary" href="contact.html">Discuss this study <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--ghost" href="case-studies.html">All case studies</a></div>
+</div></section>
+</main>
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg><span class="brand__name">BorneoStack <span>Research</span></span></a>
+      <p class="footer__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg>Kota Kinabalu, Sabah, Malaysia <span class="mono">5.98° N · 116.07° E</span></p>
+      <p class="footer__loc"><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:dale.jeffrey@borneostack.com">dale.jeffrey@borneostack.com</a></p>
+    </div>
+    <div class="footer__commit">
+      <h2>Open science &amp; reproducibility</h2>
+      <p>All geospatial feature pipelines, causal benchmark splits, and evaluation scripts are published open-source for independent verification.</p>
+    </div>
+    <div class="footer__meta">
+      <p>© 2026 BorneoStack Research</p>
+      <p class="footer__credit">Contains modified Copernicus Sentinel data. Terrain: NASA SRTM via AWS Terrain Tiles.</p>
+      <p class="footer__credit"><a href="contact.html#privacy">Privacy</a></p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
+<script src="assets/terrain.js"></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

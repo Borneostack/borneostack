@@ -1,1274 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BorneoStack Research — Environmental AI &amp; Spatiotemporal Machine Learning Lab</title>
-
-  <!-- Primary Meta Tags -->
-  <meta name="description" content="BorneoStack Research is an environmental AI &amp; spatiotemporal machine learning lab pioneering causal early-warning systems, multi-sensor earth observation, and reproducible scientific workflows across Borneo.">
-  <meta name="keywords" content="BorneoStack, Environmental AI, Spatiotemporal Machine Learning, Causal Inference, Earth Observation, Remote Sensing, Sentinel-1 SAR, Sentinel-2, Tropical Deforestation, Flood Early-Warning, Borneo, Dale Jeffrey, Open Science">
-  <meta name="author" content="Dale Jeffrey">
-  <meta name="robots" content="index, follow">
-
-  <!-- OpenGraph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://borneostack.com/">
-  <meta property="og:title" content="BorneoStack Research — Environmental AI &amp; Spatiotemporal Machine Learning Lab">
-  <meta property="og:description" content="Reproducible spatiotemporal machine learning, causal inference, and multi-sensor earth observation for tropical ecosystem &amp; climate resilience across Borneo.">
-  <meta property="og:image" content="assets/lab-crest.svg">
-  <meta property="og:site_name" content="BorneoStack Research">
-  <meta property="og:locale" content="en_US">
-  <meta property="article:author" content="Dale Jeffrey">
-
-  <!-- Twitter / X -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://borneostack.com/">
-  <meta name="twitter:title" content="BorneoStack Research — Environmental AI &amp; Spatiotemporal Machine Learning Lab">
-  <meta name="twitter:description" content="Reproducible spatiotemporal machine learning, causal inference, and multi-sensor earth observation for tropical ecosystem &amp; climate resilience across Borneo.">
-  <meta name="twitter:image" content="assets/lab-crest.svg">
-  <meta name="twitter:creator" content="@borneostack">
-
-  <!-- Google Fonts Preconnect and Links -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet">
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/svg+xml" href="assets/lab-crest.svg">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BorneoStack Research · Open environmental AI for Borneo</title>
+<meta name="description" content="BorneoStack Research is an independent environmental AI lab in Kota Kinabalu, Sabah. We turn open satellite data into open, checkable tools for floods, forests and land change.">
+<link rel="canonical" href="https://borneostack.com/">
+<meta name="theme-color" content="#FAFAFA">
+<meta property="og:title" content="BorneoStack Research · Open environmental AI for Borneo">
+<meta property="og:description" content="BorneoStack Research is an independent environmental AI lab in Kota Kinabalu, Sabah. We turn open satellite data into open, checkable tools for floods, forests and land change.">
+<meta property="og:image" content="https://borneostack.com/assets/og.jpg">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/base.css">
+<link rel="stylesheet" href="assets/site.css">
 </head>
-<body id="top">
+<body>
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <!-- Icons: Lucide (ISC licence), stroke 1.75 -->
+    <symbol id="i-github" viewBox="0 0 24 24"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+    <symbol id="i-orcid" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.5 10v7"/><path d="M8.5 7v.01"/><path d="M12 7v10h2.2a5 5 0 0 0 0-10z"/></symbol>
+  </svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <defs><mask id="bs-river" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><rect width="48" height="48" fill="#fff"/><path d="M19.00 13.27 L19.59 13.29 L20.18 13.31 L20.77 13.34 L21.34 13.37 L21.91 13.41 L22.47 13.46 L23.02 13.51 L23.56 13.57 L24.09 13.63 L24.62 13.69 L25.12 13.77 L25.62 13.84 L26.11 13.92 L26.58 14.01 L27.04 14.11 L27.48 14.20 L27.91 14.31 L28.32 14.41 L28.72 14.53 L29.10 14.64 L29.46 14.76 L29.80 14.89 L30.13 15.02 L30.43 15.16 L30.71 15.30 L30.97 15.44 L31.21 15.58 L31.42 15.73 L31.61 15.87 L31.77 16.02 L31.91 16.16 L32.02 16.30 L32.10 16.44 L32.16 16.56 L32.20 16.68 L32.22 16.79 L32.22 16.89 L32.21 16.99 L32.18 17.10 L32.14 17.20 L32.09 17.30 L32.03 17.39 L31.94 17.48 L31.83 17.58 L31.69 17.68 L31.52 17.79 L31.32 17.90 L31.10 18.01 L30.85 18.12 L30.57 18.23 L30.27 18.33 L29.95 18.44 L29.61 18.54 L29.25 18.64 L28.87 18.74 L28.48 18.84 L28.07 18.93 L27.64 19.03 L27.21 19.12 L26.76 19.21 L26.31 19.31 L25.84 19.40 L25.37 19.49 L24.89 19.59 L24.41 19.69 L23.92 19.79 L23.43 19.89 L22.94 19.99 L22.44 20.10 L21.95 20.22 L21.46 20.33 L20.97 20.46 L20.48 20.59 L20.00 20.72 L19.52 20.87 L19.05 21.02 L18.58 21.18 L18.12 21.35 L17.67 21.53 L17.24 21.72 L16.86 21.89 L16.51 22.07 L16.17 22.24 L15.84 22.42 L15.52 22.61 L15.22 22.80 L14.93 22.99 L14.65 23.19 L14.38 23.40 L14.12 23.61 L13.88 23.83 L13.65 24.06 L13.42 24.29 L13.22 24.53 L13.02 24.79 L12.84 25.05 L12.67 25.31 L12.51 25.59 L12.37 25.87 L12.25 26.16 L12.14 26.45 L12.05 26.75 L11.98 27.05 L11.92 27.35 L11.88 27.66 L11.85 27.96 L11.84 28.26 L11.84 28.56 L11.85 28.86 L11.88 29.15 L11.91 29.44 L11.96 29.73 L12.02 30.01 L12.08 30.29 L12.16 30.56 L12.24 30.83 L12.33 31.10 L12.42 31.36 L12.52 31.62 L12.61 31.86 L17.39 29.34 L17.28 29.19 L17.18 29.06 L17.09 28.94 L17.01 28.81 L16.94 28.70 L16.87 28.59 L16.80 28.48 L16.74 28.38 L16.69 28.28 L16.64 28.19 L16.60 28.10 L16.56 28.02 L16.53 27.94 L16.50 27.86 L16.47 27.79 L16.45 27.72 L16.43 27.64 L16.41 27.57 L16.40 27.49 L16.40 27.42 L16.40 27.33 L16.41 27.25 L16.42 27.15 L16.44 27.05 L16.48 26.95 L16.52 26.83 L16.58 26.71 L16.65 26.59 L16.73 26.45 L16.83 26.31 L16.95 26.17 L17.08 26.01 L17.23 25.86 L17.39 25.70 L17.58 25.54 L17.78 25.37 L18.00 25.20 L18.24 25.03 L18.50 24.85 L18.76 24.68 L19.09 24.49 L19.44 24.30 L19.80 24.12 L20.18 23.95 L20.57 23.77 L20.98 23.60 L21.41 23.44 L21.84 23.28 L22.28 23.12 L22.73 22.96 L23.18 22.81 L23.65 22.67 L24.11 22.52 L24.58 22.38 L25.05 22.23 L25.52 22.09 L25.98 21.95 L26.45 21.82 L26.91 21.68 L27.36 21.54 L27.81 21.40 L28.25 21.26 L28.69 21.11 L29.11 20.97 L29.52 20.82 L29.92 20.67 L30.31 20.52 L30.68 20.36 L31.04 20.19 L31.39 20.02 L31.71 19.84 L32.02 19.65 L32.32 19.45 L32.59 19.24 L32.84 19.01 L33.07 18.77 L33.27 18.50 L33.44 18.22 L33.57 17.91 L33.66 17.60 L33.69 17.29 L33.69 16.99 L33.65 16.69 L33.57 16.41 L33.46 16.15 L33.32 15.91 L33.15 15.68 L32.96 15.47 L32.75 15.28 L32.52 15.10 L32.28 14.94 L32.01 14.78 L31.73 14.64 L31.44 14.50 L31.12 14.38 L30.80 14.25 L30.45 14.14 L30.09 14.03 L29.72 13.93 L29.33 13.83 L28.92 13.74 L28.50 13.65 L28.07 13.57 L27.62 13.50 L27.16 13.43 L26.69 13.36 L26.20 13.30 L25.70 13.24 L25.19 13.19 L24.68 13.15 L24.15 13.11 L23.61 13.07 L23.06 13.04 L22.50 13.01 L21.94 12.98 L21.36 12.96 L20.78 12.95 L20.19 12.94 L19.60 12.93 L19.00 12.93Z" fill="#000"/></mask></defs>
+    <symbol id="mark" viewBox="0 0 48 48">
+      <g mask="url(#bs-river)"><rect x="4" y="6" width="40" height="11" rx="2.2" fill="#065F46"/><rect x="4" y="18.5" width="40" height="11" rx="2.2" fill="#0F766E"/></g>
+      <rect x="4" y="31" width="40" height="11" rx="2.2" fill="#111827"/>
+    </symbol>
+  </svg>
+<svg class="sprite" aria-hidden="true" focusable="false">
+<symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+<symbol id="i-landmark" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M12 2 20 7H4z"/></symbol>
+<symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+<symbol id="i-coins" viewBox="0 0 24 24"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></symbol>
+</svg>
+<a class="skip" href="#main">Skip to content</a>
 
-  <!-- Top Navigation Bar -->
-  <header class="site-header" id="header">
-    <div class="header-container">
-      <a href="#top" class="brand-link" aria-label="BorneoStack Research Home">
-        <div class="brand-crest-wrapper">
-          <img src="assets/lab-crest.svg" alt="BorneoStack Research Insignia" class="brand-crest" width="36" height="36" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';">
-          <svg class="brand-crest-fallback" width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:none;">
-            <circle cx="50" cy="50" r="46" stroke="#00d084" stroke-width="3" stroke-dasharray="4 2"/>
-            <polygon points="50,15 82,34 82,72 50,89 18,72 18,34" stroke="#4ade80" stroke-width="2" fill="rgba(0, 208, 132, 0.08)"/>
-            <path d="M50 24L74 70H26L50 24Z" stroke="#38bdf8" stroke-width="2" fill="none"/>
-            <circle cx="50" cy="48" r="7" fill="#00d084"/>
-          </svg>
-        </div>
-        <div class="brand-text">
-          <span class="brand-title">BorneoStack</span>
-          <span class="brand-label">Research</span>
-        </div>
-      </a>
-
-      <!-- Desktop & Mobile Navigation Links -->
-      <nav class="main-nav" id="main-nav" aria-label="Primary Navigation">
-        <ul class="nav-list">
-          <li class="nav-item"><a href="#focus" class="nav-link">Research Focus</a></li>
-          <li class="nav-item"><a href="#telemetry" class="nav-link">Live Telemetry</a></li>
-          <li class="nav-item"><a href="#benchmarks" class="nav-link">Benchmarks</a></li>
-          <li class="nav-item"><a href="#pipelines" class="nav-link">Pipelines</a></li>
-          <li class="nav-item"><a href="#data-access" class="nav-link">Data Access</a></li>
-          <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
-          <li class="nav-item"><a href="#pi" class="nav-link">PI Profile</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Header Actions -->
-      <div class="header-actions">
-        <a href="https://github.com/borneostack" target="_blank" rel="noopener noreferrer" class="btn btn-github" aria-label="BorneoStack GitHub Organization">
-          <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
-          </svg>
-          <span>GitHub</span>
-        </a>
-        <button type="button" class="btn btn-primary" id="btn-research-overview" data-action="open-overview">
-          Research Overview
-        </button>
-        <button type="button" class="nav-toggle" id="nav-toggle" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation menu">
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-          <span class="hamburger-bar"></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main id="content">
-
-    <!-- Hero Section -->
-    <section class="hero-section" id="hero" aria-labelledby="hero-title">
-      <!-- Background subtle topography texture overlay -->
-      <div class="hero-texture-overlay" style="background-image: url('assets/topography.svg');" aria-hidden="true"></div>
-      
-      <div class="container hero-container">
-        <!-- Eyebrow Pill -->
-        <div class="eyebrow-pill">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          <span class="eyebrow-text">SPATIOTEMPORAL ML • CAUSAL INFERENCE • BORNEO ENVIRONMENTAL MONITORING</span>
-        </div>
-
-        <!-- Headline -->
-        <h1 class="hero-title" id="hero-title">
-          Reproducible Spatiotemporal Machine Learning for Tropical Ecosystem &amp; Climate Resilience.
-        </h1>
-
-        <!-- Subheadline -->
-        <p class="hero-subtitle">
-          We fuse multi-spectral satellite imagery, cloud-penetrating radar, and local meteorological telemetry with frontier reasoning models to benchmark causal early-warning systems across Borneo.
-        </p>
-
-        <!-- CTA Row -->
-        <div class="hero-cta-group">
-          <a href="#pipelines" class="btn btn-primary btn-lg">Explore Research Pipelines</a>
-          <a href="#publications" class="btn btn-outline btn-lg">View GitHub &amp; Open Benchmarks</a>
-        </div>
-
-        <!-- Coordinates & Status Badge -->
-        <div class="hero-station-badge" role="status">
-          <div class="station-indicator">
-            <span class="status-live-beacon" aria-hidden="true"></span>
-            <span class="station-meta">LAB STATION: KOTA KINABALU, SABAH [5°58'17"N 116°04'30"E] • STATUS: ACTIVE BENCHMARK RUNS</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Meta Astryx Design: Constellations & Institutional Trust Strip -->
-    <section class="trust-section" aria-label="Constellations and Data Collaborators">
-      <div class="container">
-        <div class="trust-header">
-          <span class="trust-tag">DATA CONSTELLATIONS &amp; OPEN SCIENCE FRAMEWORKS</span>
-          <div class="trust-divider"></div>
-          <span class="trust-sub">Ingesting petabyte-scale orbital synthetic aperture radar, multispectral telemetry, and in-situ catchment IoT</span>
-        </div>
-        <div class="trust-grid">
-          <div class="trust-item">
-            <div class="trust-icon-wrap icon-blue">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-            </div>
-            <div class="trust-meta">
-              <span class="trust-title">ESA Copernicus</span>
-              <span class="trust-desc">Sentinel-1 C-Band SAR / Sentinel-2 MSI</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrap icon-emerald">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-            </div>
-            <div class="trust-meta">
-              <span class="trust-title">NASA EarthData</span>
-              <span class="trust-desc">SRTM 30m DEM / MODIS Land Surface</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrap icon-teal">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-            </div>
-            <div class="trust-meta">
-              <span class="trust-title">JAXA EORC</span>
-              <span class="trust-desc">ALOS-2 PALSAR L-Band Soil Moisture</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrap icon-amber">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div class="trust-meta">
-              <span class="trust-title">Universiti Malaysia Sabah</span>
-              <span class="trust-desc">Faculty of Tropical Forestry &amp; Climate</span>
-            </div>
-          </div>
-          <div class="trust-item">
-            <div class="trust-icon-wrap icon-rose">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div class="trust-meta">
-              <span class="trust-title">FAIR Scientific Data</span>
-              <span class="trust-desc">Findable, Accessible, Interoperable, Reusable</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 3 Key Technical Pillars Section (#focus) -->
-    <section class="pillars-section section-padding" id="focus" aria-labelledby="pillars-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">CORE METHODOLOGIES</div>
-          <h2 class="section-title" id="pillars-heading">Foundational Research Pillars</h2>
-          <p class="section-description">
-            Integrating physical principles of tropical remote sensing with structural causal machine learning and verifiable AI execution.
-          </p>
-        </div>
-
-        <div class="pillars-grid">
-          <!-- Pillar 1: Multi-Sensor Earth Observation -->
-          <article class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
-                  <path d="M12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 8a2 2 0 1 1 2-2 2 2 0 0 1-2 2z"/>
-                  <path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>
-                </svg>
-              </div>
-              <span class="pillar-index">01 / OBSERVATION</span>
-            </div>
-            <h3 class="pillar-title">Multi-Sensor Earth Observation</h3>
-            <div class="pillar-spec">Sentinel-1 SAR + Sentinel-2 Multispectral + Local Weather Telemetry</div>
-            <p class="pillar-body">
-              Tropical monsoon cloud cover routinely blinds standard optical satellite sensors. We combine European Space Agency Sentinel-1 C-band Synthetic Aperture Radar (SAR) with Sentinel-2 10m multispectral channels and in-situ hydrometeorological IoT sensor streams.
-            </p>
-            <div class="pillar-badges">
-              <span class="badge badge-accent">Radar Polarimetry: VV + VH</span>
-              <span class="badge badge-subtle">100% Cloud Penetration</span>
-              <span class="badge badge-subtle">10m Spatial Resolution</span>
-            </div>
-            <div class="pillar-footer">
-              <a href="assets/borneo-telemetry.svg" target="_blank" rel="noopener noreferrer" class="asset-preview-link">
-                <span>View Telemetry Architecture Diagram</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Pillar 2: Causal Early-Warning Models -->
-          <article class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <circle cx="6" cy="6" r="3"/>
-                  <circle cx="18" cy="18" r="3"/>
-                  <circle cx="18" cy="6" r="3"/>
-                  <line x1="8.5" y1="7.5" x2="15.5" y2="16.5"/>
-                  <line x1="18" y1="9" x2="18" y2="15"/>
-                  <path d="M9 6h6"/>
-                </svg>
-              </div>
-              <span class="pillar-index">02 / CAUSALITY</span>
-            </div>
-            <h3 class="pillar-title">Causal Early-Warning Models</h3>
-            <div class="pillar-spec">Separating anthropogenic deforestation from monsoon flood dynamics</div>
-            <p class="pillar-body">
-              Standard deep neural networks confuse heavy seasonal rainfall with human-driven land degradation. Our Structural Causal Models (SCMs) use Pearlian do-calculus and counterfactual estimators to rigorously decouple logging and palm oil concession encroachment from baseline hydrological runoff.
-            </p>
-            <div class="pillar-badges">
-              <span class="badge badge-accent">Structural Causal Models (SCM)</span>
-              <span class="badge badge-subtle">Do-Calculus Interventions</span>
-              <span class="badge badge-subtle">Counterfactual Simulator</span>
-            </div>
-            <div class="pillar-footer">
-              <a href="assets/causal-dag.svg" target="_blank" rel="noopener noreferrer" class="asset-preview-link">
-                <span>Inspect Structural Causal DAG</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Pillar 3: Automated Scientific Reasoning -->
-          <article class="pillar-card">
-            <div class="pillar-header">
-              <div class="pillar-icon-box">
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <polyline points="16 18 22 12 16 6"/>
-                  <polyline points="8 6 2 12 8 18"/>
-                  <line x1="14" y1="4" x2="10" y2="20"/>
-                </svg>
-              </div>
-              <span class="pillar-index">03 / REPRODUCIBILITY</span>
-            </div>
-            <h3 class="pillar-title">Automated Scientific Reasoning</h3>
-            <div class="pillar-spec">Verifiable code execution &amp; literature-grounded geospatial feature engineering</div>
-            <p class="pillar-body">
-              We employ language model agents grounded in scientific literature to discover non-linear spatiotemporal features. Every generated kernel undergoes programmatic Abstract Syntax Tree (AST) inspection, proving zero spatial lookahead leakage and deterministic reproducibility across catchment benchmarks.
-            </p>
-            <div class="pillar-badges">
-              <span class="badge badge-accent">AST Inspection Engine</span>
-              <span class="badge badge-subtle">Anti-Leakage Verification</span>
-              <span class="badge badge-subtle">Reproducibility Benchmarks</span>
-            </div>
-            <div class="pillar-footer">
-              <a href="#pipelines" class="asset-preview-link">
-                <span>View Agentic Feature Pipelines</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Sensor Telemetry & Causal Explorer Section (#telemetry) -->
-    <section class="telemetry-section section-padding" id="telemetry" aria-labelledby="telemetry-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">SIMULATION &amp; OBSERVABILITY</div>
-          <h2 class="section-title" id="telemetry-heading">Interactive Sensor Telemetry &amp; Causal Explorer</h2>
-          <p class="section-description">
-            Simulate live multi-spectral Earth observation streams across Borneo catchments and test causal interventions in real time.
-          </p>
-        </div>
-
-        <!-- Scenario Switcher Controls -->
-        <div class="scenario-controls-wrapper">
-          <div class="scenario-label">SELECT ENVIRONMENTAL SCENARIO:</div>
-          <div class="scenario-switcher" role="tablist" aria-label="Environmental Catchment Scenarios">
-            <button type="button" class="scenario-btn active" role="tab" aria-selected="true" data-scenario="pristine" id="tab-pristine">
-              <span class="scenario-btn-icon" aria-hidden="true">🌲</span>
-              <span class="scenario-btn-text">Pristine Forest</span>
-            </button>
-            <button type="button" class="scenario-btn" role="tab" aria-selected="false" data-scenario="monsoon" id="tab-monsoon">
-              <span class="scenario-btn-icon" aria-hidden="true">⛈️</span>
-              <span class="scenario-btn-text">Monsoon Cloudburst</span>
-            </button>
-            <button type="button" class="scenario-btn" role="tab" aria-selected="false" data-scenario="canopy_loss" id="tab-canopy-loss">
-              <span class="scenario-btn-icon" aria-hidden="true">⚠️</span>
-              <span class="scenario-btn-text">Canopy Loss + Monsoon</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Telemetry Explorer Layout Grid -->
-        <div class="telemetry-grid">
-          <!-- Left: Telemetry Readouts and Live Gauges -->
-          <div class="telemetry-readouts-panel">
-            <div class="panel-header">
-              <h3 class="panel-title">Multi-Modal Telemetry Readouts</h3>
-              <span class="panel-status-pill" id="telemetry-sync-status">
-                <span class="status-pulse-dot" aria-hidden="true"></span>
-                <span>STREAM SYNCED</span>
-              </span>
-            </div>
-
-            <div class="gauges-grid">
-              <!-- Gauge 1: SAR Backscatter dB -->
-              <div class="gauge-card" id="gauge-card-sar">
-                <div class="gauge-card-top">
-                  <span class="gauge-name">SAR Backscatter (C-Band VV)</span>
-                  <span class="gauge-badge">Sentinel-1 SAR</span>
-                </div>
-                <div class="gauge-display">
-                  <span class="gauge-value" id="metric-sar">-11.8</span>
-                  <span class="gauge-unit">dB</span>
-                </div>
-                <div class="gauge-meter-wrapper">
-                  <div class="gauge-meter-track" role="meter" aria-label="SAR Backscatter" id="meter-sar" aria-valuenow="-11.8" aria-valuemin="-25" aria-valuemax="-2">
-                    <div class="gauge-meter-fill" id="fill-sar" style="width: 57%;"></div>
-                  </div>
-                  <div class="gauge-scale-labels">
-                    <span>-25 dB (Water/Flooded)</span>
-                    <span>-2 dB (Rough Urban)</span>
-                  </div>
-                </div>
-                <div class="gauge-meta-desc" id="desc-sar">
-                  Dense dipterocarp canopy diffuse volume scattering; minimal ground specular reflection.
-                </div>
-              </div>
-
-              <!-- Gauge 2: NDVI -->
-              <div class="gauge-card" id="gauge-card-ndvi">
-                <div class="gauge-card-top">
-                  <span class="gauge-name">NDVI (Vegetation Index)</span>
-                  <span class="gauge-badge">Sentinel-2 MSI</span>
-                </div>
-                <div class="gauge-display">
-                  <span class="gauge-value" id="metric-ndvi">0.84</span>
-                  <span class="gauge-unit">index</span>
-                </div>
-                <div class="gauge-meter-wrapper">
-                  <div class="gauge-meter-track" role="meter" aria-label="NDVI Index" id="meter-ndvi" aria-valuenow="0.84" aria-valuemin="0" aria-valuemax="1">
-                    <div class="gauge-meter-fill" id="fill-ndvi" style="width: 84%;"></div>
-                  </div>
-                  <div class="gauge-scale-labels">
-                    <span>0.0 (Barren/Clear)</span>
-                    <span>1.0 (Dense Foliage)</span>
-                  </div>
-                </div>
-                <div class="gauge-meta-desc" id="desc-ndvi">
-                  Healthy multi-tiered tropical rainforest canopy with high near-infrared reflectance.
-                </div>
-              </div>
-
-              <!-- Gauge 3: Soil Moisture % -->
-              <div class="gauge-card" id="gauge-card-moisture">
-                <div class="gauge-card-top">
-                  <span class="gauge-name">Catchment Soil Moisture</span>
-                  <span class="gauge-badge">IoT Stream Gauge</span>
-                </div>
-                <div class="gauge-display">
-                  <span class="gauge-value" id="metric-moisture">38</span>
-                  <span class="gauge-unit">%</span>
-                </div>
-                <div class="gauge-meter-wrapper">
-                  <div class="gauge-meter-track" role="meter" aria-label="Soil Moisture" id="meter-moisture" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100">
-                    <div class="gauge-meter-fill" id="fill-moisture" style="width: 38%;"></div>
-                  </div>
-                  <div class="gauge-scale-labels">
-                    <span>0% (Dry)</span>
-                    <span>100% (Hydraulic Saturated)</span>
-                  </div>
-                </div>
-                <div class="gauge-meta-desc" id="desc-moisture">
-                  Normal root-zone buffering capacity; standard moisture retention profile.
-                </div>
-              </div>
-
-              <!-- Gauge 4: Causal Flood Risk % -->
-              <div class="gauge-card gauge-card-risk" id="gauge-card-flood-risk">
-                <div class="gauge-card-top">
-                  <span class="gauge-name">Causal Flood Risk Estimate</span>
-                  <span class="gauge-badge badge-warning">SCM Model</span>
-                </div>
-                <div class="gauge-display">
-                  <span class="gauge-value" id="metric-flood-risk">7</span>
-                  <span class="gauge-unit">%</span>
-                </div>
-                <div class="gauge-meter-wrapper">
-                  <div class="gauge-meter-track" role="meter" aria-label="Causal Flood Risk" id="meter-flood-risk" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100">
-                    <div class="gauge-meter-fill gauge-risk-low" id="fill-flood-risk" style="width: 7%;"></div>
-                  </div>
-                  <div class="gauge-scale-labels">
-                    <span>0% (Nominal)</span>
-                    <span>100% (Imminent Catastrophe)</span>
-                  </div>
-                </div>
-                <div class="gauge-meta-desc" id="desc-flood-risk">
-                  Baseline hydrological risk. Canopy retention absorbs runoff velocity.
-                </div>
-              </div>
-            </div>
-
-            <!-- Active Scenario Diagnostic Summary Box -->
-            <div class="scenario-summary-box" id="scenario-summary-box">
-              <div class="summary-box-header">
-                <span class="summary-label">SCENARIO CAUSAL ANALYSIS:</span>
-                <span class="summary-scenario-name" id="scenario-summary-name">Pristine Dipterocarp Forest Reserve</span>
-              </div>
-              <p class="summary-box-text" id="scenario-summary-text">
-                Under intact primary forest cover, continuous evapotranspiration and dense root structure mitigate peak catchment runoff. Even under high moisture conditions, soil absorption remains high and flood risk is bounded within normal natural thresholds.
-              </p>
-            </div>
-          </div>
-
-          <!-- Right: Interactive Multi-View Telemetry & Causal Explorer Card -->
-          <div class="causal-dag-card" id="causal-dag-container">
-            <div class="panel-header">
-              <div>
-                <h3 class="panel-title" id="telemetry-view-title">Structural Causal Graph (DAG)</h3>
-                <span class="panel-subtitle" id="telemetry-view-subtitle">Pearl's Do-Calculus: Decoupling Precipitation vs. Canopy Loss</span>
-              </div>
-              <div class="telemetry-tab-nav" role="tablist" aria-label="Telemetry View Modes">
-                <button type="button" class="telemetry-view-tab active" data-view="dag" role="tab" aria-selected="true" id="tab-view-dag">Causal DAG</button>
-                <button type="button" class="telemetry-view-tab" data-view="radar" role="tab" aria-selected="false" id="tab-view-radar">SAR Radar Scope</button>
-                <button type="button" class="telemetry-view-tab" data-view="arch" role="tab" aria-selected="false" id="tab-view-arch">Pipeline Arch</button>
-              </div>
-            </div>
-
-            <!-- View 1: Causal DAG -->
-            <div class="telemetry-view-panel active" id="view-dag">
-              <div class="dag-visual-container">
-                <figure class="dag-figure">
-                  <img src="assets/causal-dag.svg" alt="Structural Causal Directed Acyclic Graph showing Precipitation, Canopy Cover, Soil Saturation, and Flood Risk pathways" class="dag-image" id="causal-dag-img" onerror="this.style.display='none'; document.getElementById('dag-fallback-svg').style.display='block';">
-                  
-                  <!-- Accessible Interactive SVG Fallback in case SVG file is compiling -->
-                  <svg id="dag-fallback-svg" class="dag-svg-render" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none;" aria-label="Structural Causal Model Graph">
-                    <defs>
-                      <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
-                        <path d="M 0 1 L 9 5 L 0 9 z" fill="#00d084" />
-                      </marker>
-                    </defs>
-                    <rect x="30" y="20" width="540" height="320" rx="12" fill="#0a1219" stroke="#1f2e3d" stroke-width="1.5" stroke-dasharray="4 4"/>
-                    <line x1="160" y1="100" x2="300" y2="180" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)" />
-                    <line x1="160" y1="260" x2="300" y2="200" stroke="#00d084" stroke-width="2.5" marker-end="url(#arrow)" />
-                    <line x1="330" y1="190" x2="470" y2="190" stroke="#00d084" stroke-width="3" marker-end="url(#arrow)" />
-                    <path d="M 160 90 Q 320 60 480 170" fill="none" stroke="#38bdf8" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrow)" />
-
-                    <g class="dag-node" id="node-precipitation" transform="translate(140, 90)">
-                      <circle r="36" fill="#0c1d2e" stroke="#38bdf8" stroke-width="2.5"/>
-                      <text text-anchor="middle" y="-6" fill="#f8fafc" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600">P [Rain]</text>
-                      <text text-anchor="middle" y="12" fill="#94a3b8" font-size="10" font-family="'Inter', sans-serif">Monsoon</text>
-                    </g>
-                    <g class="dag-node" id="node-canopy" transform="translate(140, 260)">
-                      <circle r="36" fill="#0c231a" stroke="#00d084" stroke-width="2.5"/>
-                      <text text-anchor="middle" y="-6" fill="#f8fafc" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600">C [Canopy]</text>
-                      <text text-anchor="middle" y="12" fill="#94a3b8" font-size="10" font-family="'Inter', sans-serif">Intervention</text>
-                    </g>
-                    <g class="dag-node" id="node-saturation" transform="translate(315, 190)">
-                      <circle r="36" fill="#13241b" stroke="#4ade80" stroke-width="2.5"/>
-                      <text text-anchor="middle" y="-6" fill="#f8fafc" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600">S [Moisture]</text>
-                      <text text-anchor="middle" y="12" fill="#94a3b8" font-size="10" font-family="'Inter', sans-serif">Soil Mediated</text>
-                    </g>
-                    <g class="dag-node" id="node-flood" transform="translate(490, 190)">
-                      <circle r="38" fill="#2d1519" stroke="#f43f5e" stroke-width="2.5"/>
-                      <text text-anchor="middle" y="-6" fill="#f8fafc" font-size="12" font-family="'JetBrains Mono', monospace" font-weight="600">Y [Flood Risk]</text>
-                      <text text-anchor="middle" y="12" fill="#fca5a5" font-size="10" font-family="'Inter', sans-serif">Kinabatangan</text>
-                    </g>
-                  </svg>
-                  <figcaption class="dag-caption">
-                    Causal DAG: Pearl's back-door criterion isolates the causal effect of canopy alteration <code class="code-inline">do(C = c)</code> on catchment flooding <code class="code-inline">Y</code> by conditioning on antecedent precipitation <code class="code-inline">P</code>.
-                  </figcaption>
-                </figure>
-              </div>
-
-              <!-- Causal Equations & Mathematical Grounding -->
-              <div class="dag-formula-box">
-                <div class="formula-title">PEARL'S DO-CALCULUS FORMULATION</div>
-                <div class="formula-code">
-                  P(Flood | do(Canopy = c)) = &sum;<sub>p</sub> P(Flood | Canopy = c, Rain = p) &bull; P(Rain = p)
-                </div>
-                <div class="formula-note">
-                  Guarantees zero confounding bias between seasonal precipitation spikes and illegal logging runoff anomalies.
-                </div>
-              </div>
-            </div>
-
-            <!-- View 2: Live SAR Radar Scope -->
-            <div class="telemetry-view-panel" id="view-radar" style="display:none;">
-              <div class="dag-visual-container">
-                <figure class="dag-figure">
-                  <img src="assets/radar-sweep.svg" alt="Live Borneo SAR Radar Sweep and In-situ Station Blips" class="dag-image" id="radar-sweep-img">
-                  <figcaption class="dag-caption">
-                    Active C-band Synthetic Aperture Radar sweep tracking telemetry from Kinabatangan (KB-04), Danum Valley (DV-01), Crocker Range (CR-09), and Rajang Basin (RB-02).
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="dag-formula-box">
-                <div class="formula-title">ORBITAL SAR RADAR PARAMETERS</div>
-                <div class="formula-code">
-                  Sentinel-1 C-Band (5.405 GHz) &bull; Polarimetry: VV + VH &bull; Spatial Resolution: 10m Ground Range
-                </div>
-                <div class="formula-note">
-                  Cloud-penetrating microwave backscatter eliminates 95% of tropical cloud masking errors across Malaysian Borneo.
-                </div>
-              </div>
-            </div>
-
-            <!-- View 3: Multi-Sensor Pipeline Architecture -->
-            <div class="telemetry-view-panel" id="view-arch" style="display:none;">
-              <div class="dag-visual-container">
-                <figure class="dag-figure">
-                  <img src="assets/borneo-telemetry.svg" alt="Multi-Sensor Earth Observation & Causal Architecture Pipeline" class="dag-image" id="borneo-telemetry-img">
-                  <figcaption class="dag-caption">
-                    End-to-end multi-modal ingestion pipeline: Sentinel-1 SAR + Sentinel-2 MSI + In-situ IoT &rarr; AST Verification Engine &rarr; Structural Causal Early-Warning.
-                  </figcaption>
-                </figure>
-              </div>
-              <div class="dag-formula-box">
-                <div class="formula-title">AST VERIFIED EXECUTION GUARANTEE</div>
-                <div class="formula-code">
-                  Deterministic AST check: spatial lookahead = 0 &bull; temporal leakage = 0 &bull; reproducible seed
-                </div>
-                <div class="formula-note">
-                  Every auto-generated spatiotemporal feature kernel is validated against formal leak-prevention rules before deployment.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Active Research Programs Section (#pipelines) -->
-    <section class="pipelines-section section-padding" id="pipelines" aria-labelledby="pipelines-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">OPEN BENCHMARKS &amp; REPOSITORIES</div>
-          <h2 class="section-title" id="pipelines-heading">Active Research Programs</h2>
-          <p class="section-description">
-            Three core spatiotemporal pipelines deployed across Malaysian Borneo to generate reproducible climate benchmarks.
-          </p>
-        </div>
-
-        <div class="programs-grid">
-          <!-- Program Card 1: BorneoGeoCausal -->
-          <article class="program-card" id="card-borneo-geocausal">
-            <div class="program-card-header">
-              <span class="program-status-badge badge-active">STAGE 4 BENCHMARK</span>
-              <span class="program-id">PRG-01</span>
-            </div>
-            <h3 class="program-title">BorneoGeoCausal</h3>
-            <div class="program-lead">Causal Attribution of Catchment Hydrology &amp; Concession Runoff</div>
-            <p class="program-summary">
-              Decoupling commercial logging and oil palm expansion from monsoon flash flooding across the Kinabatangan and Rajang river basins. Fuses 12-day Sentinel-1 SAR orbital passes with hydrological river gauge networks to compute causal counterfactual damage estimates.
-            </p>
-            <div class="program-tags">
-              <span class="tag">Spatiotemporal SCM</span>
-              <span class="tag">Sentinel-1 SAR</span>
-              <span class="tag">Kinabatangan Basin</span>
-              <span class="tag">Counterfactual Inference</span>
-            </div>
-            <div class="program-footer">
-              <button type="button" class="btn btn-outline btn-protocol" data-protocol-id="borneo-geocausal">
-                <span>View Study Protocol</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- Program Card 2: Agentic Feature Engineering -->
-          <article class="program-card" id="card-agentic-feature-eng">
-            <div class="program-card-header">
-              <span class="program-status-badge badge-active">CONTINUOUS SYNTHESIS</span>
-              <span class="program-id">PRG-02</span>
-            </div>
-            <h3 class="program-title">Agentic Feature Engineering</h3>
-            <div class="program-lead">AST-Verified Geospatial Representation Synthesis</div>
-            <p class="program-summary">
-              Autonomous reasoning agents iteratively formulate and evaluate novel multispectral vegetation interaction kernels. All generated code undergoes deterministic Abstract Syntax Tree (AST) validation to enforce zero future lookahead, zero spatial cross-contamination, and strict reproducibility.
-            </p>
-            <div class="program-tags">
-              <span class="tag">LLM Reasoning</span>
-              <span class="tag">Geospatial AST</span>
-              <span class="tag">Zero-Leakage</span>
-              <span class="tag">Sentinel-2 Spectral Indices</span>
-            </div>
-            <div class="program-footer">
-              <button type="button" class="btn btn-outline btn-protocol" data-protocol-id="agentic-feature-eng">
-                <span>View Study Protocol</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </article>
-
-          <!-- Program Card 3: Biodiversity Shift Forecasting -->
-          <article class="program-card" id="card-biodiversity-shift">
-            <div class="program-card-header">
-              <span class="program-status-badge badge-validation">VALIDATION PHASE</span>
-              <span class="program-id">PRG-03</span>
-            </div>
-            <h3 class="program-title">Biodiversity Shift Forecasting</h3>
-            <div class="program-lead">Canopy Microclimate Buffering &amp; Fragmented Corridors</div>
-            <p class="program-summary">
-              Spatiotemporal thermal infrared calibration combined with acoustic bio-monitoring across Danum Valley and Maliau Basin. Predicts high-resolution microclimatic threshold crossings and species distribution shifts triggered by canopy edge degradation and logging road expansion.
-            </p>
-            <div class="program-tags">
-              <span class="tag">Bioacoustics</span>
-              <span class="tag">Thermal IR</span>
-              <span class="tag">Canopy Cover Dynamics</span>
-              <span class="tag">Danum Valley</span>
-            </div>
-            <div class="program-footer">
-              <button type="button" class="btn btn-outline btn-protocol" data-protocol-id="biodiversity-shift">
-                <span>View Study Protocol</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Empirical Benchmark Leaderboard Section (#benchmarks) -->
-    <section class="benchmark-section section-padding" id="benchmarks" aria-labelledby="benchmarks-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">EMPIRICAL EVALUATION &amp; FRONTIER ACCURACY</div>
-          <h2 class="section-title" id="benchmarks-heading">State-of-the-Art Benchmark Leaderboard</h2>
-          <p class="section-description">
-            Head-to-head empirical comparison across 10m Sentinel-1 SAR flood inundation and causal counterfactual attribution over 4 major Borneo basins (2020–2026).
-          </p>
-        </div>
-
-        <div class="benchmark-table-wrapper">
-          <table class="benchmark-table" aria-label="Spatiotemporal Model Benchmark Comparison">
-            <thead>
-              <tr>
-                <th scope="col">Model Architecture</th>
-                <th scope="col">Institution / Framework</th>
-                <th scope="col">Cloud Invariance</th>
-                <th scope="col">Forecast Horizon</th>
-                <th scope="col">Inundation F1</th>
-                <th scope="col">RMSE (m³/s)</th>
-                <th scope="col">Causal Do-Calculus</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="highlight-row">
-                <td>
-                  <div class="model-name">
-                    <strong>BorneoStack CausalML (EPT-Borneo)</strong>
-                    <span class="badge badge-accent">Our SOTA</span>
-                  </div>
-                  <div class="model-sub">Multi-Sensor SAR-MSI + SCM Pearl Graph</div>
-                </td>
-                <td>BorneoStack Research (Sabah)</td>
-                <td><span class="badge badge-subtle">100% (SAR-Guided)</span></td>
-                <td><strong>0–72h</strong></td>
-                <td><strong class="metric-best">0.934</strong></td>
-                <td><strong class="metric-best">14.2</strong></td>
-                <td><span class="badge badge-accent">Verified SCM</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="model-name">
-                    <strong>GraphCast (ECMWF fine-tuned)</strong>
-                  </div>
-                  <div class="model-sub">Global Graph Neural Weather Prediction</div>
-                </td>
-                <td>Google DeepMind</td>
-                <td><span class="badge badge-warning">Partial (Optical Blinding)</span></td>
-                <td>24–120h</td>
-                <td>0.862</td>
-                <td>23.8</td>
-                <td><span class="badge badge-subtle">Correlational</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="model-name">
-                    <strong>FourCastNet v2</strong>
-                  </div>
-                  <div class="model-sub">Adaptive Fourier Neural Operator</div>
-                </td>
-                <td>NVIDIA AI Research</td>
-                <td><span class="badge badge-warning">Coarse 25km</span></td>
-                <td>0–48h</td>
-                <td>0.821</td>
-                <td>28.4</td>
-                <td><span class="badge badge-subtle">Correlational</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="model-name">
-                    <strong>ConvLSTM-SAR Baseline</strong>
-                  </div>
-                  <div class="model-sub">Spatiotemporal Recurrent Convolutional</div>
-                </td>
-                <td>Classical Deep Learning</td>
-                <td><span class="badge badge-subtle">85% (SAR only)</span></td>
-                <td>0–24h</td>
-                <td>0.795</td>
-                <td>32.1</td>
-                <td><span class="badge badge-rose">No Causal Bounds</span></td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="model-name">
-                    <strong>Spatial XGBoost + Kriging</strong>
-                  </div>
-                  <div class="model-sub">Operational Hydrology Baseline</div>
-                </td>
-                <td>Regional DID Benchmark</td>
-                <td><span class="badge badge-subtle">Station Gauge Only</span></td>
-                <td>0–12h</td>
-                <td>0.728</td>
-                <td>41.6</td>
-                <td><span class="badge badge-rose">Spurious Confounders</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="benchmark-footer-notes">
-          * Evaluated on held-out 2024–2026 monsoon flood events across Kinabatangan, Baram, and Rajang catchments. All benchmark splits containerized on Zenodo (DOI: 10.5281/zenodo.1084291).
-        </div>
-      </div>
-    </section>
-
-    <!-- Open Science Data Access & STAC API Portal (#data-access) -->
-    <section class="data-portal-section section-padding" id="data-access" aria-labelledby="data-portal-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">OPEN SCIENCE &amp; ZARR CLOUD DATASETS</div>
-          <h2 class="section-title" id="data-portal-heading">Research Data &amp; STAC API Access</h2>
-          <p class="section-description">
-            Instant token generation for accredited academic researchers, conservation NGOs, and river basin authorities. Query cloud-optimized Zarr cubes directly in Python.
-          </p>
-        </div>
-
-        <div class="portal-grid">
-          <!-- Request Form -->
-          <div class="portal-form-card">
-            <h3 class="form-title">Request Academic API Token &amp; Manifest</h3>
-            <p class="form-subtitle">Zero cost for academic research, government disaster management, and accredited conservation bodies under our Open Science Grant.</p>
-            
-            <form id="data-access-form" class="portal-form" novalidate>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="researcher-name">Full Name *</label>
-                  <input type="text" id="researcher-name" name="name" class="form-input" placeholder="e.g. Dr. Siti Aminah" required>
-                </div>
-                <div class="form-group">
-                  <label for="researcher-email">Institutional / Org Email *</label>
-                  <input type="email" id="researcher-email" name="email" class="form-input" placeholder="e.g. name@ums.edu.my" required>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="catchment-basin">Catchment Basin of Interest *</label>
-                  <select id="catchment-basin" name="basin" class="form-input" required>
-                    <option value="kinabatangan">Kinabatangan Basin (Sabah - 16,800 km²)</option>
-                    <option value="rajang">Rajang River Basin (Sarawak - 50,000 km²)</option>
-                    <option value="danum">Danum Valley Conservation Area</option>
-                    <option value="all-borneo">Full Borneo Island Spatiotemporal Cube (Sentinel-1/2)</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label for="intended-use">Research Field</label>
-                  <select id="intended-use" name="use" class="form-input">
-                    <option value="flood">Flood Early-Warning &amp; Disaster Response</option>
-                    <option value="forestry">Tropical Forestry &amp; Peatland Conservation</option>
-                    <option value="ai-ml">Spatiotemporal Foundation Model Benchmarking</option>
-                    <option value="policy">ESG / EUDR Concession Monitoring</option>
-                  </select>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block" id="btn-request-access">
-                <span>Generate Instant STAC API Key &amp; Zarr Manifest</span>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </button>
-              <div class="form-privacy-note">
-                Encrypted via TLS 1.3. Instant programmatic token issued under Creative Commons CC-BY 4.0 Open Science terms.
-              </div>
-            </form>
-          </div>
-
-          <!-- Code Snippet & Manifest Preview -->
-          <div class="portal-info">
-            <h3 class="panel-title" style="color:#f8fafc; font-size:1.15rem; margin-bottom:8px;">Cloud-Native Python Access</h3>
-            <p style="color:#94a3b8; font-size:0.88rem; line-height:1.6; margin-bottom:12px;">
-              Stream multi-gigabyte Zarr spatiotemporal tensors directly into your GPU or notebook without downloading terabytes of raw GeoTIFF tiles:
-            </p>
-            <div style="background:#04090e; border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-lg); overflow:hidden;">
-              <div style="display:flex; justify-content:space-between; align-items:center; background:#0a1420; padding:8px 14px; border-bottom:1px solid rgba(255,255,255,0.08);">
-                <span style="font-family:var(--font-mono); font-size:0.75rem; color:#38bdf8;">python / xarray client</span>
-                <button type="button" class="btn btn-sm btn-outline" id="btn-copy-sdk" style="font-size:0.72rem; padding:3px 8px;">Copy</button>
-              </div>
-              <pre style="margin:0; padding:14px; font-family:var(--font-mono); font-size:0.8rem; color:#cbd5e1; line-height:1.5; overflow-x:auto;"><code><span style="color:#64748b;"># pip install borneostack xarray zarr</span>
-<span style="color:#00d084;">import</span> xarray <span style="color:#00d084;">as</span> xr
-<span style="color:#00d084;">from</span> borneostack <span style="color:#00d084;">import</span> Client
-
-client = Client(api_key=<span style="color:#f59e0b;">"bs_live_kinabatangan"</span>)
-
-<span style="color:#64748b;"># Stream 10m cloud-penetrating SAR tensor</span>
-ds = client.open_catchment(
-    basin=<span style="color:#f59e0b;">"kinabatangan"</span>,
-    variables=[<span style="color:#f59e0b;">"sar_vv"</span>, <span style="color:#f59e0b;">"sar_vh"</span>, <span style="color:#f59e0b;">"soil_moisture"</span>],
-    time=(<span style="color:#f59e0b;">"2024-01-01"</span>, <span style="color:#f59e0b;">"2026-11-20"</span>)
-)
-
-<span style="color:#64748b;"># Compute counterfactual do-calculus flood risk</span>
-risk = client.causal_inundation(ds, do_canopy_loss=<span style="color:#38bdf8;">0.20</span>)
-print(f<span style="color:#f59e0b;">"Attributable Runoff Risk: {risk.mean().values:.2%}"</span>)</code></pre>
-            </div>
-            <ul class="portal-feature-list">
-              <li>
-                <span class="feature-icon">&#10003;</span>
-                <span><strong>STAC API Specification:</strong> SpatioTemporal Asset Catalog v1.0.0 compliance with cloud-optimized geotiff (COG) endpoints.</span>
-              </li>
-              <li>
-                <span class="feature-icon">&#10003;</span>
-                <span><strong>Zarr Tensor Streaming:</strong> Chunked multi-dimensional cubes hosted on high-throughput Malaysian &amp; Singapore edge mirrors.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Publications, Working Papers & Reproducible Artifacts Section (#publications) -->
-    <section class="publications-section section-padding" id="publications" aria-labelledby="publications-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">OPEN SCIENCE</div>
-          <h2 class="section-title" id="publications-heading">Publications &amp; Reproducible Artifacts</h2>
-          <p class="section-description">
-            All preprints, empirical benchmark suites, and containerized data pipelines are published open-access with full evaluation code.
-          </p>
-        </div>
-
-        <!-- Filter Tabs -->
-        <div class="filter-controls-wrapper">
-          <div class="filter-tabs" role="tablist" aria-label="Publication Category Filter">
-            <button type="button" class="tab-btn active" role="tab" aria-selected="true" data-filter="all">
-              All Artifacts (4)
-            </button>
-            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="working-papers">
-              Working Papers (2)
-            </button>
-            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="benchmarks">
-              Benchmarks (1)
-            </button>
-            <button type="button" class="tab-btn" role="tab" aria-selected="false" data-filter="pipelines">
-              Geospatial Pipelines (1)
-            </button>
-          </div>
-        </div>
-
-        <!-- Academic Publications Table -->
-        <div class="table-responsive-wrapper">
-          <table class="academic-table" id="publications-table" aria-label="Research Publications and Benchmarks">
-            <thead>
-              <tr>
-                <th scope="col" class="col-year">Year</th>
-                <th scope="col" class="col-title">Title &amp; Preprint Specification</th>
-                <th scope="col" class="col-author">Lead Author</th>
-                <th scope="col" class="col-category">Category</th>
-                <th scope="col" class="col-actions">Artifacts &amp; Citations</th>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Publication 1 -->
-              <tr class="pub-row" data-category="working-papers" id="pub-row-1">
-                <td class="col-year">
-                  <span class="pub-year">2026</span>
-                </td>
-                <td class="col-title">
-                  <div class="pub-title-text">Causal Disentanglement of Monsoon Precipitation and Deforestation-Induced Runoff in Northern Borneo</div>
-                  <div class="pub-meta-note">BorneoStack Working Paper Series • arXiv:2603.08412 [cs.LG / stat.ML]</div>
-                </td>
-                <td class="col-author">
-                  <span class="author-name">Dale Jeffrey</span>
-                </td>
-                <td class="col-category">
-                  <span class="badge badge-working-paper">Working Papers</span>
-                </td>
-                <td class="col-actions">
-                  <div class="action-btn-group">
-                    <button type="button" class="btn btn-sm btn-outline btn-abstract" data-abstract-id="paper-1" aria-label="Read Abstract for Causal Disentanglement Paper">
-                      Abstract
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline btn-bibtex" data-bibtex-id="paper-1" aria-label="Copy BibTeX for Causal Disentanglement Paper">
-                      BibTeX
-                    </button>
-                    <a href="https://github.com/borneostack/borneo-causal-runoff" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline btn-github-link" aria-label="GitHub Repository for Causal Disentanglement Paper">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Publication 2 -->
-              <tr class="pub-row" data-category="benchmarks" id="pub-row-2">
-                <td class="col-year">
-                  <span class="pub-year">2026</span>
-                </td>
-                <td class="col-title">
-                  <div class="pub-title-text">Borneo-SAR-Bench: A Cloud-Resilient 10m Spatiotemporal Benchmark for Tropical Flood Risk</div>
-                  <div class="pub-meta-note">Geospatial AI Datasets &amp; Benchmarks Track • DOI: 10.5281/zenodo.1084291</div>
-                </td>
-                <td class="col-author">
-                  <span class="author-name">Dale Jeffrey</span>
-                </td>
-                <td class="col-category">
-                  <span class="badge badge-benchmark">Benchmarks</span>
-                </td>
-                <td class="col-actions">
-                  <div class="action-btn-group">
-                    <button type="button" class="btn btn-sm btn-outline btn-abstract" data-abstract-id="paper-2" aria-label="Read Abstract for Borneo-SAR-Bench">
-                      Abstract
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline btn-bibtex" data-bibtex-id="paper-2" aria-label="Copy BibTeX for Borneo-SAR-Bench">
-                      BibTeX
-                    </button>
-                    <a href="https://github.com/borneostack/borneo-sar-bench" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline btn-github-link" aria-label="GitHub Repository for Borneo-SAR-Bench">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Publication 3 -->
-              <tr class="pub-row" data-category="pipelines" id="pub-row-3">
-                <td class="col-year">
-                  <span class="pub-year">2026</span>
-                </td>
-                <td class="col-title">
-                  <div class="pub-title-text">Automated Symbolic Geospatial Feature Synthesis with Verifiable Anti-Leakage Constraints</div>
-                  <div class="pub-meta-note">Proceedings of Machine Learning Systems &amp; Geospatial AI</div>
-                </td>
-                <td class="col-author">
-                  <span class="author-name">Dale Jeffrey</span>
-                </td>
-                <td class="col-category">
-                  <span class="badge badge-pipeline">Geospatial Pipelines</span>
-                </td>
-                <td class="col-actions">
-                  <div class="action-btn-group">
-                    <button type="button" class="btn btn-sm btn-outline btn-abstract" data-abstract-id="paper-3" aria-label="Read Abstract for Automated Symbolic Feature Synthesis">
-                      Abstract
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline btn-bibtex" data-bibtex-id="paper-3" aria-label="Copy BibTeX for Automated Symbolic Feature Synthesis">
-                      BibTeX
-                    </button>
-                    <a href="https://github.com/borneostack/verifiable-geospatial-ast" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline btn-github-link" aria-label="GitHub Repository for Automated Symbolic Feature Synthesis">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-
-              <!-- Publication 4 -->
-              <tr class="pub-row" data-category="working-papers" id="pub-row-4">
-                <td class="col-year">
-                  <span class="pub-year">2026</span>
-                </td>
-                <td class="col-title">
-                  <div class="pub-title-text">Empirical Evaluation of Causal Representation Learning on Cloud-Degraded Optical Satellite Series</div>
-                  <div class="pub-meta-note">BorneoStack Technical Report BS-TR-2026-04</div>
-                </td>
-                <td class="col-author">
-                  <span class="author-name">Dale Jeffrey</span>
-                </td>
-                <td class="col-category">
-                  <span class="badge badge-working-paper">Working Papers</span>
-                </td>
-                <td class="col-actions">
-                  <div class="action-btn-group">
-                    <button type="button" class="btn btn-sm btn-outline btn-abstract" data-abstract-id="paper-4" aria-label="Read Abstract for Causal Representation Learning Paper">
-                      Abstract
-                    </button>
-                    <button type="button" class="btn btn-sm btn-outline btn-bibtex" data-bibtex-id="paper-4" aria-label="Copy BibTeX for Causal Representation Learning Paper">
-                      BibTeX
-                    </button>
-                    <a href="https://github.com/borneostack/causal-cloud-optical" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline btn-github-link" aria-label="GitHub Repository for Causal Representation Learning Paper">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                      <span>GitHub</span>
-                    </a>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- Principal Investigator & Lab Profile Section (#pi) -->
-    <section class="pi-section section-padding" id="pi" aria-labelledby="pi-heading">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-tag">LAB LEADERSHIP</div>
-          <h2 class="section-title" id="pi-heading">Principal Investigator &amp; Lab Profile</h2>
-          <p class="section-description">
-            Pioneering spatiotemporal data science and verifiable environmental machine learning in the Heart of Borneo.
-          </p>
-        </div>
-
-        <!-- 2-Column PI Profile Layout -->
-        <div class="pi-grid">
-          <!-- Left Column: Photo / Crest Card & Bio -->
-          <div class="pi-card pi-bio-card">
-            <div class="pi-card-header">
-              <div class="pi-avatar-crest">
-                <img src="assets/lab-crest.svg" alt="Dale Jeffrey Lab Crest" class="pi-crest-img" width="80" height="80" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <div class="pi-avatar-fallback" style="display:none;" aria-hidden="true">
-                  <span>DJ</span>
-                </div>
-              </div>
-              <div class="pi-titles">
-                <h3 class="pi-name">Dale Jeffrey</h3>
-                <div class="pi-role">Principal Investigator</div>
-                <div class="pi-affiliation">BorneoStack Research, Kota Kinabalu, Sabah, Malaysia</div>
-                <div class="pi-coordinates">Station Coordinates: 5.9804° N, 116.0735° E</div>
-              </div>
-            </div>
-
-            <div class="pi-bio-body">
-              <p>
-                Dale Jeffrey is the Principal Investigator at BorneoStack Research, based in Kota Kinabalu, Sabah. His work is situated at the intersection of spatiotemporal machine learning, causal inference for Earth observation, and verifiable autonomous reasoning systems for tropical ecosystem resilience.
-              </p>
-              <p>
-                By fusing high-frequency synthetic aperture radar (SAR), cloud-penetrating microwave telemetry, multispectral orbital constellations, and in-situ hydrometeorological IoT streams, his lab constructs open-source causal early-warning architectures. These systems disentangle anthropogenic land-cover changes from extreme monsoon dynamics to safeguard critical rainforest watersheds and endemic biodiversity across Southeast Asia.
-              </p>
-            </div>
-
-            <div class="pi-domains">
-              <span class="domain-tag">Spatiotemporal Deep Learning</span>
-              <span class="domain-tag">Causal Inference &amp; SCM</span>
-              <span class="domain-tag">Sentinel-1 SAR Polarimetry</span>
-              <span class="domain-tag">Verifiable AST Workflows</span>
-              <span class="domain-tag">Tropical Catchment Hydrology</span>
-            </div>
-          </div>
-
-          <!-- Right Column: Structured Profile & Connectivity Card -->
-          <div class="pi-card pi-connect-card" id="contact">
-            <div class="connect-card-header">
-              <h3 class="connect-title">Structured Profile &amp; Connectivity</h3>
-              <p class="connect-subtitle">Direct academic channels, institutional registries, and source code archives.</p>
-            </div>
-
-            <ul class="connect-list">
-              <!-- Institutional Email -->
-              <li class="connect-item">
-                <div class="connect-item-left">
-                  <div class="connect-icon-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                  </div>
-                  <div>
-                    <span class="connect-label">Institutional Inquiries &amp; Email</span>
-                    <a href="mailto:dale.jeffrey@borneostack.com" class="connect-val" id="email-text">dale.jeffrey@borneostack.com</a>
-                  </div>
-                </div>
-                <button type="button" class="btn btn-sm btn-outline btn-copy" id="btn-copy-email" data-copy="dale.jeffrey@borneostack.com" aria-label="Copy institutional email to clipboard">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                  <span>Copy Email</span>
-                </button>
-              </li>
-
-              <!-- GitHub Organization -->
-              <li class="connect-item">
-                <div class="connect-item-left">
-                  <div class="connect-icon-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-                  </div>
-                  <div>
-                    <span class="connect-label">Open Source &amp; Code Pipelines</span>
-                    <a href="https://github.com/borneostack" target="_blank" rel="noopener noreferrer" class="connect-val">github.com/borneostack</a>
-                  </div>
-                </div>
-                <a href="https://github.com/borneostack" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                  <span>Visit GitHub</span>
-                </a>
-              </li>
-
-              <!-- LinkedIn -->
-              <li class="connect-item">
-                <div class="connect-item-left">
-                  <div class="connect-icon-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9h2.77v8.37H6.46V10.9M7.84 6.2a1.62 1.62 0 0 0-1.63 1.62c0 .89.73 1.62 1.63 1.62.9 0 1.63-.73 1.63-1.62 0-.9-.73-1.62-1.63-1.62Z"/></svg>
-                  </div>
-                  <div>
-                    <span class="connect-label">Professional Profile</span>
-                    <a href="https://linkedin.com/in/dale-jeffrey-borneo" target="_blank" rel="noopener noreferrer" class="connect-val">linkedin.com/in/dale-jeffrey-borneo</a>
-                  </div>
-                </div>
-                <a href="https://linkedin.com/in/dale-jeffrey-borneo" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                  <span>Connect</span>
-                </a>
-              </li>
-
-              <!-- ORCID ID -->
-              <li class="connect-item">
-                <div class="connect-item-left">
-                  <div class="connect-icon-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm-3.2 14.5H7.2V7.5h1.6zm-.8-8.2a1 1 0 1 1 1-1 1 1 0 0 1-1 1zm7.8 4.2a3.4 3.4 0 0 1-3.4 3.4h-2.9V7.5h2.9a3.4 3.4 0 0 1 3.4 3.4zm-1.6 0a1.8 1.8 0 0 0-1.8-1.8h-1.3v3.6h1.3a1.8 1.8 0 0 0 1.8-1.8z"/></svg>
-                  </div>
-                  <div>
-                    <span class="connect-label">ORCID Permanent Researcher ID</span>
-                    <a href="https://orcid.org/0009-0004-8921-5120" target="_blank" rel="noopener noreferrer" class="connect-val font-mono">0009-0004-8921-5120</a>
-                  </div>
-                </div>
-                <a href="https://orcid.org/0009-0004-8921-5120" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
-                  <span>ORCID Record</span>
-                </a>
-              </li>
-
-              <!-- Physical Field Station -->
-              <li class="connect-item">
-                <div class="connect-item-left">
-                  <div class="connect-icon-box">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                  </div>
-                  <div>
-                    <span class="connect-label">Research Station &amp; Lab Headquarters</span>
-                    <span class="connect-val">Kota Kinabalu, Sabah (Borneo, Malaysia)</span>
-                  </div>
-                </div>
-                <span class="badge badge-subtle">Sabah Station</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Academic Footer -->
-  <footer class="site-footer">
-    <div class="container footer-container">
-      <div class="footer-top-grid">
-        <!-- Lab Brand & Mission -->
-        <div class="footer-col footer-col-brand">
-          <div class="footer-brand">
-            <img src="assets/lab-crest.svg" alt="BorneoStack Crest" class="footer-crest" width="30" height="30" onerror="this.style.display='none';">
-            <span class="footer-brand-name">BorneoStack Research</span>
-          </div>
-          <p class="footer-commitment">
-            <strong>Open Science &amp; Reproducibility Commitment:</strong> All geospatial feature pipelines, causal benchmark splits, and evaluation scripts are published open-source for independent verification.
-          </p>
-          <div class="footer-station-tag">
-            <span>STATION: KOTA KINABALU, SABAH, MALAYSIA [5°58'17"N 116°04'30"E]</span>
-          </div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Research Navigation</h4>
-          <ul class="footer-nav">
-            <li><a href="#focus">Research Focus</a></li>
-            <li><a href="#telemetry">Live Telemetry</a></li>
-            <li><a href="#benchmarks">Benchmark Leaderboard</a></li>
-            <li><a href="#pipelines">Active Pipelines</a></li>
-            <li><a href="#data-access">STAC &amp; Zarr Data Access</a></li>
-            <li><a href="#publications">Publications &amp; Preprints</a></li>
-            <li><a href="#pi">Principal Investigator</a></li>
-            <li><a href="#contact">Contact &amp; Field Station</a></li>
-          </ul>
-        </div>
-
-        <!-- Data & Open Repositories -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Artifacts &amp; Code</h4>
-          <ul class="footer-nav">
-            <li><a href="https://github.com/borneostack" target="_blank" rel="noopener noreferrer">GitHub Lab Organization</a></li>
-            <li><a href="https://github.com/borneostack/borneo-causal-runoff" target="_blank" rel="noopener noreferrer">Causal Runoff Benchmark</a></li>
-            <li><a href="https://github.com/borneostack/borneo-sar-bench" target="_blank" rel="noopener noreferrer">Borneo-SAR-Bench 10m</a></li>
-            <li><a href="https://github.com/borneostack/verifiable-geospatial-ast" target="_blank" rel="noopener noreferrer">Verifiable Geospatial AST</a></li>
-            <li><a href="https://orcid.org/0009-0004-8921-5120" target="_blank" rel="noopener noreferrer">ORCID Registry</a></li>
-          </ul>
-        </div>
-
-        <!-- Vector Graphics Previews -->
-        <div class="footer-col">
-          <h4 class="footer-heading">Scientific Assets</h4>
-          <ul class="footer-nav">
-            <li><a href="assets/causal-dag.svg" target="_blank" rel="noopener noreferrer">Structural Causal DAG (SVG)</a></li>
-            <li><a href="assets/radar-sweep.svg" target="_blank" rel="noopener noreferrer">SAR Radar Scope &amp; Sweep (SVG)</a></li>
-            <li><a href="assets/borneo-telemetry.svg" target="_blank" rel="noopener noreferrer">Sensor Telemetry Architecture (SVG)</a></li>
-            <li><a href="assets/partner-badges.svg" target="_blank" rel="noopener noreferrer">Constellation Partner Badges (SVG)</a></li>
-            <li><a href="assets/lab-crest.svg" target="_blank" rel="noopener noreferrer">BorneoStack Lab Crest (SVG)</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom-bar">
-        <p class="copyright-text">
-          &copy; 2026 BorneoStack Research. All research artifacts distributed under Open Science licenses.
-        </p>
-        <p class="footer-location-sub">
-          Kota Kinabalu, Sabah, Malaysia • Spatiotemporal Machine Learning &amp; Environmental AI
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Universal Modal Dialog Backdrop and Container -->
-  <div id="modal-container" class="modal-backdrop" role="dialog" aria-modal="true" aria-hidden="true" style="display:none;">
-    <div class="modal-card">
-      <div class="modal-header">
-        <h3 class="modal-title" id="modal-title">Research Information</h3>
-        <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Close dialog">&times;</button>
-      </div>
-      <div class="modal-body" id="modal-body">
-        <!-- Dynamic content injected by app.js based on data.js -->
-        <p>Loading research artifact content...</p>
-      </div>
-      <div class="modal-footer" id="modal-footer">
-        <button type="button" class="btn btn-outline" id="modal-dismiss-btn">Close</button>
-      </div>
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="BorneoStack Research home">
+      <svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__name">BorneoStack <span>Research</span></span>
+    </a>
+    <nav class="nav__links" id="nav-links" aria-label="Primary">
+<a href="research.html">Research</a>
+<a href="case-studies.html">Case studies</a>
+<a href="publications.html">Publications</a>
+<a href="about.html">About</a>
+<a href="people.html">People</a>
+<a href="collaborate.html">Collaborate</a>
+<a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="icon-btn" href="https://github.com/Borneostack" target="_blank" rel="noopener" aria-label="BorneoStack on GitHub" data-tip="GitHub"><svg aria-hidden="true"><use href="#i-github"/></svg></a>
+      <button class="icon-btn nav__toggle" type="button" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"><svg aria-hidden="true"><use href="#i-menu"/></svg></button>
     </div>
   </div>
+</header>
+<main id="main">
+<section class="hero" aria-labelledby="hero-title">
+  <canvas class="hero__terrain" id="hero-terrain" aria-hidden="true"></canvas>
+  <div class="hero__readout" aria-hidden="true">
+    <span class="hero__readout-label">Gunung Kinabalu · Crocker Range</span>
+    <span id="readout-coords">6.075° N · 116.558° E</span>
+    <span id="readout-elev">4,095 m a.s.l.</span>
+  </div>
+  <div class="wrap hero__inner">
+    <p class="hero__tags">Environmental AI lab <i></i> Kota Kinabalu, Sabah <i></i> Est. 2026</p>
+    <h1 id="hero-title">Open evidence for Borneo’s floods, forests and rivers.</h1>
+    <p class="hero__lede">BorneoStack Research is an independent environmental AI lab. We turn free satellite data into machine-learning tools that anyone can check, starting with monsoon floods, forest loss and mangrove change in Sabah.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary" href="case-studies.html">See our case studies <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <a class="btn btn--ghost" href="collaborate.html">Work with us</a>
+    </div>
+  </div>
+  <div class="wrap">
+    <ol class="pillars" aria-label="What we do">
+      <li class="pillar"><h2>See through the cloud</h2><p>Radar satellites map floods and land change through the monsoon cloud that hides Borneo for months.</p>
+        <ul class="specs"><li>Sentinel-1 SAR <span>C-band · VV/VH</span></li><li>Sentinel-2 MSI <span>10 m · 13 bands</span></li><li>GEDI LiDAR <span>canopy height</span></li></ul></li>
+      <li class="pillar"><h2>Separate cause from season</h2><p>Causal models ask how much of a flood came from cleared forest upstream, not only whether water rose.</p>
+        <ul class="specs"><li>Estimator <span>double ML</span></li><li>Splits <span>leave-one-basin-out</span></li><li>Stress test <span>unseen monsoons</span></li></ul></li>
+      <li class="pillar"><h2>Check every line of code</h2><p>AI helps us write pipelines, and we test what it writes for leakage before any number leaves the lab.</p>
+        <ul class="specs"><li>Execution <span>sandboxed</span></li><li>Checks <span>leakage probes</span></li><li>Release <span>open source</span></li></ul></li>
+    </ol>
+  </div>
+</section>
 
-  <!-- Toast Notification Container -->
-  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+<section class="section" aria-labelledby="mv-title">
+  <div class="wrap founder">
+    <figure class="founder__photo"><img src="assets/people/scene-office-portrait.webp" alt="Dale Jeffrey in the BorneoStack office, Kota Kinabalu" loading="lazy" decoding="async"></figure>
+    <div class="founder__body">
+      <p class="eyebrow" id="mv-title">Our mission</p>
+      <blockquote class="founder__quote">Give Sabah earlier, clearer evidence about floods, forest loss and land change, using open satellite data and machine learning that anyone can re-run.</blockquote>
+      <p class="founder__vision"><b>Vision.</b> A Borneo where every flood warning and forest decision rests on evidence that local people can see and verify.</p>
+      <div class="founder__by"><b>Dale Jeffrey</b><span>Founder &amp; Principal Investigator</span></div>
+      <div class="hero__cta"><a class="btn btn--ghost" href="about.html">About the lab <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--ghost" href="people.html">Meet the founder</a></div>
+    </div>
+  </div>
+</section>
 
-  <!-- Application Scripts -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+<section class="section" aria-labelledby="cases-title">
+  <div class="wrap">
+    <div class="section__head section__head--row">
+      <div><h2 class="h2" id="cases-title">Case studies</h2>
+      <p class="section__sub">Each one is built on public data and published with its code. Status labels are honest: in progress means in progress.</p></div>
+      <a class="btn btn--ghost" href="case-studies.html">All case studies <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    </div>
+    <div class="cases"><a class="case" href="cs-kinabatangan-flood.html">
+  <figure class="case__plate" data-plate="kinabatangan"><canvas aria-hidden="true"></canvas><figcaption><b>Lower Kinabatangan floodplain · 10 m contours</b><span data-coords></span></figcaption></figure>
+  <div class="case__body">
+    <div class="program__meta"><span class="status status--active">In progress</span><span class="tag">Sentinel-1 SAR</span><span class="tag">Flood mapping</span></div>
+    <h3>Seeing through the monsoon: mapping a Kinabatangan flood with radar</h3>
+    <p>Northeast-monsoon floods arrive under thick cloud, exactly when optical satellites are blind. We map one documented flood on the lower Kinabatangan with Sentinel-1 radar and test the map against independent water data.</p>
+    <span class="case__more">Read the case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+  </div>
+</a>
+<a class="case" href="cs-ai-code-audit.html">
+  <figure class="case__plate" data-plate="crocker"><canvas aria-hidden="true"></canvas><figcaption><b>Crocker Range, west of Kota Kinabalu · 75 m contours</b><span data-coords></span></figcaption></figure>
+  <div class="case__body">
+    <div class="program__meta"><span class="status status--paper">Working paper</span><span class="tag">Reasoning models</span><span class="tag">Reproducibility</span></div>
+    <h3>Does AI-written geospatial code leak? An audit of 30 tasks</h3>
+    <p>Reasoning models now write a lot of geospatial code. We give them 30 published feature-engineering tasks and check, line by line, whether the code they write quietly uses the future or the neighbour’s answer.</p>
+    <span class="case__more">Read the case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+  </div>
+</a>
+<a class="case" href="cs-mangroves.html">
+  <figure class="case__plate" data-plate="danum"><canvas aria-hidden="true"></canvas><figcaption><b>Danum Valley &amp; Segama headwaters · 40 m contours</b><span data-coords></span></figcaption></figure>
+  <div class="case__body">
+    <div class="program__meta"><span class="status status--data">Planned</span><span class="tag">Sentinel-2</span><span class="tag">Mangroves</span></div>
+    <h3>Mangroves of the Kinabatangan–Segama delta, 2017–2025</h3>
+    <p>Sabah’s east-coast mangroves protect coastlines and fisheries. We map where mangrove cover has changed since Sentinel-2 began, and check our map against Global Mangrove Watch.</p>
+    <span class="case__more">Read the case study <svg aria-hidden="true"><use href="#i-arrow"/></svg></span>
+  </div>
+</a></div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="section__head"><h2 class="h2" id="work-title">From the riverbank to the notebook</h2>
+    <p class="section__sub">Field context, open data and careful code, in one small lab in Kota Kinabalu.</p></div>
+    <div class="photos">
+      <figure class="photo"><img src="assets/people/scene-field-station.webp" alt="Checking a river telemetry station" loading="lazy" decoding="async"><figcaption><span>Checking a river telemetry station</span></figcaption></figure>
+      <figure class="photo"><img src="assets/people/scene-mangrove-drone.webp" alt="Mangrove drone survey" loading="lazy" decoding="async"><figcaption><span>Mangrove drone survey</span></figcaption></figure>
+      <figure class="photo"><img src="assets/people/scene-desk-coding.webp" alt="Pipeline work in Kota Kinabalu" loading="lazy" decoding="async"><figcaption><span>Pipeline work in Kota Kinabalu</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" aria-labelledby="cta-title">
+  <div class="wrap grid-2">
+    <div><h2 class="h2" id="cta-title">Work with a lab that publishes its working.</h2></div>
+    <div class="prose"><p>We work with universities on co-supervised student projects, with agencies and NGOs on open pilots, and with anyone who wants to re-run our results.</p>
+    <div class="hero__cta" style="margin-top:8px"><a class="btn btn--primary" href="contact.html">Start a conversation <svg aria-hidden="true"><use href="#i-arrow"/></svg></a><a class="btn btn--ghost" href="collaborate.html">How we collaborate</a></div></div>
+  </div>
+</section>
+</main>
+<footer class="footer">
+  <div class="wrap footer__grid">
+    <div class="footer__brand">
+      <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg><span class="brand__name">BorneoStack <span>Research</span></span></a>
+      <p class="footer__loc"><svg aria-hidden="true"><use href="#i-pin"/></svg>Kota Kinabalu, Sabah, Malaysia <span class="mono">5.98° N · 116.07° E</span></p>
+      <p class="footer__loc"><svg aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:dale.jeffrey@borneostack.com">dale.jeffrey@borneostack.com</a></p>
+    </div>
+    <div class="footer__commit">
+      <h2>Open science &amp; reproducibility</h2>
+      <p>All geospatial feature pipelines, causal benchmark splits, and evaluation scripts are published open-source for independent verification.</p>
+    </div>
+    <div class="footer__meta">
+      <p>© 2026 BorneoStack Research</p>
+      <p class="footer__credit">Contains modified Copernicus Sentinel data. Terrain: NASA SRTM via AWS Terrain Tiles.</p>
+      <p class="footer__credit"><a href="contact.html#privacy">Privacy</a></p>
+    </div>
+  </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"><svg aria-hidden="true"><use href="#i-check"/></svg><span></span></div>
+<script src="assets/terrain.js"></script>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

@@ -24,3 +24,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 *.log
+
+# Private planning (never publish)
+docs/private/
+
+# third-party logos and scraped pages: local research only, not for the public repo
+brand/partners/
+mockup/assets/partners/
