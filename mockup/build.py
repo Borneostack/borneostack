@@ -306,7 +306,7 @@ def group_of(p):
 def partner_logo(p):
     f = p.get("logo") or p.get("logo_file") or ""
     name = Path(f).name if f and "not found" not in f.lower() else ""
-    if name and not LIVE and (ROOT / "assets" / "partners" / "logos" / name).exists():
+    if name and (ROOT / "assets" / "partners" / "logos" / name).exists():
         return f'<img src="assets/partners/logos/{e(name)}" alt="{e(p.get("short") or p["name"])} logo" loading="lazy">'
     return f'<span>{e(p.get("short") or p["name"])}</span>'
 
@@ -664,7 +664,13 @@ if LIVE:
     (dst / "people").mkdir(parents=True, exist_ok=True)
     for f in ["base.css", "site.css", "site.js", "terrain.js", "fig-corridor.webp", "fig-transect.webp", "mark.svg", "og.jpg"]:
         shutil.copy2(ROOT / "assets" / f, dst / f)
-    used = set(re.findall(r'assets/people/([\w.-]+)', "".join(x.read_text(encoding="utf-8") for x in OUT.glob("*.html"))))
+    pages = "".join(x.read_text(encoding="utf-8") for x in OUT.glob("*.html"))
+    logos = set(re.findall(r'assets/partners/logos/([\w.-]+)', pages))
+    (dst / "partners" / "logos").mkdir(parents=True, exist_ok=True)
+    for f in logos:
+        shutil.copy2(ROOT / "assets" / "partners" / "logos" / f, dst / "partners" / "logos" / f)
+    print("partner logos:", len(logos))
+    used = set(re.findall(r'assets/people/([\w.-]+)', pages))
     for f in used:
         shutil.copy2(ROOT / "assets" / "people" / f, dst / "people" / f)
     print("people images:", sorted(used))
