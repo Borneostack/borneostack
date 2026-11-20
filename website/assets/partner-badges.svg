@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" fill="none">
+  <!-- Transparent Background -->
+  <!-- Item 1: ESA Copernicus -->
+  <g transform="translate(40, 25)">
+    <circle cx="35" cy="35" r="30" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="3 2" fill="rgba(56, 189, 248, 0.08)"/>
+    <ellipse cx="35" cy="35" rx="26" ry="12" stroke="#38bdf8" stroke-width="1.2" fill="none" transform="rotate(-25 35 35)"/>
+    <circle cx="35" cy="35" r="7" fill="#38bdf8"/>
+    <text x="80" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="14" font-weight="700">ESA Copernicus</text>
+    <text x="80" y="48" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Sentinel-1 &amp; Sentinel-2 Data</text>
+  </g>
+
+  <!-- Item 2: NASA EarthData -->
+  <g transform="translate(330, 25)">
+    <circle cx="35" cy="35" r="30" stroke="#f43f5e" stroke-width="1.5" fill="rgba(244, 63, 94, 0.08)"/>
+    <path d="M18 35h34M24 24l22 22M24 46l22-22" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="80" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="14" font-weight="700">NASA EarthData</text>
+    <text x="80" y="48" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">GPM IMERG Rain Telemetry</text>
+  </g>
+
+  <!-- Item 3: Universiti Malaysia Sabah (UMS) -->
+  <g transform="translate(620, 25)">
+    <circle cx="35" cy="35" r="30" stroke="#00d084" stroke-width="1.5" fill="rgba(0, 208, 132, 0.08)"/>
+    <polygon points="35,18 52,48 18,48" stroke="#00d084" stroke-width="1.5" fill="none"/>
+    <circle cx="35" cy="38" r="4" fill="#00d084"/>
+    <text x="80" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="14" font-weight="700">Universiti Malaysia Sabah</text>
+    <text x="80" y="48" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Tropical Ecology Field Labs</text>
+  </g>
+
+  <!-- Item 4: Open Science & FAIR Principles -->
+  <g transform="translate(930, 25)">
+    <circle cx="35" cy="35" r="30" stroke="#fbbf24" stroke-width="1.5" fill="rgba(251, 191, 36, 0.08)"/>
+    <rect x="23" y="23" width="24" height="24" rx="4" stroke="#fbbf24" stroke-width="1.5" fill="none"/>
+    <path d="M29 35h12M35 29v12" stroke="#fbbf24" stroke-width="1.5"/>
+    <text x="80" y="32" fill="#f8fafc" font-family="'Inter', sans-serif" font-size="14" font-weight="700">FAIR Data Certified</text>
+    <text x="80" y="48" fill="#94a3b8" font-family="'JetBrains Mono', monospace" font-size="11">Open Access &amp; Reproducible</text>
+  </g>
+</svg>
