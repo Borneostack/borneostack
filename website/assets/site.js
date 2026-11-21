@@ -68,9 +68,39 @@
     apply('all');
   }
 
-  /* ---------- Contact form (mockup: validates, then opens the mail client) ---------- */
+  /* ---------- Reviews filter ---------- */
+  const revFilters = $('#review-filters');
+  if (revFilters) {
+    const cards = $$('.review[data-cat]');
+    const revCount = $('#review-count');
+    const applyRev = (cat) => {
+      let n = 0;
+      cards.forEach((c) => {
+        const show = cat === 'all' || c.dataset.cat === cat;
+        c.hidden = !show;
+        if (show) n++;
+      });
+      if (revCount) revCount.textContent = `Showing ${n} of ${cards.length} verified reviews`;
+    };
+    revFilters.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-filter]');
+      if (!b) return;
+      $$('[data-filter]', revFilters).forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      applyRev(b.dataset.filter);
+    });
+    applyRev('all');
+  }
+
+  /* ---------- Contact form (validates, pre-fills topic, opens mail client) ---------- */
   const form = $('#contact-form');
   if (form) {
+    const params = new URLSearchParams(location.search);
+    const topicParam = params.get('topic');
+    const topicSelect = $('#f-topic');
+    if (topicParam && topicSelect) {
+      const opt = [...topicSelect.options].find((o) => o.value.toLowerCase().includes(topicParam.toLowerCase()) || o.text.toLowerCase().includes(topicParam.toLowerCase()));
+      if (opt) topicSelect.value = opt.value;
+    }
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       let ok = true;
@@ -140,11 +170,11 @@
       ctx.fillStyle = '#065F46';
       if (kind === 'peak') { ctx.beginPath(); ctx.moveTo(x, y - 5); ctx.lineTo(x + 5, y + 4); ctx.lineTo(x - 5, y + 4); ctx.closePath(); ctx.fill(); }
       else { ctx.beginPath(); ctx.arc(x, y, 3.5, 0, Math.PI * 2); ctx.fill(); }
-      ctx.lineJoin = 'round'; ctx.strokeStyle = 'rgba(250,250,250,.95)'; ctx.lineWidth = 5;
+      ctx.lineJoin = 'round'; ctx.strokeStyle = 'rgba(250,249,245,.95)'; ctx.lineWidth = 5;
       ctx.font = '500 12px "JetBrains Mono", monospace';
-      ctx.strokeText(text, x + 12, y - 2); ctx.fillStyle = '#111827'; ctx.fillText(text, x + 12, y - 2);
+      ctx.strokeText(text, x + 12, y - 2); ctx.fillStyle = '#141413'; ctx.fillText(text, x + 12, y - 2);
       ctx.font = '400 11px "JetBrains Mono", monospace';
-      ctx.strokeText(sub, x + 12, y + 12); ctx.fillStyle = '#4B5563'; ctx.fillText(sub, x + 12, y + 12);
+      ctx.strokeText(sub, x + 12, y + 12); ctx.fillStyle = '#4A4742'; ctx.fillText(sub, x + 12, y + 12);
       ctx.restore();
     }
     function draw() {
@@ -155,7 +185,7 @@
         const k = [KIN[0] * s + ox, KIN[1] * s + oy];
         const c = [KK[0] * s + ox, KK[1] * s + oy];
         if (k[0] > 0 && k[0] < w - 120) label(ctx, k[0], k[1], 'Gunung Kinabalu', '4,095 m', 'peak');
-        if (c[0] > 0 && c[0] < w - 120) label(ctx, c[0], c[1], 'Kota Kinabalu', 'BorneoStack Research', 'city');
+        if (c[0] > 0 && c[0] < w - 120) label(ctx, c[0], c[1], 'Kota Kinabalu', 'BorneoStack', 'city');
       }
       if (cursor) {
         ctx.save(); ctx.strokeStyle = 'rgba(15,118,110,.9)'; ctx.lineWidth = 1;
