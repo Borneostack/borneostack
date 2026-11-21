@@ -187,37 +187,6 @@
         if (k[0] > 0 && k[0] < w - 120) label(ctx, k[0], k[1], 'Gunung Kinabalu', '4,095 m', 'peak');
         if (c[0] > 0 && c[0] < w - 120) label(ctx, c[0], c[1], 'Kota Kinabalu', 'BorneoStack', 'city');
       }
-      if (cursor) {
-        ctx.save(); ctx.strokeStyle = 'rgba(15,118,110,.9)'; ctx.lineWidth = 1;
-        ctx.beginPath(); ctx.arc(cursor.x, cursor.y, 9, 0, Math.PI * 2); ctx.stroke();
-        ctx.setLineDash([2, 4]); ctx.beginPath();
-        ctx.moveTo(cursor.x - 26, cursor.y); ctx.lineTo(cursor.x - 13, cursor.y); ctx.moveTo(cursor.x + 13, cursor.y); ctx.lineTo(cursor.x + 26, cursor.y);
-        ctx.moveTo(cursor.x, cursor.y - 26); ctx.lineTo(cursor.x, cursor.y - 13); ctx.moveTo(cursor.x, cursor.y + 13); ctx.lineTo(cursor.x, cursor.y + 26);
-        ctx.stroke(); ctx.restore();
-      }
-    }
-    if (interactive) {
-      const coordsEl = $('#readout-coords');
-      const elevEl = $('#readout-elev');
-      const G = H.grid;
-      section.addEventListener('pointermove', (e) => {
-        if (e.pointerType !== 'mouse' || !geo || !coordsEl) return;
-        const r = canvas.getBoundingClientRect();
-        const x = e.clientX - r.left, y = e.clientY - r.top;
-        const px = (x - geo.ox) / geo.s, py = (y - geo.oy) / geo.s;
-        if (px < 0 || py < 0 || px > H.w || py > H.h || x < r.width * 0.45) { if (cursor) { cursor = null; draw(); } return; }
-        cursor = { x, y };
-        const lon = lon0 + (px / H.w) * (lon1 - lon0);
-        const lat = invMercY(yN - (py / H.h) * (yN - yS));
-        const e2 = G.v[Math.min(G.h - 1, Math.round(py / G.s)) * G.w + Math.min(G.w - 1, Math.round(px / G.s))];
-        coordsEl.textContent = fmtCoord(lon, lat);
-        elevEl.textContent = e2 > 2 ? `${e2.toLocaleString('en-US')} m a.s.l.` : 'sea level';
-        cancelAnimationFrame(raf); raf = requestAnimationFrame(draw);
-      });
-      section.addEventListener('pointerleave', () => {
-        cursor = null; draw();
-        if (coordsEl) { coordsEl.textContent = '6.075° N · 116.558° E'; elevEl.textContent = '4,095 m a.s.l.'; }
-      });
     }
     let rt;
     addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(layout, 120); });
@@ -249,8 +218,6 @@
         const P = T[key];
         if (!P) return;
         const canvas = $('canvas', fig);
-        const coords = $('[data-coords]', fig);
-        if (coords) coords.textContent = fmtCoord(P.center[0], P.center[1]);
         const st = PLATE_STYLE[key] || {};
         const render = (k) => {
           const c = setupCanvas(canvas);

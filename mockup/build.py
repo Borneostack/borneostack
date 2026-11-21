@@ -94,7 +94,7 @@ def page(filename, title, desc, body, active=None):
   <div class="wrap footer__grid">
     <div class="footer__brand">
       <a class="brand" href="index.html"><svg class="brand__mark" viewBox="0 0 48 48" aria-hidden="true"><use href="#mark"/></svg><span class="brand__name">BorneoStack</span></a>
-      <p class="footer__loc">{icon("pin")}Kota Kinabalu, Sabah, Malaysia <span class="mono">5.98° N · 116.07° E</span></p>
+      <p class="footer__loc">{icon("pin")}Kota Kinabalu, Sabah, Malaysia</p>
       <p class="footer__loc">{icon("mail")}<a href="mailto:{EMAIL}">{EMAIL}</a></p>
     </div>
     <div class="footer__commit">
@@ -156,15 +156,6 @@ CASES = [
         "tags": ["Sentinel-1 SAR", "Flood mapping"],
         "title": "Seeing through the monsoon: mapping a Kinabatangan flood with radar",
         "summary": "Northeast-monsoon floods arrive under thick cloud, exactly when optical satellites are blind. We map one documented flood on the lower Kinabatangan with Sentinel-1 radar and test the map against independent water data.",
-    },
-    {
-        "slug": "cs-ai-code-audit",
-        "plate": "crocker",
-        "plate_caption": "Crocker Range, west of Kota Kinabalu · 75 m contours",
-        "status": ("paper", "Working paper"),
-        "tags": ["Reasoning models", "Reproducibility"],
-        "title": "Does AI-written geospatial code leak? An audit of 30 tasks",
-        "summary": "Reasoning models now write a lot of geospatial code. We give them 30 published methods in a sandbox and check for silent temporal leakage, spatial bleed, and coordinate errors before they reach production.",
     },
     {
         "slug": "cs-mangroves",
@@ -407,12 +398,11 @@ FAQS = [
 
 FOCUS = [
     ("Floods under monsoon cloud", "Radar satellites see through the cloud that hides Sabah during the monsoon. We use them to map where floods spread and how land change affects flood risk."),
-    ("Trustworthy AI for science", "AI tools now write much of the code behind environmental research. We test that code so mistakes are caught before they become results."),
+    ("Reproducible open pipelines", "Every map and dataset is backed by documented, open scripts that anyone can inspect, verify, and re-run."),
     ("Forests, mangroves and corridors", "We track how forests and mangroves change over time, and where habitats stay connected for wildlife."),
 ]
 PROJECTS = {
     "cs-kinabatangan-flood": ("Mapping a monsoon flood on the Kinabatangan", "We are mapping a recent monsoon flood on Sabah’s longest river with radar satellite data, and checking the map against independent records.", "scene-field-station.webp"),
-    "cs-ai-code-audit": ("Can AI write reliable research code?", "We asked AI models to write code for 30 published environmental methods, then checked where it quietly goes wrong.", "scene-desk-coding.webp"),
     "cs-mangroves": ("Mangrove change on Sabah’s east coast", "We will map how mangroves in the Kinabatangan–Segama delta have changed since 2017, starting in early 2027.", "scene-mangrove-drone.webp"),
 }
 
@@ -422,7 +412,7 @@ def status_pill(kind, label):
 
 
 def plate_fig(key, caption, cls):
-    return f'<figure class="{cls}" data-plate="{key}"><canvas aria-hidden="true"></canvas><figcaption><b>{e(caption)}</b><span data-coords></span></figcaption></figure>'
+    return f'<figure class="{cls}" data-plate="{key}"><canvas aria-hidden="true"></canvas><figcaption><b>{e(caption)}</b></figcaption></figure>'
 
 
 def load_partners():
@@ -651,11 +641,6 @@ page("index.html", "BorneoStack · Custom AI, Automation & Data Systems",
      "BorneoStack builds workflow automations, internal document AI assistants, live dashboards and satellite maps at fixed prices, from Kota Kinabalu, Sabah.",
      f"""<section class="hero" aria-labelledby="hero-title">
   <canvas class="hero__terrain" id="hero-terrain" aria-hidden="true"></canvas>
-  <div class="hero__readout" aria-hidden="true">
-    <span class="hero__readout-label">Gunung Kinabalu · Crocker Range</span>
-    <span id="readout-coords">6.075° N · 116.558° E</span>
-    <span id="readout-elev">4,095 m a.s.l.</span>
-  </div>
   <div class="wrap hero__inner">
     <div class="hero__badge"><span class="hero__badge-dot" aria-hidden="true"></span>AI, Automation &amp; Data Studio · Kota Kinabalu, Sabah</div>
     <h1 id="hero-title">Systems that give your team <em>hours back every week</em>.</h1>
@@ -781,7 +766,6 @@ gallery = "".join(photo(f, c) for f, c in [
     ("scene-kinabatangan-boat.webp", "Lower Kinabatangan"),
     ("scene-canopy-walkway.webp", "Canopy walkway, Danum Valley"),
     ("scene-mangrove-drone.webp", "Mangrove drone survey"),
-    ("scene-desk-coding.webp", "Pipeline work in Kota Kinabalu"),
     ("scene-seminar.webp", "Presenting flood maps"),
     ("scene-whiteboard.webp", "Partner workshop"),
     ("scene-lab-mentoring.webp", "Supervising student projects"),
@@ -846,7 +830,7 @@ page("collaborate.html", "Collaborate · BorneoStack",
      pagehead("Research partners", "For universities, field stations, NGOs, and grant bodies interested in open environmental data and joint research.") + f"""
 <section class="section"><div class="wrap">
   <div class="offers">
-    <div class="offer"><span class="who">{icon('cap')} Universities</span><h3>Co-supervised student projects</h3><p>Final-year and internship projects on flood mapping, mangrove change or AI code auditing, with data, compute and weekly supervision.</p></div>
+    <div class="offer"><span class="who">{icon('cap')} Universities</span><h3>Co-supervised student projects</h3><p>Final-year and internship projects on flood mapping, mangrove change or geospatial telemetry, with data, compute and weekly supervision.</p></div>
     <div class="offer"><span class="who">{icon('landmark')} Agencies</span><h3>Open pilots on public data</h3><p>A scoped, 6–8 week pilot on an existing operational question, delivered as a reproducible notebook your own team can re-run.</p></div>
     <div class="offer"><span class="who">{icon('leaf')} Field stations &amp; NGOs</span><h3>Ground truth meets satellite</h3><p>Your field records validate our satellite models; our maps extend your records across the landscape. Credit and data rights agreed in writing first.</p></div>
     <div class="offer"><span class="who">{icon('coins')} Funders</span><h3>Grants and programmes</h3><p>We partner on applied innovation and conservation grants and publish every non-sensitive output openly.</p></div>
@@ -895,7 +879,7 @@ page("contact.html", "Contact · BorneoStack",
 </div></section>""")
 
 OLD = {"research.html": "work.html", "case-studies.html": "work.html", "publications.html": "work.html", "people.html": "about.html",
-       "cs-kinabatangan-flood.html": "work.html#cs-kinabatangan-flood", "cs-ai-code-audit.html": "work.html#cs-ai-code-audit", "cs-mangroves.html": "work.html#cs-mangroves"}
+       "cs-kinabatangan-flood.html": "work.html#cs-kinabatangan-flood", "cs-ai-code-audit.html": "work.html", "cs-mangroves.html": "work.html#cs-mangroves"}
 for old in OLD:
     (OUT / old).unlink(missing_ok=True)
 if LIVE:

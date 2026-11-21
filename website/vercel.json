@@ -27,7 +27,7 @@
     },
     {
       "source": "/cs-ai-code-audit",
-      "destination": "/work.html#cs-ai-code-audit",
+      "destination": "/work.html",
       "permanent": true
     },
     {
@@ -62,7 +62,7 @@
     },
     {
       "source": "/cs-ai-code-audit.html",
-      "destination": "/work.html#cs-ai-code-audit",
+      "destination": "/work.html",
       "permanent": true
     },
     {
