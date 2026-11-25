@@ -19,7 +19,7 @@ import {
 } from 'lucide-react'
 
 import BrandLogo from '@/components/neural/brand-logo'
-import LiveMap from '@/components/neural/live-map'
+import GisDemo from '@/components/neural/gis-demo'
 import Reveal from '@/components/neural/reveal'
 import SectionHead from '@/components/neural/section-head'
 import { SOLUTIONS } from '@/lib/site'
@@ -71,7 +71,7 @@ const VoiceArt = () => (
   </div>
 )
 
-// The drawn map: a street grid, a delivery zone and site pins. It shows while the live map loads, and stays if it cannot.
+// The drawn map: a street grid, a road and site pins. It shows while the live map loads, and stays if it cannot.
 const PINS = [
   [92, 58],
   [176, 34],
@@ -93,12 +93,6 @@ const MapArt = () => (
       fill='none'
       stroke='rgb(43 123 255 / 0.35)'
       strokeWidth='10'
-    />
-    <path
-      d='M40 20 L150 8 L272 30 L300 128 L120 136 Z'
-      fill='rgb(43 123 255 / 0.12)'
-      stroke='rgb(43 123 255 / 0.6)'
-      strokeDasharray='5 5'
     />
     <path
       d='M92 58 L176 34 L238 92 L318 52 L402 104 L470 40'
@@ -188,29 +182,24 @@ const Solutions = () => (
               delay={(n % 3) * 0.08}
               className={cn('h-full', full ? 'sm:col-span-2 lg:col-span-6' : wide ? 'lg:col-span-3' : 'lg:col-span-2')}
             >
-              <article
-                className={cn(
-                  'glass flex h-full flex-col rounded-2xl p-6',
-                  full && 'gap-6 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center'
-                )}
-              >
-                <div>
-                  <div className='flex items-center gap-3'>
-                    <span className='bg-primary/15 text-primary grid size-10 shrink-0 place-items-center rounded-xl'>
-                      <Icon className='size-5' />
-                    </span>
-                    <h3 className='text-lg'>{s.name}</h3>
+              <article className={cn('glass flex h-full flex-col rounded-2xl p-6', full && 'gap-6')}>
+                <div
+                  className={cn(full && 'lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end lg:gap-10')}
+                >
+                  <div>
+                    <div className='flex items-center gap-3'>
+                      <span className='bg-primary/15 text-primary grid size-10 shrink-0 place-items-center rounded-xl'>
+                        <Icon className='size-5' />
+                      </span>
+                      <h3 className='text-lg'>{s.name}</h3>
+                    </div>
+                    <p className='text-muted-foreground mt-4 text-sm'>{s.pitch}</p>
                   </div>
-                  <p className='text-muted-foreground mt-4 text-sm'>{s.pitch}</p>
-                  <p className='mt-3 text-sm'>{s.example}</p>
+                  <p className={cn('mt-3 text-sm', full && 'lg:mt-0')}>{s.example}</p>
                   {s.id === 'chatbot' && <ChatArt />}
                   {s.id === 'voice-agent' && <VoiceArt />}
                 </div>
-                {full && (
-                  <LiveMap className='h-56 sm:h-64'>
-                    <MapArt />
-                  </LiveMap>
-                )}
+                {full && <GisDemo fallback={<MapArt />} />}
               </article>
             </Reveal>
           )
