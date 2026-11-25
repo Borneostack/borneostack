@@ -3,6 +3,7 @@ import Hub from '@/components/neural/hub'
 import Problem from '@/components/neural/problem'
 import Showcase from '@/components/neural/showcase'
 import Custom from '@/components/neural/custom'
+import TryAssistant from '@/components/neural/try-assistant'
 import Promises from '@/components/neural/promises'
 import Process from '@/components/neural/process'
 import ScopeSample from '@/components/neural/scope-sample'
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Problem />
       <Hub />
       <Showcase />
+      <TryAssistant />
       <Custom />
       <Reviews />
       <Promises />

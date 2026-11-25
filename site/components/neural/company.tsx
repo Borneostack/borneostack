@@ -15,7 +15,7 @@ const FACTS = [
 ]
 
 const Company = () => (
-  <section className='py-20 sm:py-28'>
+  <section id='company' className='scroll-mt-24 py-20 sm:py-28'>
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>
       <Reveal>
         <figure className='relative overflow-hidden rounded-3xl border border-white/10'>

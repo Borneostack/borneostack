@@ -57,10 +57,18 @@ const Hero = () => (
             See prices
             <ArrowRightIcon />
           </Button>
+          <a
+            href='#try'
+            className='text-foreground hover:text-primary inline-flex h-11 items-center gap-1.5 px-2 text-sm font-semibold transition-colors'
+          >
+            Try the live demo
+            <ArrowRightIcon className='size-4' />
+          </a>
         </div>
-        <p className='text-muted-foreground mt-5 flex items-center gap-2 text-sm'>
-          <ShieldCheckIcon className='text-primary size-4' />
-          Written scope and price before any payment. 30 days of free fixes, then care plans from USD 39 a month.
+        <p className='text-muted-foreground mt-5 flex items-start gap-2 text-sm sm:items-center'>
+          <ShieldCheckIcon className='text-primary mt-0.5 size-4 shrink-0 sm:mt-0' />
+          Packages from USD 150. Written scope and price before any payment. 30 days of free fixes, then care plans
+          from USD 39 a month.
         </p>
       </Reveal>
 

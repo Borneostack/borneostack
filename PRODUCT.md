@@ -51,9 +51,10 @@ time.
 - Every project: one-page written scope, 2 rounds of changes, handover guide and video, 30 days of free fixes for
   defects.
 - Third-party running costs (AI usage, hosting, subscriptions) are paid by the client.
-- Static site: Next.js static export served by Vercel from `website/`; source in `site/`. No server; the contact
-  form opens the visitor's email app.
-- Contact: hello@borneostack.com (forwarding not yet confirmed).
+- Static site: Next.js static export served by Vercel from `website/`; source in `site/`. One Vercel Function
+  (`website/api/contact.js`) sends the contact form through Resend.
+- Contact: hello@borneostack.com (Cloudflare Email Routing to the owner's inbox). Booking: Cal.com
+  (`cal.com/borneostack/free-call`).
 
 ## Brand Commitments
 

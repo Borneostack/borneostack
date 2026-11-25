@@ -14,7 +14,7 @@ const PAINS = [
 
 const Problem = () => (
   <section className='py-20 sm:py-28'>
-    <div className='mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-14'>
+    <div className='mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-14'>
       <Reveal>
         <figure className='relative overflow-hidden rounded-3xl border border-white/10 shadow-[0_30px_80px_-30px_#2b7bff66]'>
           <Photo

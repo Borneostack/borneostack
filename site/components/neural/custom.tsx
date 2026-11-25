@@ -13,7 +13,7 @@ const STACK = ['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQ
 const Custom = ({ id = 'custom' }: { id?: string }) => (
   <section id={id} className='py-20 sm:py-28'>
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>
-      <div className='grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]'>
+      <div className='grid items-center gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]'>
         <div>
           <SectionHead
             align='left'
