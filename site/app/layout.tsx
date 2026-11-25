@@ -7,9 +7,14 @@ import { TooltipProvider } from '@/components/ui/tooltip'
 import Header from '@/components/site/header'
 import Footer from '@/components/site/footer'
 import SmoothScroll from '@/components/neural/smooth-scroll'
+import BackToTop from '@/components/site/back-to-top'
 import { SITE } from '@/lib/site'
 
-const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-jakarta' })
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-jakarta'
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -33,8 +38,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           </a>
           <SmoothScroll />
           <Header />
-          <main id='main' className='overflow-x-clip'>{children}</main>
+          <main id='main' tabIndex={-1} className='overflow-x-clip outline-none'>
+            {children}
+          </main>
           <Footer />
+          <BackToTop />
         </TooltipProvider>
       </body>
     </html>

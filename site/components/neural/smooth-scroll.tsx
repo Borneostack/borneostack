@@ -1,17 +1,16 @@
 'use client'
 
-// Native wheel and touch scrolling; in-page links glide to their section on an ease-in-out curve and stop below
-// the fixed header.
+// Scrolling is fully native (wheel, touch, keyboard): no scroll library hijacks the page.
+// In-page links glide to their section with the browser's own smooth scroll and stop below the fixed header;
+// a bare '#' link glides back to the top. Reduced-motion visitors jump instead.
 // Also feeds the pointer position to glass cards for their hover spotlight (globals.css, article.glass).
 import { useEffect } from 'react'
-import Lenis from 'lenis'
-import 'lenis/dist/lenis.css'
 
-const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+const HEADER_OFFSET = 96
 
 const SmoothScroll = () => {
   useEffect(() => {
-    const lenis = new Lenis({ smoothWheel: false, autoRaf: true })
+    const behavior = (): ScrollBehavior => (matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth')
 
     const spot = (e: PointerEvent) => {
       const card = (e.target as Element | null)?.closest?.('article.glass') as HTMLElement | null
@@ -20,15 +19,20 @@ const SmoothScroll = () => {
       card.style.setProperty('--mx', `${e.clientX - r.left}px`)
       card.style.setProperty('--my', `${e.clientY - r.top}px`)
     }
-    // In-page links: glide to the section and stop 96px down, below the fixed header.
     const jump = (e: MouseEvent) => {
       const link = (e.target as Element | null)?.closest?.('a[href^="#"], a[href^="/#"]') as HTMLAnchorElement | null
       if (!link || link.pathname !== location.pathname) return
-      const el = link.hash.length > 1 ? document.getElementById(decodeURIComponent(link.hash.slice(1))) : null
+      if (link.hash.length <= 1) {
+        e.preventDefault()
+        history.replaceState(null, '', location.pathname + location.search)
+        window.scrollTo({ top: 0, behavior: behavior() })
+        return
+      }
+      const el = document.getElementById(decodeURIComponent(link.hash.slice(1)))
       if (!el) return
       e.preventDefault()
       history.pushState(null, '', link.hash)
-      lenis.scrollTo(el.getBoundingClientRect().top + window.scrollY - 96, { duration: 1.2, easing: easeInOutCubic })
+      window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET, behavior: behavior() })
     }
     window.addEventListener('pointermove', spot, { passive: true })
     document.addEventListener('click', jump)
@@ -45,7 +49,6 @@ const SmoothScroll = () => {
     if (main) mo.observe(main, { childList: true })
 
     return () => {
-      lenis.destroy()
       io.disconnect()
       mo.disconnect()
       window.removeEventListener('pointermove', spot)
