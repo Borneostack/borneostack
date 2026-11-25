@@ -147,10 +147,10 @@ const Footer = () => (
         </div>
       </div>
 
-      {/* The large faded brand name, cut off by the bottom bar */}
+      {/* The large brand name, filled with the Kota Kinabalu night skyline and fading into the bottom bar */}
       <p
         aria-hidden
-        className='pointer-events-none relative mt-10 -mb-[0.2em] text-center text-[min(14.5vw,10.5rem)] leading-none font-extrabold tracking-tighter text-transparent select-none bg-linear-to-b from-white/[0.13] to-white/0 bg-clip-text'
+        className='pointer-events-none relative mt-10 -mb-[0.2em] bg-[url(/img/kk-800.webp)] bg-size-[154%_auto] bg-clip-text bg-position-[100%_54%] text-center text-[min(14.5vw,10.5rem)] leading-none font-extrabold tracking-tighter text-transparent brightness-[1.9] saturate-[1.15] select-none [mask-image:linear-gradient(to_bottom,black_65%,transparent_100%)] sm:bg-[url(/img/kk-1600.webp)]'
       >
         BorneoStack
       </p>
