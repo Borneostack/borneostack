@@ -190,7 +190,7 @@ export const PROCESS = [
   {
     id: '04',
     title: 'Handover and 30 days of fixes',
-    content: 'You own the code and the accounts. You get a written guide, a short video, and 30 days of free bug fixes.'
+    content: 'The system goes live in your accounts with a written guide, a short video and 30 days of free fixes. Then choose a care plan to keep it running.'
   }
 ]
 
@@ -198,7 +198,7 @@ export const VALUES = [
   { title: 'Fixed and honest', text: 'Every price, limit and running cost is written down before work starts.' },
   { title: 'Simple first', text: 'We propose the smallest system that solves the problem.' },
   { title: 'You talk to the builder', text: 'The person who builds your system answers your messages.' },
-  { title: 'You own it', text: 'Code, workflows and logins stay in your accounts. No lock-in.' }
+  { title: 'Built to last', text: 'We look after what we build, with care plans that keep it running as your tools change.' }
 ]
 
 export const TOOLS = [
@@ -210,14 +210,29 @@ export const TOOLS = [
 
 export const FAQS = [
   {
+    question: 'How do payments work?',
+    answer:
+      '40% of the fixed price when you sign the scope, so we can reserve the time. The other 60% at handover, before the system goes live. Care plans are billed monthly and can be cancelled with 30 days notice.'
+  },
+  {
+    question: 'What if we want changes after the scope is signed?',
+    answer:
+      'Small fixes inside the agreed scope are covered by the 2 rounds of changes. New features are written up as a short change request with its own fixed price, and nothing is added without your written approval.'
+  },
+  {
+    question: 'What is the founding-client offer?',
+    answer:
+      'Our first 15 clients get 20% off any package, as thanks for trusting a new studio. It applies to the first 15 signed scopes, one per company, and everything else stays the same: written scope, 2 rounds of changes, handover and 30 days of free fixes.'
+  },
+  {
     question: 'How does a fixed price work?',
     answer:
       'After a free 30-minute call, we send a one-page scope with the deliverables, the date and one fixed price. If the work takes us longer, you do not pay more.'
   },
   {
-    question: 'Who owns the code and the data?',
+    question: 'Who owns the system and the data?',
     answer:
-      'You do. At handover, the code, workflows and logins live in your own accounts, such as your Google Workspace, GitHub or server.'
+      'Your data and your accounts are always yours. For the system we build, you get a permanent licence to use it in your business; BorneoStack keeps the copyright, as our written scope states. If you need the full source code and copyright, for example to have another team maintain it, we transfer it for an extra 50% of the build price.'
   },
   {
     question: 'Can we pay in Ringgit?',
@@ -232,11 +247,104 @@ export const FAQS = [
   {
     question: 'What happens if something breaks after handover?',
     answer:
-      'Every project includes 30 days of free bug fixes. After that, an optional monthly care plan covers checks, fixes and small changes. We quote it at handover.'
+      'Every project includes 30 days of free fixes for defects in what we built. After that, a monthly care plan covers monitoring, fixes when Google, WhatsApp or other providers change their systems, and small changes. Without a plan, fixes are charged at USD 35 per hour.'
   },
   {
     question: 'How soon can you start?',
     answer:
       'Usually within a week of agreeing the scope. We take one project at a time, so we will tell you the real start date before you agree.'
+  }
+]
+
+// Custom engineering work. No list price: each gets one fixed price in a written scope after the free call.
+export const CUSTOM = [
+  {
+    id: 'frontend',
+    name: 'Frontend development',
+    pitch: 'Web apps, customer portals, admin screens and landing pages that load fast and work well on a phone.',
+    points: ['React and Next.js', 'Accessible, responsive layouts', 'Connected to your real data']
+  },
+  {
+    id: 'backend',
+    name: 'Backend development',
+    pitch: 'APIs, databases and integrations that your apps and staff can rely on every day.',
+    points: ['APIs and background jobs', 'PostgreSQL, MySQL, SQL Server', 'Logins, roles and audit logs']
+  },
+  {
+    id: 'system-design',
+    name: 'System design',
+    pitch: 'A clear plan before you build: architecture, data model, costs and risks, written so your team can act on it.',
+    points: ['Architecture and data model', 'Review of an existing system', 'Written plan with cost estimates']
+  }
+] as const
+
+// Client reviews. Add only real words from real clients, with their permission to publish.
+// The reviews section stays hidden while this list is empty.
+export type Review = { name: string; role?: string; project?: string; rating: number; quote: string }
+export const REVIEWS: Review[] = []
+
+// Founding-client offer. Update `taken` each time a founding client signs a scope; the site shows places left.
+export const FOUNDING = { total: 15, taken: 0, percent: 20 }
+export const foundingLeft = () => Math.max(0, FOUNDING.total - FOUNDING.taken)
+
+const usd = (s: string) => Number(s.replace(/[^0-9]/g, ''))
+const fmt = (n: number) => n.toLocaleString('en-US')
+// Founding price for a list price like 'USD 1,200': 20% off, rounded to the nearest 10.
+export const foundingPrice = (price: string) => `USD ${fmt(Math.round((usd(price) * (100 - FOUNDING.percent)) / 1000) * 10)}`
+export const foundingMyr = (price: string) =>
+  `about RM${fmt(Math.round((usd(price) * (100 - FOUNDING.percent) * 4.4) / 1000) * 10)}`
+
+
+// Terms that keep the studio sustainable. Research and reasons: borneostack-company/decisions/DEC-008.
+export const TERMS = {
+  depositPercent: 40,
+  sourceTransferPercent: 50, // full source code and copyright transfer, as a share of the build price
+  hourlyUsd: 35, // fixes and changes outside a care plan, minimum 1 hour
+  warrantyDays: 30
+}
+
+export type CarePlan = { id: string; name: string; usd: number; myr: string; summary: string; features: string[] }
+export const CARE_PLANS: CarePlan[] = [
+  {
+    id: 'essential',
+    name: 'Essential',
+    usd: 39,
+    myr: 'about RM170',
+    summary: 'Keep one system running safely.',
+    features: [
+      'Daily error monitoring and alerts',
+      'Fixes when a connected app or API changes',
+      'Monthly health check',
+      'Up to 30 minutes of small changes',
+      'Reply within 2 working days'
+    ]
+  },
+  {
+    id: 'standard',
+    name: 'Standard',
+    usd: 99,
+    myr: 'about RM440',
+    summary: 'For systems your team uses every day.',
+    features: [
+      'Everything in Essential',
+      'Up to 2 hours of changes each month',
+      'Reply within 1 working day',
+      'Monthly usage and cost report',
+      'Backups checked monthly'
+    ]
+  },
+  {
+    id: 'priority',
+    name: 'Priority',
+    usd: 249,
+    myr: 'about RM1,100',
+    summary: 'For several systems or business-critical work.',
+    features: [
+      'Everything in Standard',
+      'Up to 6 hours of changes each month',
+      'Same-day reply on working days',
+      'Quarterly review of what to improve next',
+      'Covers up to 3 systems'
+    ]
   }
 ]

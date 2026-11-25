@@ -1,5 +1,6 @@
 // Process steps in glass cards, joined by a blue line on wide screens.
 import SectionHead from '@/components/neural/section-head'
+import Reveal from '@/components/neural/reveal'
 import { PROCESS } from '@/lib/site'
 
 const Process = () => (
@@ -15,14 +16,14 @@ const Process = () => (
           aria-hidden
           className='via-primary/60 absolute top-[2.35rem] right-[12%] left-[12%] h-px bg-gradient-to-r from-transparent to-transparent max-lg:hidden'
         />
-        {PROCESS.map(step => (
-          <li key={step.id} className='glass relative rounded-2xl p-6'>
+        {PROCESS.map((step, n) => (
+          <Reveal as='li' key={step.id} delay={n * 0.12} className='glass relative rounded-2xl p-6'>
             <span className='bg-background border-primary/60 text-primary grid size-9 place-items-center rounded-full border text-sm font-bold tabular-nums'>
               {Number(step.id)}
             </span>
             <h3 className='mt-5 text-lg'>{step.title}</h3>
             <p className='text-muted-foreground mt-2 text-sm'>{step.content}</p>
-          </li>
+          </Reveal>
         ))}
       </ol>
     </div>

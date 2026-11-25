@@ -30,7 +30,7 @@ export default function AboutPage() {
             </p>
             <p>
               Large agencies quote months and open-ended hours for this work. We do the opposite: one focused system,
-              one fixed price in writing, delivered in days or weeks, and you own all of it.
+              one fixed price in writing, delivered in days or weeks, and looked after once it is live.
             </p>
             <p>We take one project at a time, so the person who builds your system is the person who answers you.</p>
           </div>

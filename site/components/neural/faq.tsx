@@ -11,7 +11,7 @@ const FAQ = () => (
         title='Questions before we start'
         description={
           <>
-            Prices, ownership and what happens after handover. Something else? Email{' '}
+            Payment, ownership, changes and support after handover. Something else? Email{' '}
             <a href={`mailto:${SITE.email}`} className='text-foreground underline'>
               {SITE.email}
             </a>

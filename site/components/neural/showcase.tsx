@@ -2,6 +2,7 @@
 import { CheckIcon, CircleCheckIcon, MailIcon, SheetIcon, TriangleAlertIcon, ZapIcon } from 'lucide-react'
 
 import SectionHead from '@/components/neural/section-head'
+import Reveal from '@/components/neural/reveal'
 import { SERVICES } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
@@ -21,11 +22,11 @@ const AutomationDemo = () => (
       { icon: ZapIcon, t: 'Sorted by AI: quotation request, logistics', d: '09:14' },
       { icon: CircleCheckIcon, t: 'Sales team alerted on WhatsApp', d: '09:15' }
     ].map(({ icon: Icon, t, d }, i) => (
-      <div key={t} className='bg-background/70 flex items-center gap-3 rounded-xl border px-3 py-2.5 text-sm'>
+      <Reveal key={t} delay={0.25 + i * 0.35} y={10} className='bg-background/70 flex items-center gap-3 rounded-xl border px-3 py-2.5 text-sm'>
         <Icon className={cn('size-4 shrink-0', i === 3 ? 'text-primary' : 'text-muted-foreground')} />
         <span className='flex-1'>{t}</span>
         <span className='text-muted-foreground text-xs tabular-nums'>{d}</span>
-      </div>
+      </Reveal>
     ))}
     <p className='text-muted-foreground flex items-center gap-2 px-1 text-xs'>
       <TriangleAlertIcon className='size-3.5' /> If a step fails, you get an email with the reason.
@@ -80,8 +81,8 @@ const DashboardDemo = () => (
       {BARS.map((h, i) => (
         <div
           key={i}
-          className={cn('flex-1 rounded-md', i === BARS.length - 2 ? 'bg-primary' : 'bg-primary/35')}
-          style={{ height: `${h}%` }}
+          className={cn('bar-grow flex-1 origin-bottom rounded-md', i === BARS.length - 2 ? 'bg-primary' : 'bg-primary/35')}
+          style={{ height: `${h}%`, animationDelay: `${i * 90}ms` }}
         />
       ))}
     </div>
@@ -102,7 +103,7 @@ const Showcase = () => (
         const Demo = DEMOS[s.id]
 
         return (
-          <div key={s.id} className='grid items-center gap-10 lg:grid-cols-2 lg:gap-16'>
+          <Reveal key={s.id} className='grid items-center gap-10 lg:grid-cols-2 lg:gap-16'>
             <div className={cn('glass relative isolate rounded-3xl p-5 sm:p-6', i % 2 === 1 && 'lg:order-2')}>
               <div aria-hidden className='bg-primary/15 absolute inset-0 -z-10 scale-105 rounded-full blur-3xl' />
               <Demo />
@@ -123,7 +124,7 @@ const Showcase = () => (
                 {s.name} packages from {s.from} →
               </a>
             </div>
-          </div>
+          </Reveal>
         )
       })}
     </div>

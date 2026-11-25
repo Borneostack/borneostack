@@ -7,9 +7,9 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import { SERVICES, SITE } from '@/lib/site'
+import { CUSTOM, SERVICES, SITE } from '@/lib/site'
 
-const TOPICS = ['Not sure yet', ...SERVICES.map(s => s.name), 'Care plan for an existing system', 'Other']
+const TOPICS = ['Not sure yet', ...SERVICES.map(s => s.name), ...CUSTOM.map(c => c.name), 'Care plan for an existing system', 'Other']
 
 // No server: sending opens the visitor's email app with the message filled in.
 const ContactForm = () => {

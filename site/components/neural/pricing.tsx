@@ -6,7 +6,7 @@ import { CheckIcon, ClockIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import SectionHead from '@/components/neural/section-head'
-import { SERVICES, type Service } from '@/lib/site'
+import { FOUNDING, SERVICES, foundingLeft, foundingMyr, foundingPrice, type Service } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const Plans = ({ service }: { service: Service }) => (
@@ -32,9 +32,22 @@ const Plans = ({ service }: { service: Service }) => (
           </div>
           <p className='text-muted-foreground mt-2 min-h-10 text-sm'>{t.summary}</p>
 
-          <p className='mt-6 text-4xl font-extrabold tracking-tight tabular-nums'>{t.price}</p>
+          {foundingLeft() > 0 ? (
+            <>
+              <p className='mt-6 flex items-baseline gap-3'>
+                <span className='text-4xl font-extrabold tracking-tight tabular-nums'>{foundingPrice(t.price)}</span>
+                <s className='text-muted-foreground text-base tabular-nums'>
+                  <span className='sr-only'>Regular price </span>
+                  {t.price}
+                </s>
+              </p>
+              <p className='text-primary mt-1 text-xs font-semibold'>Founding-client price, {FOUNDING.percent}% off</p>
+            </>
+          ) : (
+            <p className='mt-6 text-4xl font-extrabold tracking-tight tabular-nums'>{t.price}</p>
+          )}
           <p className='text-muted-foreground mt-1 flex flex-wrap items-center gap-x-2 text-sm'>
-            <span>{t.myr}</span>
+            <span>{foundingLeft() > 0 ? foundingMyr(t.price) : t.myr}</span>
             <span aria-hidden>·</span>
             <span className='inline-flex items-center gap-1'>
               <ClockIcon className='size-3.5' /> {t.time}
@@ -63,6 +76,31 @@ const Plans = ({ service }: { service: Service }) => (
   </div>
 )
 
+export const FoundingBanner = () => {
+  const left = foundingLeft()
+  if (left === 0) return null
+
+  return (
+    <div className='border-primary/50 bg-primary/10 mb-6 flex flex-col gap-4 rounded-2xl border p-5 sm:flex-row sm:items-center sm:justify-between'>
+      <div>
+        <p className='font-semibold'>Founding-client offer: {FOUNDING.percent}% off any package</p>
+        <p className='text-muted-foreground mt-1 text-sm'>
+          For our first {FOUNDING.total} clients, as thanks for trusting a new studio. Same scope, same promises.
+        </p>
+      </div>
+      <div className='shrink-0 sm:text-right'>
+        <p className='text-2xl font-extrabold tabular-nums'>
+          {left} of {FOUNDING.total}
+        </p>
+        <p className='text-muted-foreground text-xs'>places left</p>
+        <div className='bg-background mt-2 h-1.5 w-40 overflow-hidden rounded-full' aria-hidden>
+          <div className='bg-primary h-full rounded-full' style={{ width: `${(left / FOUNDING.total) * 100}%` }} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
 const Pricing = ({ id = 'pricing' }: { id?: string }) => {
   const [active, setActive] = useState<Service['id']>('automation')
   const service = SERVICES.find(s => s.id === active) ?? SERVICES[0]
@@ -72,7 +110,7 @@ const Pricing = ({ id = 'pricing' }: { id?: string }) => {
       <div className='mx-auto max-w-6xl px-4 sm:px-6'>
         <SectionHead
           title='One fixed price, agreed before we start'
-          description='Every package includes a one-page written scope, 2 rounds of changes, a handover guide and video, and 30 days of free bug fixes.'
+          description='Every package includes a one-page written scope, 2 rounds of changes, a handover guide and video, and 30 days of free fixes. Paid 40% on signing, 60% at handover.'
         />
 
         <div
@@ -95,6 +133,8 @@ const Pricing = ({ id = 'pricing' }: { id?: string }) => {
             </button>
           ))}
         </div>
+
+        <FoundingBanner />
 
         <Plans service={service} />
 

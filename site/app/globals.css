@@ -215,6 +215,36 @@
   to { transform: translateY(-14px) scale(1.05); }
 }
 
+@utility beam-spark {
+  background: linear-gradient(to bottom, transparent 0%, transparent 42%, #ffffff 50%, transparent 58%, transparent 100%);
+  background-size: 100% 220%;
+  filter: drop-shadow(0 0 6px #9fc4ff);
+  animation: beam-fall 3.2s cubic-bezier(0.55, 0, 0.8, 0.6) infinite;
+}
+@keyframes beam-fall {
+  from { background-position: 0 100%; }
+  to { background-position: 0 0%; }
+}
+/* Light pulses that travel along diagram wires. */
+@utility wire-pulse {
+  stroke-dasharray: 18 400;
+  animation: wire-run 3.4s linear infinite;
+}
+@keyframes wire-run {
+  from { stroke-dashoffset: 418; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* Dashboard demo bars rise and settle, then repeat. */
+@utility bar-grow {
+  animation: bar-grow 5s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+@keyframes bar-grow {
+  0% { transform: scaleY(0.15); }
+  18%, 85% { transform: scaleY(1); }
+  100% { transform: scaleY(0.15); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

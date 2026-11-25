@@ -2,7 +2,7 @@
 import Link from 'next/link'
 
 import Logo from '@/components/shadcn-studio/logo'
-import { NAV, SERVICES, SITE } from '@/lib/site'
+import { CUSTOM, NAV, SERVICES, SITE } from '@/lib/site'
 
 const Footer = () => (
   <footer className='border-t'>
@@ -36,6 +36,13 @@ const Footer = () => (
             <li key={s.id}>
               <a href={`/services#${s.id}`} className='text-muted-foreground hover:text-foreground transition-colors'>
                 {s.name}
+              </a>
+            </li>
+          ))}
+          {CUSTOM.map(c => (
+            <li key={c.id}>
+              <a href='/services#custom' className='text-muted-foreground hover:text-foreground transition-colors'>
+                {c.name}
               </a>
             </li>
           ))}
