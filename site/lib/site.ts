@@ -5,6 +5,8 @@ export const SITE = {
   legalName: 'BorneoStack Technology',
   url: 'https://borneostack.com',
   email: 'hello@borneostack.com',
+  // Cal.com booking page for the free 30-minute call, e.g. 'https://cal.com/borneostack/30min'. Empty hides it.
+  bookingUrl: '',
   location: 'Kota Kinabalu, Sabah, Malaysia',
   tagline: 'Business systems that save your team time.'
 }
@@ -174,23 +176,35 @@ export const SERVICES: Service[] = [
 export const PROCESS = [
   {
     id: '01',
+    when: 'Day 1',
     title: 'Free 30-minute call',
-    content: 'You show us the task that eats your team’s time. We tell you honestly whether a system will help, and which package fits.'
+    content: 'You show us the task that eats your team’s time. We tell you honestly whether a system will help, and which package fits.',
+    get: 'A straight answer, even if it is no',
+    pay: 'Nothing'
   },
   {
     id: '02',
+    when: 'Within 2 working days',
     title: 'Fixed price in writing',
-    content: 'Within 2 working days you get a one-page scope: what we build, what is not included, the price and the delivery date.'
+    content: 'A one-page scope: what we build, what is not included, the price, the date, payment and ownership. Ask questions, then sign.',
+    get: 'Your one-page scope',
+    pay: '40% when you sign'
   },
   {
     id: '03',
+    when: '3 days to 3 weeks',
     title: 'Build and check',
-    content: 'We build in short steps and show you working progress during the build, not only at the end.'
+    content: 'We build in short steps and show you each working part. Your 2 rounds of changes happen here, before anything goes live.',
+    get: 'Working previews to test',
+    pay: 'Nothing more'
   },
   {
     id: '04',
-    title: 'Handover and 30 days of fixes',
-    content: 'The system goes live in your accounts with a written guide, a short video and 30 days of free fixes. Then choose a care plan to keep it running.'
+    when: 'Handover day',
+    title: 'Go live and hand over',
+    content: 'The system goes live in your accounts with a written guide and a short video. We fix any defect free for 30 days.',
+    get: 'Live system, guide and video',
+    pay: '60% at go-live'
   }
 ]
 

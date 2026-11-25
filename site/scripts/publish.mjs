@@ -11,6 +11,9 @@ if (!existsSync(join(out, 'index.html'))) throw new Error('No build found. Run `
 for (const entry of readdirSync(web)) rmSync(join(web, entry), { recursive: true, force: true })
 cpSync(out, web, { recursive: true, filter: src => !src.endsWith('.txt') })
 
+// Vercel Functions (the contact form endpoint). Source lives in site/vercel-api/.
+cpSync(resolve(import.meta.dirname, '..', 'vercel-api'), join(web, 'api'), { recursive: true })
+
 // Old pages from the research site, sent to their closest new page.
 const OLD = {
   '/work': '/services',
