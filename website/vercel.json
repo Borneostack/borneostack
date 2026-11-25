@@ -1,73 +1,94 @@
 {
+  "cleanUrls": true,
   "redirects": [
     {
+      "source": "/work",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/work.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/collaborate",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/collaborate.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
       "source": "/research",
-      "destination": "/work.html",
-      "permanent": true
-    },
-    {
-      "source": "/case-studies",
-      "destination": "/work.html",
-      "permanent": true
-    },
-    {
-      "source": "/publications",
-      "destination": "/work.html",
-      "permanent": true
-    },
-    {
-      "source": "/people",
-      "destination": "/about.html",
-      "permanent": true
-    },
-    {
-      "source": "/cs-kinabatangan-flood",
-      "destination": "/work.html#cs-kinabatangan-flood",
-      "permanent": true
-    },
-    {
-      "source": "/cs-ai-code-audit",
-      "destination": "/work.html",
-      "permanent": true
-    },
-    {
-      "source": "/cs-mangroves",
-      "destination": "/work.html#cs-mangroves",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/research.html",
-      "destination": "/work.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/case-studies",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/case-studies.html",
-      "destination": "/work.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/publications",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/publications.html",
-      "destination": "/work.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/people",
+      "destination": "/about",
       "permanent": true
     },
     {
       "source": "/people.html",
-      "destination": "/about.html",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/cs-kinabatangan-flood",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/cs-kinabatangan-flood.html",
-      "destination": "/work.html#cs-kinabatangan-flood",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/cs-ai-code-audit",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/cs-ai-code-audit.html",
-      "destination": "/work.html",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/cs-mangroves",
+      "destination": "/services",
       "permanent": true
     },
     {
       "source": "/cs-mangroves.html",
-      "destination": "/work.html#cs-mangroves",
+      "destination": "/services",
       "permanent": true
     }
   ]

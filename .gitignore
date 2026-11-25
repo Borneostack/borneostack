@@ -34,3 +34,9 @@ mockup/assets/partners/
 
 # private business plan (own private repo: Dxlxz/borneostack-company)
 /borneostack-company/
+
+# local agent tooling: private Dstack clone and licensed shadcn/studio kit
+/agent-framework/
+
+# old static-site generator (holds personal photos); kept locally only
+/mockup/
