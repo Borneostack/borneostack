@@ -10,7 +10,7 @@ import SectionHead from '@/components/neural/section-head'
 import { PROCESS } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
-const EASE = [0.22, 1, 0.36, 1] as const
+const EASE = [0.65, 0, 0.35, 1] as const
 
 const Process = () => {
   const view = { once: true, margin: '0px 0px -15% 0px' } as const

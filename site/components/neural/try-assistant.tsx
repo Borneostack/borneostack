@@ -14,7 +14,7 @@ import { PASSAGES, SUGGESTIONS, ask, highlight, type Result } from '@/lib/ask'
 import { SITE } from '@/lib/site'
 
 const DOCS = Array.from(new Set(PASSAGES.map(p => p.doc)))
-const EASE = [0.22, 1, 0.36, 1] as const
+const EASE = [0.65, 0, 0.35, 1] as const
 
 type Turn = { id: number; result: Result | null } // null while searching
 

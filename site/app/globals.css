@@ -264,10 +264,10 @@
       radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgb(43 123 255 / calc(0.16 * var(--spot))), transparent 65%),
       linear-gradient(180deg, rgb(255 255 255 / 0.065), rgb(255 255 255 / 0.025));
     transition:
-      --spot 0.5s ease,
-      translate 0.6s cubic-bezier(0.22, 1, 0.36, 1),
-      border-color 0.5s ease,
-      box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+      --spot 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+      translate 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+      border-color 0.5s cubic-bezier(0.65, 0, 0.35, 1),
+      box-shadow 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   }
   article.glass:hover {
     --spot: 1;
@@ -275,4 +275,19 @@
     border-color: rgb(43 123 255 / 0.35);
     box-shadow: 0 28px 70px -34px rgb(43 123 255 / 0.6);
   }
+}
+
+/* Hero entrance, in CSS so it starts the moment the page arrives (before scripts load). Ease-in-out.
+   --d is each element's delay; --rise is how far it travels. */
+@keyframes hero-rise {
+  from { opacity: 0; translate: 0 var(--rise, 16px); }
+}
+@utility hero-rise {
+  animation: hero-rise 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0s) both;
+}
+@keyframes word-rise {
+  from { opacity: 0; translate: 0 100%; }
+}
+@utility word-rise {
+  animation: word-rise 0.8s cubic-bezier(0.65, 0, 0.35, 1) var(--d, 0s) both;
 }

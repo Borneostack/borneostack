@@ -67,7 +67,7 @@ const CTA = ({
               transition={{
                 duration: 0.6,
                 delay: 0.6,
-                ease: [0.22, 1, 0.36, 1]
+                ease: [0.65, 0, 0.35, 1]
               }}
             />
           </div>
@@ -81,7 +81,7 @@ const CTA = ({
               transition={{
                 duration: 1.1,
                 delay: 0.7,
-                ease: [0.22, 1, 0.36, 1]
+                ease: [0.65, 0, 0.35, 1]
               }}
             />
           </div>
@@ -94,7 +94,7 @@ const CTA = ({
             transition={{
               duration: 1.2,
               delay: 0.72,
-              ease: [0.22, 1, 0.36, 1]
+              ease: [0.65, 0, 0.35, 1]
             }}
           />
           <motion.div

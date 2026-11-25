@@ -1,14 +1,17 @@
 'use client'
 
-// Smooth, weighted page scrolling: in-page links glide to their section and stop below the fixed header.
+// Native wheel and touch scrolling; in-page links glide to their section on an ease-in-out curve and stop below
+// the fixed header.
 // Also feeds the pointer position to glass cards for their hover spotlight (globals.css, article.glass).
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import 'lenis/dist/lenis.css'
 
+const easeInOutCubic = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
+
 const SmoothScroll = () => {
   useEffect(() => {
-    const lenis = new Lenis({ lerp: 0.09, wheelMultiplier: 1, autoRaf: true })
+    const lenis = new Lenis({ smoothWheel: false, autoRaf: true })
 
     const spot = (e: PointerEvent) => {
       const card = (e.target as Element | null)?.closest?.('article.glass') as HTMLElement | null
@@ -25,7 +28,7 @@ const SmoothScroll = () => {
       if (!el) return
       e.preventDefault()
       history.pushState(null, '', link.hash)
-      lenis.scrollTo(el.getBoundingClientRect().top + window.scrollY - 96, { duration: 1.4 })
+      lenis.scrollTo(el.getBoundingClientRect().top + window.scrollY - 96, { duration: 1.2, easing: easeInOutCubic })
     }
     window.addEventListener('pointermove', spot, { passive: true })
     document.addEventListener('click', jump)
