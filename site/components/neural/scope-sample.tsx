@@ -3,6 +3,7 @@ import { CheckIcon, FileTextIcon, PlayCircleIcon, XIcon } from 'lucide-react'
 
 import SectionHead from '@/components/neural/section-head'
 import Reveal from '@/components/neural/reveal'
+import { CARE_PLANS } from '@/lib/site'
 
 const HANDOVER = [
   { icon: FileTextIcon, text: 'Written guide: how it works and how to change it' },
@@ -67,7 +68,7 @@ const ScopeSample = () => (
             <Row k='Delivery'>1 week from your approval</Row>
             <Row k='Changes'>2 rounds included</Row>
             <Row k='Ownership'>Your data and accounts stay yours. Licence to use the system; copyright stays with BorneoStack.</Row>
-            <Row k='After handover'>30 days of free fixes. Care plan optional, from USD 39 a month.</Row>
+            <Row k='After handover'>30 days of free fixes. Care plan optional, from USD {CARE_PLANS[0].usd} a month.</Row>
           </dl>
 
           <footer className='mt-5 flex items-center justify-between border-t border-[#0b1220]/10 pt-4 text-xs text-[#55607a]'>

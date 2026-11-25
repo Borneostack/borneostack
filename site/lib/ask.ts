@@ -1,11 +1,11 @@
 // The "ask our documents" demo. It searches only what this site already publishes (lib/site.ts), ranks passages
 // with BM25, and quotes the best one with its source. No model writes the answer, so it cannot invent a fact.
-import { CARE_PLANS, CUSTOM, FAQS, SOLUTIONS, FOUNDING, PROCESS, SERVICES, SITE, TERMS, foundingLeft } from '@/lib/site'
+import { CARE_PLANS, CARE_YEARLY_MONTHS, CUSTOM, FAQS, SOLUTIONS, FOUNDING, PROCESS, SERVICES, SITE, TERMS, foundingLeft } from '@/lib/site'
 
 export type Passage = { id: string; doc: string; title: string; text: string; href: string }
 
 const care = (p: (typeof CARE_PLANS)[number]) =>
-  `${p.name} care plan: USD ${p.usd} a month (${p.myr}). ${p.summary} Includes: ${p.features.join('; ')}.`
+  `${p.name} care plan: USD ${p.usd} a month (${p.myr}), or USD ${p.usd * CARE_YEARLY_MONTHS} a year paid yearly, 2 months free. ${p.fits}. ${p.summary} Includes: ${p.features.join('; ')}.`
 
 export const PASSAGES: Passage[] = [
   ...FAQS.map((f, n) => ({ id: `faq-${n}`, doc: 'FAQ', title: f.question, text: f.answer, href: '/#faq' })),
@@ -92,6 +92,14 @@ const SYNONYMS: Record<string, string[]> = {
   portal: ['portal', 'login', 'customers'],
   website: ['website', 'landing', 'frontend'],
   map: ['maps', 'gis', 'locations'],
+  yearly: ['year', 'yearly', 'months'],
+  annual: ['year', 'yearly', 'months'],
+  annually: ['year', 'yearly'],
+  monthly: ['month', 'care'],
+  plan: ['month'],
+  plans: ['month'],
+  subscription: ['care', 'month'],
+  retainer: ['care', 'month'],
   lead: ['leads', 'enquiry', 'crm'],
   leads: ['enquiry', 'crm', 'follow'],
   sales: ['leads', 'enquiry'],

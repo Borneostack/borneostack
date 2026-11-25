@@ -46,7 +46,7 @@ time.
 - Founding-client offer: 20% off any package for the first 15 clients (one per company). Count kept in
   `site/lib/site.ts` (FOUNDING.taken).
 - Payment 40% on signing, 60% at handover. Source code and copyright transfer: +50% of the build price.
-- Care plans after the 30 free days: Essential USD 39, Standard USD 99, Priority USD 249 a month. Ad-hoc work USD 35
+- Care plans after the 30 free days, matched to system size: Essential USD 19, Standard USD 49, Priority USD 129 a month; paid yearly, 2 months free. Founding prices end in 9 (USD 150 list, USD 119 founding). Ad-hoc work USD 35
   per hour (minimum 1 hour).
 - Every project: one-page written scope, 2 rounds of changes, handover guide and video, 30 days of free fixes for
   defects.

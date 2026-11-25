@@ -6,7 +6,7 @@ import { CheckIcon, ClockIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import SectionHead from '@/components/neural/section-head'
-import { FOUNDING, SERVICES, foundingLeft, foundingMyr, foundingPrice, type Service } from '@/lib/site'
+import { FOUNDING, SERVICES, foundingLeft, foundingMyr, foundingPrice, foundingSave, type Service } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const Plans = ({ service }: { service: Service }) => (
@@ -41,7 +41,12 @@ const Plans = ({ service }: { service: Service }) => (
                   {t.price}
                 </s>
               </p>
-              <p className='text-primary mt-1 text-xs font-semibold'>Founding-client price, {FOUNDING.percent}% off</p>
+              <p className='mt-2 flex flex-wrap items-center gap-2 text-xs'>
+                <span className='bg-primary/15 text-primary rounded-full px-2 py-0.5 font-semibold'>
+                  You save {foundingSave(t.price)}
+                </span>
+                <span className='text-muted-foreground'>Founding-client price</span>
+              </p>
             </>
           ) : (
             <p className='mt-6 text-4xl font-extrabold tracking-tight tabular-nums'>{t.price}</p>

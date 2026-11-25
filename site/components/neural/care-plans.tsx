@@ -4,7 +4,7 @@ import { CheckIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import SectionHead from '@/components/neural/section-head'
 import Reveal from '@/components/neural/reveal'
-import { CARE_PLANS, TERMS } from '@/lib/site'
+import { CARE_PLANS, CARE_YEARLY_MONTHS, TERMS } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const CarePlans = ({ id = 'care' }: { id?: string }) => (
@@ -12,7 +12,7 @@ const CarePlans = ({ id = 'care' }: { id?: string }) => (
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>
       <SectionHead
         title='Care plans that keep your system working'
-        description={`Google, WhatsApp, AI providers and other apps change their systems often. A care plan means someone is watching yours and fixing it when they do. Start after the ${TERMS.warrantyDays} free days, cancel with 30 days notice.`}
+        description={`Apps and AI providers change their systems often. A care plan means someone is watching yours and fixing it when they do. The plan matches the size of your system, and we recommend one in your scope. Start after the ${TERMS.warrantyDays} free days, cancel with 30 days notice.`}
       />
 
       <div className='mt-12 grid gap-4 md:grid-cols-3'>
@@ -27,13 +27,24 @@ const CarePlans = ({ id = 'care' }: { id?: string }) => (
                   featured && 'border-primary/70 bg-primary/[0.08] shadow-[0_0_80px_-30px_#2b7bff]'
                 )}
               >
-                <h3 className='text-xl'>{p.name}</h3>
+                <div className='flex flex-wrap items-center justify-between gap-2'>
+                  <h3 className='text-xl'>{p.name}</h3>
+                  <span className='text-muted-foreground rounded-full border border-white/10 px-2.5 py-0.5 text-xs'>
+                    {p.fits}
+                  </span>
+                </div>
                 <p className='text-muted-foreground mt-1 text-sm'>{p.summary}</p>
                 <p className='mt-5 flex items-baseline gap-1'>
                   <span className='text-4xl font-extrabold tracking-tight tabular-nums'>USD {p.usd}</span>
                   <span className='text-muted-foreground text-sm'>/ month</span>
                 </p>
                 <p className='text-muted-foreground mt-1 text-sm'>{p.myr} a month</p>
+                <p className='mt-2 text-xs'>
+                  <span className='bg-primary/15 text-primary rounded-full px-2 py-0.5 font-semibold'>
+                    2 months free
+                  </span>{' '}
+                  <span className='text-muted-foreground'>paid yearly: USD {(p.usd * CARE_YEARLY_MONTHS).toLocaleString('en-US')} a year</span>
+                </p>
                 <ul className='mt-6 flex-1 space-y-3 border-t pt-6 text-sm'>
                   {p.features.map(f => (
                     <li key={f} className='flex gap-2.5'>
@@ -43,7 +54,10 @@ const CarePlans = ({ id = 'care' }: { id?: string }) => (
                   ))}
                 </ul>
                 <Button
-                  className={cn('mt-6 h-10 rounded-xl', !featured && 'bg-secondary text-foreground hover:bg-secondary/80')}
+                  className={cn(
+                    'mt-6 h-10 rounded-xl',
+                    !featured && 'bg-secondary text-foreground hover:bg-secondary/80'
+                  )}
                   render={<a href='/contact' />}
                   nativeButton={false}
                 >

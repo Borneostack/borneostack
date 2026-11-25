@@ -7,7 +7,7 @@ import { ArrowRightIcon, CalendarClockIcon, PackageCheckIcon, WalletIcon } from 
 
 import { Button } from '@/components/ui/button'
 import SectionHead from '@/components/neural/section-head'
-import { PROCESS } from '@/lib/site'
+import { CARE_PLANS, PROCESS } from '@/lib/site'
 import { cn } from '@/lib/utils'
 
 const EASE = [0.65, 0, 0.35, 1] as const
@@ -97,7 +97,7 @@ const Process = () => {
             Start with step 1: book a free call
             <ArrowRightIcon />
           </Button>
-          <p className='text-muted-foreground text-sm'>After go-live, a care plan keeps it running. Optional, from USD 39 a month.</p>
+          <p className='text-muted-foreground text-sm'>After go-live, a care plan keeps it running. Optional, from USD {CARE_PLANS[0].usd} a month.</p>
         </div>
       </div>
     </section>

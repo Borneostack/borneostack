@@ -7,7 +7,7 @@ import { ArrowRightIcon, ShieldCheckIcon } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Words from '@/components/neural/words'
 import HeroPanel from '@/components/neural/hero-panel'
-import { FOUNDING, foundingLeft } from '@/lib/site'
+import { CARE_PLANS, FOUNDING, foundingLeft } from '@/lib/site'
 
 const Hero = () => (
   <section className='relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-28'>
@@ -73,7 +73,7 @@ const Hero = () => (
         <p className='text-muted-foreground mt-5 flex items-start gap-2 text-sm sm:items-center'>
           <ShieldCheckIcon className='text-primary mt-0.5 size-4 shrink-0 sm:mt-0' />
           Packages from USD 150. Written scope and price before any payment. 30 days of free fixes, then care plans from
-          USD 39 a month.
+          USD {CARE_PLANS[0].usd} a month.
         </p>
       </div>
 

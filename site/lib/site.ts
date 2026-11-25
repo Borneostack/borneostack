@@ -379,11 +379,13 @@ export const foundingLeft = () => Math.max(0, FOUNDING.total - FOUNDING.taken)
 
 const usd = (s: string) => Number(s.replace(/[^0-9]/g, ''))
 const fmt = (n: number) => n.toLocaleString('en-US')
-// Founding price for a list price like 'USD 1,200': 20% off, rounded to the nearest 10.
-export const foundingPrice = (price: string) => `USD ${fmt(Math.round((usd(price) * (100 - FOUNDING.percent)) / 1000) * 10)}`
-export const foundingMyr = (price: string) =>
-  `about RM${fmt(Math.round((usd(price) * (100 - FOUNDING.percent) * 4.4) / 1000) * 10)}`
-
+// Pricing psychology: list prices stay round (round numbers signal quality and trust in services), while the founding
+// price ends in 9 (a 9-ending signals a deal, and often drops the first digit: 400 becomes 399). Above USD 100 a saving
+// reads bigger as an amount than as a percentage, so cards show "You save USD 81" rather than "20% off".
+const foundingUsd = (price: string) => Math.round((usd(price) * (100 - FOUNDING.percent)) / 1000) * 10 - 1
+export const foundingPrice = (price: string) => `USD ${fmt(foundingUsd(price))}`
+export const foundingSave = (price: string) => `USD ${fmt(usd(price) - foundingUsd(price))}`
+export const foundingMyr = (price: string) => `about RM${fmt(Math.round((foundingUsd(price) * 4.4) / 10) * 10)}`
 
 // Terms that keep the studio sustainable. Research and reasons: borneostack-company/decisions/DEC-008.
 export const TERMS = {
@@ -393,31 +395,43 @@ export const TERMS = {
   warrantyDays: 30
 }
 
-export type CarePlan = { id: string; name: string; usd: number; myr: string; summary: string; features: string[] }
+// Care plans are matched to the size of the system: a small automation needs far less looking after than several
+// connected systems. Paid yearly, 2 months are free.
+export type CarePlan = {
+  id: string
+  name: string
+  usd: number
+  myr: string
+  fits: string
+  summary: string
+  features: string[]
+}
+export const CARE_YEARLY_MONTHS = 10
 export const CARE_PLANS: CarePlan[] = [
   {
     id: 'essential',
     name: 'Essential',
-    usd: 39,
-    myr: 'about RM170',
-    summary: 'Keep one system running safely.',
+    usd: 19,
+    myr: 'about RM85',
+    fits: 'Fits a Starter package',
+    summary: 'Keep one small system running safely.',
     features: [
       'Daily error monitoring and alerts',
-      'Fixes when a connected app or API changes',
+      'Fixes when a connected app changes, up to 1 hour a month',
       'Monthly health check',
-      'Up to 30 minutes of small changes',
       'Reply within 2 working days'
     ]
   },
   {
     id: 'standard',
     name: 'Standard',
-    usd: 99,
-    myr: 'about RM440',
-    summary: 'For systems your team uses every day.',
+    usd: 49,
+    myr: 'about RM215',
+    fits: 'Fits a Standard package',
+    summary: 'For a system your team uses every day.',
     features: [
       'Everything in Essential',
-      'Up to 2 hours of changes each month',
+      'Up to 2 hours of fixes and changes each month',
       'Reply within 1 working day',
       'Monthly usage and cost report',
       'Backups checked monthly'
@@ -426,12 +440,13 @@ export const CARE_PLANS: CarePlan[] = [
   {
     id: 'priority',
     name: 'Priority',
-    usd: 249,
-    myr: 'about RM1,100',
-    summary: 'For several systems or business-critical work.',
+    usd: 129,
+    myr: 'about RM570',
+    fits: 'Fits an Advanced package',
+    summary: 'For business-critical work or up to 3 systems.',
     features: [
       'Everything in Standard',
-      'Up to 6 hours of changes each month',
+      'Up to 5 hours of fixes and changes each month',
       'Same-day reply on working days',
       'Quarterly review of what to improve next',
       'Covers up to 3 systems'
