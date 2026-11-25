@@ -165,21 +165,18 @@
     radial-gradient(ellipse 50% 45% at 50% 0%, rgb(43 123 255 / 0.18), transparent 75%);
 }
 
-/* Hero light beam. Position comes from --bx on the hero panel. */
+/* Hero light beam. Position comes from --bx on the hero panel.
+   The smoke is a still image, baked once from an SVG turbulence filter: running that filter live re-rendered a
+   900 by 640 area on every frame. It now moves with transform only, which the GPU does for free. */
 @utility beam-smoke {
-  background:
-    radial-gradient(ellipse 12% 80% at 50% 100%, rgb(130 180 255 / 0.85), transparent 70%),
-    radial-gradient(ellipse 30% 40% at 40% 82%, rgb(43 123 255 / 0.75), transparent 70%),
-    radial-gradient(ellipse 30% 50% at 62% 72%, rgb(43 123 255 / 0.8), transparent 70%),
-    radial-gradient(ellipse 22% 35% at 74% 30%, rgb(60 120 255 / 0.45), transparent 70%),
-    radial-gradient(ellipse 20% 30% at 34% 45%, rgb(60 120 255 / 0.3), transparent 70%);
-  filter: url(#beam-smoke);
-  mask-image: linear-gradient(to top, black 30%, transparent);
+  background: url(/beam-smoke.webp) center / 100% 100% no-repeat;
+  will-change: transform;
   animation: beam-drift 14s ease-in-out infinite alternate;
 }
 @utility beam-core {
   background: linear-gradient(to bottom, rgb(140 190 255 / 0.3), rgb(200 225 255 / 0.9) 20%, #ffffff 60%);
   box-shadow: 0 0 4px 1px #fff, 0 0 14px 3px rgb(170 205 255 / 0.95), 0 0 40px 8px rgb(43 123 255 / 0.8), 0 0 110px 24px rgb(43 123 255 / 0.4);
+  will-change: opacity;
   animation: beam-pulse 4s ease-in-out infinite;
 }
 @utility beam-foot {
@@ -192,6 +189,7 @@
     radial-gradient(ellipse 40% 26% at 50% 50%, rgb(190 215 255 / 1), transparent 75%),
     radial-gradient(ellipse 55% 60% at 50% 50%, rgb(43 123 255 / 0.65), transparent 75%);
   filter: blur(3px);
+  will-change: opacity;
   animation: beam-pulse 4s ease-in-out infinite;
 }
 @utility beam-edge {
@@ -215,15 +213,32 @@
   to { transform: translateY(-14px) scale(1.05); }
 }
 
+/* A spark of light falling down the beam. The spark moves with transform, so it never repaints. */
 @utility beam-spark {
-  background: linear-gradient(to bottom, transparent 0%, transparent 42%, #ffffff 50%, transparent 58%, transparent 100%);
-  background-size: 100% 220%;
-  filter: drop-shadow(0 0 6px #9fc4ff);
-  animation: beam-fall 3.2s cubic-bezier(0.55, 0, 0.8, 0.6) infinite;
+  overflow: hidden;
+  &::after {
+    content: '';
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 35%;
+    background: linear-gradient(to bottom, transparent, #ffffff 50%, transparent);
+    filter: drop-shadow(0 0 6px #9fc4ff);
+    will-change: transform;
+    animation: beam-fall 3.2s cubic-bezier(0.55, 0, 0.8, 0.6) infinite;
+  }
 }
 @keyframes beam-fall {
-  from { background-position: 0 100%; }
-  to { background-position: 0 0%; }
+  from { transform: translateY(-78%); }
+  to { transform: translateY(263%); }
+}
+
+/* A section's endless animations stop while it is scrolled out of view (set in smooth-scroll.tsx). */
+@utility anim-off {
+  & *,
+  & *::after {
+    animation-play-state: paused !important;
+  }
 }
 /* Light pulses that travel along diagram wires. */
 @utility wire-pulse {
@@ -246,8 +261,8 @@
 }
 
 @keyframes tab-progress {
-  from { width: 0%; }
-  to { width: 100%; }
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
 }
 
 

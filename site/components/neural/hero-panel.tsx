@@ -2,7 +2,7 @@
 
 // The hero product panel: one window that shows all three systems we build, with sample data. It moves to the next
 // system on its own, and the visitor can pick one. The light beam lands on its top edge.
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import {
   BarChart3Icon,
@@ -32,17 +32,6 @@ const DWELL = 9000
 // light down the panel's right side. --bx sets where the beam lands on the panel.
 const LightBeam = () => (
   <div aria-hidden className='pointer-events-none absolute inset-0 -z-10 select-none'>
-    <svg className='absolute size-0'>
-      <filter id='beam-smoke' x='-20%' y='-20%' width='140%' height='140%'>
-        <feTurbulence type='fractalNoise' baseFrequency='0.008 0.014' numOctaves='4' seed='7'>
-          <animate attributeName='baseFrequency' dur='18s' values='0.008 0.014;0.011 0.018;0.008 0.014' repeatCount='indefinite' />
-        </feTurbulence>
-        <feDisplacementMap in='SourceGraphic' scale='120'>
-          <animate attributeName='scale' dur='11s' values='110;150;110' repeatCount='indefinite' />
-        </feDisplacementMap>
-        <feGaussianBlur stdDeviation='6' />
-      </filter>
-    </svg>
     <div className='beam-smoke absolute bottom-full left-(--bx) h-[200px] w-[520px] -translate-x-1/2 opacity-60 sm:h-[640px] sm:w-[900px] sm:opacity-100' />
     <div className='beam-core absolute bottom-full left-(--bx) h-[190px] w-[3px] -translate-x-1/2 sm:h-[760px]' />
     <div className='beam-spark absolute bottom-full left-(--bx) h-[190px] w-[3px] -translate-x-1/2 sm:h-[760px]' />
@@ -69,16 +58,17 @@ const LOG = [
   ['09:14:06', 'Delivery team notified']
 ]
 
-const AutomationView = () => {
+const AutomationView = ({ live }: { live: boolean }) => {
   const [tick, setTick] = useState(0)
   const step = Math.min(tick, FLOW.length)
 
   useEffect(() => {
+    if (!live) return
     // Light one step at a time, hold the finished run for 3 ticks, then start again.
     const id = setInterval(() => setTick(t => (t >= FLOW.length + 3 ? 0 : t + 1)), 1000)
 
     return () => clearInterval(id)
-  }, [])
+  }, [live])
 
   return (
     <div className='grid h-full gap-5 lg:grid-cols-[1.3fr_1fr]'>
@@ -92,7 +82,9 @@ const AutomationView = () => {
               <span
                 className={cn(
                   'relative z-10 grid size-10 shrink-0 place-items-center rounded-xl border transition-all duration-500',
-                  done ? 'border-primary bg-primary text-primary-foreground shadow-[0_0_24px_-4px_#2b7bff]' : 'bg-background text-muted-foreground'
+                  done
+                    ? 'border-primary bg-primary text-primary-foreground shadow-[0_0_24px_-4px_#2b7bff]'
+                    : 'bg-background text-muted-foreground'
                 )}
               >
                 {done ? <CheckIcon className='size-4.5' /> : <Icon className='size-4.5' />}
@@ -115,7 +107,10 @@ const AutomationView = () => {
         <p className='text-muted-foreground text-xs font-medium'>Run log</p>
         <ul className='mt-3 space-y-2 font-mono text-xs'>
           {LOG.map(([t, msg], n) => (
-            <li key={t} className={cn('flex gap-3 transition-opacity duration-500', n < step ? 'opacity-100' : 'opacity-25')}>
+            <li
+              key={t}
+              className={cn('flex gap-3 transition-opacity duration-500', n < step ? 'opacity-100' : 'opacity-25')}
+            >
               <span className='text-muted-foreground tabular-nums'>{t}</span>
               <span>{msg}</span>
             </li>
@@ -166,7 +161,11 @@ const DOCS = ['Staff handbook 2026.pdf', 'Claims policy v4.pdf', 'Safety manual.
 const Typing = () => (
   <span className='flex gap-1' aria-label='Assistant is typing'>
     {[0, 1, 2].map(i => (
-      <span key={i} className='bg-muted-foreground size-1.5 animate-pulse rounded-full' style={{ animationDelay: `${i * 0.15}s` }} />
+      <span
+        key={i}
+        className='bg-muted-foreground size-1.5 animate-pulse rounded-full'
+        style={{ animationDelay: `${i * 0.15}s` }}
+      />
     ))}
   </span>
 )
@@ -291,7 +290,11 @@ const DashboardView = () => (
       </div>
       <div className='bg-background/60 flex min-h-40 flex-1 flex-col rounded-xl border p-3'>
         <p className='text-muted-foreground text-xs'>Daily sales, all branches</p>
-        <div className='mt-3 flex flex-1 items-end gap-2' role='img' aria-label='Example bar chart of daily sales across one week'>
+        <div
+          className='mt-3 flex flex-1 items-end gap-2'
+          role='img'
+          aria-label='Example bar chart of daily sales across one week'
+        >
           {WEEK.map(({ d, v }, i) => (
             <div key={d} className='flex h-full flex-1 flex-col items-center justify-end gap-1.5'>
               <div
@@ -332,19 +335,32 @@ const DashboardView = () => (
 const HeroPanel = () => {
   const [view, setView] = useState<ViewId>('automation')
   const [paused, setPaused] = useState(false)
+  const [visible, setVisible] = useState(true)
+  const ref = useRef<HTMLElement>(null)
+
+  // Timers stop while the panel is out of view, so the page does no work for a panel nobody sees.
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting))
+    io.observe(el)
+
+    return () => io.disconnect()
+  }, [])
 
   useEffect(() => {
-    if (paused) return
+    if (paused || !visible) return
     const id = setTimeout(() => {
       const n = VIEWS.findIndex(v => v.id === view)
       setView(VIEWS[(n + 1) % VIEWS.length].id)
     }, DWELL)
 
     return () => clearTimeout(id)
-  }, [view, paused])
+  }, [view, paused, visible])
 
   return (
     <figure
+      ref={ref}
       className='relative mt-16 text-left [--bx:76%] sm:mt-20 sm:[--bx:70%]'
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
@@ -352,7 +368,7 @@ const HeroPanel = () => {
       onBlur={() => setPaused(false)}
     >
       <LightBeam />
-      <div className='to-primary/10 relative overflow-hidden rounded-3xl bg-linear-to-b from-sky-500/20 p-2 shadow-[inset_0.5px_0.5px_0.5px_0_#fff,inset_-0.5px_-0.5px_0.5px_0_#2b7bff] backdrop-blur-md sm:p-3'>
+      <div className='to-primary/10 relative overflow-hidden rounded-3xl bg-linear-to-b from-sky-500/20 p-2 shadow-[inset_0.5px_0.5px_0.5px_0_#fff,inset_-0.5px_-0.5px_0.5px_0_#2b7bff] sm:p-3'>
         <div className='overflow-hidden rounded-2xl border bg-[#070b14]/90'>
           <div className='flex flex-wrap items-center justify-between gap-3 border-b px-3 py-2.5 sm:px-4'>
             <div role='group' aria-label='Choose an example system' className='flex gap-0.5 sm:gap-1'>
@@ -373,11 +389,11 @@ const HeroPanel = () => {
                     <Icon className={cn('size-3.5 sm:size-4', active && 'text-primary')} />
                     <span className='sm:hidden'>{short}</span>
                     <span className='max-sm:hidden'>{label}</span>
-                    {active && !paused && (
+                    {active && !paused && visible && (
                       <span
                         key={id}
                         aria-hidden
-                        className='bg-primary absolute bottom-0 left-0 h-0.5 animate-[tab-progress_linear_forwards]'
+                        className='bg-primary absolute bottom-0 left-0 h-0.5 w-full origin-left animate-[tab-progress_linear_forwards]'
                         style={{ animationDuration: `${DWELL}ms` }}
                       />
                     )}
@@ -395,12 +411,12 @@ const HeroPanel = () => {
               <motion.div
                 key={view}
                 className='h-full'
-                initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
-                animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                exit={{ opacity: 0, y: -10, filter: 'blur(6px)' }}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.35 }}
               >
-                {view === 'automation' && <AutomationView />}
+                {view === 'automation' && <AutomationView live={visible} />}
                 {view === 'assistant' && <AssistantView />}
                 {view === 'dashboard' && <DashboardView />}
               </motion.div>

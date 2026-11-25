@@ -13,11 +13,12 @@ import { cn } from '@/lib/utils'
 
 const Header = () => {
   const pathname = usePathname()
-  const isActive = (href: string) => (href === '/' ? pathname === '/' : !href.includes('#') && pathname.startsWith(href))
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : !href.includes('#') && pathname.startsWith(href)
 
   return (
     <header className='fixed inset-x-0 top-3 z-50 px-3 sm:top-5 sm:px-4'>
-      <div className='mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#0a0e17]/85 pr-2 pl-4 backdrop-blur-xl'>
+      <div className='mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 rounded-2xl border border-white/10 bg-[#0a0e17]/85 pr-2 pl-4 backdrop-blur-md'>
         <Link href='/' aria-label='BorneoStack home'>
           <Logo />
         </Link>

@@ -13,7 +13,7 @@ const Hero = () => (
   <section className='relative isolate overflow-hidden pt-32 pb-20 sm:pt-40 lg:pb-28'>
     <div
       aria-hidden
-      className='bg-primary/10 pointer-events-none absolute -top-40 left-1/2 -z-20 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-3xl'
+      className='pointer-events-none absolute -top-40 left-1/2 -z-20 h-[520px] w-[900px] -translate-x-1/2 bg-[radial-gradient(closest-side,rgb(43_123_255/0.1)_40%,transparent)]'
     />
 
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>

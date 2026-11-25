@@ -33,8 +33,21 @@ const SmoothScroll = () => {
     window.addEventListener('pointermove', spot, { passive: true })
     document.addEventListener('click', jump)
 
+    // Endless CSS animations (beams, wires, waveforms, the logo strip) pause while their section is out of view.
+    const io = new IntersectionObserver(entries => {
+      for (const e of entries) e.target.classList.toggle('anim-off', !e.isIntersecting)
+    })
+    const watch = () => document.querySelectorAll('main section, footer').forEach(el => io.observe(el))
+    watch()
+    // A client-side page change swaps the sections inside main, so watch the new ones too.
+    const mo = new MutationObserver(watch)
+    const main = document.getElementById('main')
+    if (main) mo.observe(main, { childList: true })
+
     return () => {
       lenis.destroy()
+      io.disconnect()
+      mo.disconnect()
       window.removeEventListener('pointermove', spot)
       document.removeEventListener('click', jump)
     }
