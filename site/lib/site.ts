@@ -107,7 +107,7 @@ export const SERVICES: Service[] = [
         myr: 'about RM1,100',
         time: '5 days',
         summary: 'Up to 20 documents, web chat with sources.',
-        features: ['Up to 20 documents', 'Web chat with page sources', 'English and Malay questions', '2 rounds of changes']
+        features: ['Up to 20 documents', 'Web chat with page sources', 'Questions in any language', '2 rounds of changes']
       },
       {
         id: 'assistant-standard',
@@ -295,6 +295,82 @@ export const CUSTOM = [
 // Client reviews. Add only real words from real clients, with their permission to publish.
 // The reviews section stays hidden while this list is empty.
 export type Review = { name: string; role?: string; project?: string; rating: number; quote: string }
+// More systems we build beyond the three packages. Each is scoped and priced in writing after a free call.
+export const SOLUTIONS = [
+  {
+    id: 'chatbot',
+    name: 'AI chatbot',
+    pitch: 'Answers your customers on your website or WhatsApp, day and night, from your own prices and policies.',
+    example: 'Hands the chat to a person when it cannot help, with the full conversation attached.'
+  },
+  {
+    id: 'voice-agent',
+    name: 'AI voice agent',
+    pitch: 'Picks up phone calls, answers common questions and takes bookings or orders, in whatever language your callers speak.',
+    example: 'Every call is logged with a short summary, and urgent ones are passed to your team.'
+  },
+  {
+    id: 'leads',
+    name: 'AI lead follow-up',
+    pitch: 'Replies to every new enquiry from your website, WhatsApp or ads straight away, asks the right questions and books the call.',
+    example: 'Each lead lands in your sheet or CRM with a short summary.'
+  },
+  {
+    id: 'voiceover',
+    name: 'AI voiceover',
+    pitch: 'Natural narration for product videos, ads, training and announcements.',
+    example: 'Any voice, any language, revised until it sounds right.'
+  },
+  {
+    id: 'content',
+    name: 'AI content assistant',
+    pitch: 'Drafts posts, product descriptions, replies and translations in any language, in your tone.',
+    example: 'Nothing is published until a person on your team approves it.'
+  },
+  {
+    id: 'booking',
+    name: 'Booking system',
+    pitch: 'Online booking with deposits, reminders and a calendar your staff can manage.',
+    example: 'Clinics, salons, rentals, tours and classes.'
+  },
+  {
+    id: 'management',
+    name: 'Management system',
+    pitch: 'One place for orders, stock, staff, customers or projects, with roles for each team.',
+    example: 'Inventory, simple CRM, job tracking, HR records.'
+  },
+  {
+    id: 'tools',
+    name: 'Business tools',
+    pitch: 'Small tools that remove daily busywork: quote builders, calculators and form-to-PDF.',
+    example: 'Approval flows, invoice generators, price calculators.'
+  },
+  {
+    id: 'portal',
+    name: 'Customer portal',
+    pitch: 'A login where your customers see their orders, documents, bookings and invoices.',
+    example: 'Fewer "what is the status?" calls and messages.'
+  },
+  {
+    id: 'website',
+    name: 'Website',
+    pitch: 'A fast company website or landing page that is easy to update and connects to your systems.',
+    example: 'Contact forms that land in your sheet or inbox.'
+  },
+  {
+    id: 'design',
+    name: 'UI and UX design',
+    pitch: 'Screens and clickable prototypes in Figma, tested with your team before any code is written.',
+    example: 'App and website designs, design systems, redesigns of an existing tool.'
+  },
+  {
+    id: 'mapping',
+    name: 'Maps and GIS',
+    pitch: 'Interactive maps of your sites, assets, customers or deliveries, built on your own data and kept up to date.',
+    example: 'Asset and site maps, delivery zones, field data collection and spatial reports, on the platform that suits you.'
+  }
+] as const
+
 export const REVIEWS: Review[] = []
 
 // Founding-client offer. Update `taken` each time a founding client signs a scope; the site shows places left.

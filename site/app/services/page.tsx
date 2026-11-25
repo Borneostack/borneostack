@@ -4,6 +4,7 @@ import { CheckIcon } from 'lucide-react'
 import PageHead from '@/components/site/page-head'
 import { Plans } from '@/components/neural/pricing'
 import FAQ from '@/components/neural/faq'
+import Solutions from '@/components/neural/solutions'
 import Custom from '@/components/neural/custom'
 import CarePlans from '@/components/neural/care-plans'
 import CTA from '@/components/neural/cta'
@@ -35,6 +36,9 @@ export default function ServicesPage() {
         <a href='#custom' className='glass hover:border-primary/60 rounded-xl px-4 py-2 text-sm font-medium transition-colors'>
           Frontend, backend and system design
         </a>
+        <a href='#solutions' className='glass hover:border-primary/60 rounded-xl px-4 py-2 text-sm font-medium transition-colors'>
+          AI chatbots, voice, booking and more
+        </a>
       </nav>
 
       {SERVICES.map(s => (
@@ -60,6 +64,7 @@ export default function ServicesPage() {
       ))}
 
       <CarePlans />
+      <Solutions />
       <Custom />
 
       <section className='mx-auto max-w-6xl px-4 sm:px-6'>

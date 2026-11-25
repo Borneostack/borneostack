@@ -1,6 +1,7 @@
 import Hero from '@/components/neural/hero'
 import Hub from '@/components/neural/hub'
 import Problem from '@/components/neural/problem'
+import Solutions from '@/components/neural/solutions'
 import Showcase from '@/components/neural/showcase'
 import Custom from '@/components/neural/custom'
 import TryAssistant from '@/components/neural/try-assistant'
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Hero />
       <Problem />
       <Hub />
+      <Solutions />
       <Showcase />
       <TryAssistant />
       <Custom />

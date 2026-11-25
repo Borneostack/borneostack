@@ -1,6 +1,6 @@
 // The "ask our documents" demo. It searches only what this site already publishes (lib/site.ts), ranks passages
 // with BM25, and quotes the best one with its source. No model writes the answer, so it cannot invent a fact.
-import { CARE_PLANS, CUSTOM, FAQS, FOUNDING, PROCESS, SERVICES, SITE, TERMS, foundingLeft } from '@/lib/site'
+import { CARE_PLANS, CUSTOM, FAQS, SOLUTIONS, FOUNDING, PROCESS, SERVICES, SITE, TERMS, foundingLeft } from '@/lib/site'
 
 export type Passage = { id: string; doc: string; title: string; text: string; href: string }
 
@@ -40,6 +40,13 @@ export const PASSAGES: Passage[] = [
     text: `${c.pitch} Covers: ${c.points.join('; ')}. One fixed price, quoted in a written scope after a free call.`,
     href: '/#custom'
   })),
+  ...SOLUTIONS.map(s => ({
+    id: `solution-${s.id}`,
+    doc: 'What we build',
+    title: s.name,
+    text: `${s.pitch} ${s.example} Priced as one fixed price in a written scope after a free call.`,
+    href: '/#solutions'
+  })),
   {
     id: 'founding',
     doc: 'Founding offer',
@@ -63,6 +70,47 @@ const STOP = new Set(
 
 // Everyday words mapped onto the words the documents use.
 const SYNONYMS: Record<string, string[]> = {
+  chatbot: ['chatbot', 'chat', 'customers', 'whatsapp', 'assistant'],
+  bot: ['chatbot', 'assistant'],
+  chat: ['chatbot'],
+  voice: ['voice', 'calls', 'voiceover'],
+  call: ['calls', 'phone'],
+  calls: ['phone', 'voice'],
+  phone: ['calls', 'voice'],
+  narration: ['voiceover', 'narration'],
+  voiceover: ['narration', 'voices'],
+  booking: ['booking', 'bookings', 'reminders'],
+  bookings: ['booking', 'reminders'],
+  appointment: ['booking', 'bookings', 'calendar'],
+  appointments: ['booking', 'bookings', 'calendar'],
+  reservation: ['booking', 'bookings'],
+  inventory: ['stock', 'management', 'orders'],
+  stock: ['inventory', 'management'],
+  crm: ['customers', 'management'],
+  erp: ['management', 'orders', 'stock'],
+  hr: ['staff', 'management'],
+  portal: ['portal', 'login', 'customers'],
+  website: ['website', 'landing', 'frontend'],
+  map: ['maps', 'gis', 'locations'],
+  lead: ['leads', 'enquiry', 'crm'],
+  leads: ['enquiry', 'crm', 'follow'],
+  sales: ['leads', 'enquiry'],
+  marketing: ['content', 'posts', 'leads'],
+  social: ['posts', 'content'],
+  content: ['posts', 'drafts', 'content'],
+  translation: ['translations', 'malay', 'chinese'],
+  design: ['figma', 'prototypes', 'screens'],
+  ui: ['figma', 'screens', 'design'],
+  ux: ['figma', 'prototypes', 'design'],
+  figma: ['figma', 'prototypes'],
+  maps: ['gis', 'locations'],
+  mapping: ['maps', 'gis', 'locations'],
+  gis: ['maps', 'gis', 'arcgis'],
+  arcgis: ['gis', 'arcgis'],
+  geospatial: ['gis', 'maps'],
+  spatial: ['gis', 'maps'],
+  tool: ['tools', 'calculators', 'quote'],
+  tools: ['calculators', 'quote', 'generators'],
   cost: ['price', 'usd', 'pay'],
   costs: ['price', 'usd', 'pay'],
   price: ['usd'],
@@ -98,8 +146,6 @@ const SYNONYMS: Record<string, string[]> = {
   quickly: ['days', 'start'],
   timeline: ['days', 'weeks', 'ready'],
   start: ['start', 'week', 'call'],
-  chatbot: ['assistant', 'documents'],
-  bot: ['assistant'],
   ai: ['assistant', 'ai'],
   pdf: ['documents', 'files'],
   documents: ['assistant', 'files'],
@@ -108,7 +154,6 @@ const SYNONYMS: Record<string, string[]> = {
   dashboard: ['dashboards', 'data'],
   report: ['dashboards', 'summary'],
   reports: ['dashboards', 'summary'],
-  website: ['frontend', 'landing'],
   mobile: ['phone', 'frontend'],
   apps: ['frontend', 'apps'],
   app: ['frontend', 'web'],
@@ -116,7 +161,7 @@ const SYNONYMS: Record<string, string[]> = {
   database: ['backend', 'database', 'postgresql'],
   where: ['based', 'location'],
   located: ['based'],
-  location: ['based'],
+  location: ['based', 'locations', 'maps'],
   contact: ['email'],
   hour: ['hourly', 'hour'],
   hourly: ['hour'],

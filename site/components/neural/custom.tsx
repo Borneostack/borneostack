@@ -3,12 +3,28 @@ import { CheckIcon, Code2Icon, NetworkIcon, ServerIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import Photo from '@/components/neural/photo'
+import BrandLogo from '@/components/neural/brand-logo'
 import SectionHead from '@/components/neural/section-head'
 import Reveal from '@/components/neural/reveal'
 import { CUSTOM } from '@/lib/site'
 
 const ICONS = { frontend: Code2Icon, backend: ServerIcon, 'system-design': NetworkIcon }
-const STACK = ['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'n8n', 'Google Workspace', 'OpenAI and Claude APIs', 'Vercel']
+const STACK = [
+  { name: 'Next.js', slug: 'nextdotjs' },
+  { name: 'React', slug: 'react' },
+  { name: 'TypeScript', slug: 'typescript' },
+  { name: 'Node.js', slug: 'nodedotjs' },
+  { name: 'Python', slug: 'python' },
+  { name: 'PostgreSQL', slug: 'postgresql' },
+  { name: 'Supabase', slug: 'supabase' },
+  { name: 'n8n', slug: 'n8n' },
+  { name: 'Google', slug: 'google' },
+  { name: 'Claude', slug: 'claude' },
+  { name: 'Gemini', slug: 'googlegemini' },
+  { name: 'OpenAI' },
+  { name: 'Figma', slug: 'figma' },
+  { name: 'Vercel', slug: 'vercel' }
+]
 
 const Custom = ({ id = 'custom' }: { id?: string }) => (
   <section id={id} className='py-20 sm:py-28'>
@@ -27,8 +43,12 @@ const Custom = ({ id = 'custom' }: { id?: string }) => (
             <p className='text-muted-foreground text-xs font-semibold tracking-wider uppercase'>What we build with</p>
             <ul className='mt-3 flex flex-wrap gap-2'>
               {STACK.map(t => (
-                <li key={t} className='rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm'>
-                  {t}
+                <li
+                  key={t.name}
+                  className='inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm'
+                >
+                  {t.slug && <BrandLogo slug={t.slug} className='size-3.5 opacity-80' />}
+                  {t.name}
                 </li>
               ))}
             </ul>
