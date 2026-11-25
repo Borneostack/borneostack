@@ -6,7 +6,7 @@ export const SITE = {
   url: 'https://borneostack.com',
   email: 'hello@borneostack.com',
   // Cal.com booking page for the free 30-minute call, e.g. 'https://cal.com/borneostack/30min'. Empty hides it.
-  bookingUrl: '',
+  bookingUrl: 'https://cal.com/borneostack/free-call',
   location: 'Kota Kinabalu, Sabah, Malaysia',
   tagline: 'Business systems that save your team time.'
 }
