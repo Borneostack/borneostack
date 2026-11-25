@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" fill="none">
+  <title>BorneoStack</title>
+  <defs>
+    <linearGradient id="bs-g1" x1="8" y1="6" x2="40" y2="17" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e40af"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="bs-g2" x1="4" y1="18.5" x2="44" y2="29.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="bs-g3" x1="8" y1="31" x2="40" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="6" width="24" height="9.5" rx="4.75" fill="url(#bs-g1)"/>
+  <rect x="6" y="19" width="36" height="9.5" rx="4.75" fill="url(#bs-g2)"/>
+  <rect x="10" y="32" width="28" height="9.5" rx="4.75" fill="url(#bs-g3)"/>
+</svg>
