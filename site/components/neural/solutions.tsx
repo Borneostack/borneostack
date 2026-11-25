@@ -19,6 +19,7 @@ import {
 } from 'lucide-react'
 
 import BrandLogo from '@/components/neural/brand-logo'
+import LiveMap from '@/components/neural/live-map'
 import Reveal from '@/components/neural/reveal'
 import SectionHead from '@/components/neural/section-head'
 import { SOLUTIONS } from '@/lib/site'
@@ -70,7 +71,7 @@ const VoiceArt = () => (
   </div>
 )
 
-// A small map: a street grid, a delivery zone, and site pins that pulse. Illustrative only.
+// The drawn map: a street grid, a delivery zone and site pins. It shows while the live map loads, and stays if it cannot.
 const PINS = [
   [92, 58],
   [176, 34],
@@ -80,11 +81,7 @@ const PINS = [
   [470, 40]
 ]
 const MapArt = () => (
-  <svg
-    aria-hidden
-    viewBox='0 0 560 150'
-    className='h-full min-h-36 w-full rounded-xl border border-white/10 bg-[#070b14]'
-  >
+  <svg aria-hidden viewBox='0 0 560 150' preserveAspectRatio='xMidYMid slice' className='size-full'>
     <defs>
       <pattern id='map-grid' width='28' height='28' patternUnits='userSpaceOnUse'>
         <path d='M28 0H0V28' fill='none' stroke='rgb(255 255 255 / 0.06)' />
@@ -209,7 +206,11 @@ const Solutions = () => (
                   {s.id === 'chatbot' && <ChatArt />}
                   {s.id === 'voice-agent' && <VoiceArt />}
                 </div>
-                {full && <MapArt />}
+                {full && (
+                  <LiveMap className='h-56 sm:h-64'>
+                    <MapArt />
+                  </LiveMap>
+                )}
               </article>
             </Reveal>
           )
