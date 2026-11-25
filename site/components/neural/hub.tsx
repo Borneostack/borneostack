@@ -12,6 +12,7 @@ import {
 import SectionHead from "@/components/neural/section-head";
 import Reveal from "@/components/neural/reveal";
 import { LogoMark } from "@/components/shadcn-studio/logo";
+import Photo from "@/components/neural/photo";
 import { SERVICES } from "@/lib/site";
 
 const TOOLS = [
@@ -20,6 +21,12 @@ const TOOLS = [
   { name: "Gmail · Outlook", icon: MailIcon },
   { name: "SQL databases", icon: DatabaseIcon },
 ];
+const ART = {
+  automation: "ill-automation",
+  assistant: "ill-assistant",
+  dashboards: "ill-dashboards",
+};
+const ARTW = 1448;
 const ICONS = {
   automation: ZapIcon,
   assistant: MessageSquareTextIcon,
@@ -119,12 +126,23 @@ const Hub = () => (
             <Reveal key={s.id} delay={n * 0.1}>
               <a
                 href={`/services#${s.id}`}
-                className="glass hover:border-primary/60 flex h-full flex-col rounded-2xl p-6 transition-colors"
+                className="glass hover:border-primary/60 group flex h-full flex-col overflow-hidden rounded-2xl transition-colors"
               >
-                <span className="bg-primary/15 text-primary grid size-10 place-items-center rounded-xl">
-                  <Icon className="size-5" />
-                </span>
-                <h3 className="mt-5 text-xl">{s.name}</h3>
+                <div className="relative overflow-hidden border-b border-white/10">
+                  <Photo
+                    name={ART[s.id]}
+                    large={ARTW}
+                    ratio={1.6}
+                    sizes="(min-width: 768px) 360px, 100vw"
+                    alt=""
+                    className="transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <span className="bg-background/70 text-primary absolute bottom-3 left-3 grid size-9 place-items-center rounded-lg border border-white/10 backdrop-blur">
+                    <Icon className="size-4" />
+                  </span>
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                <h3 className="text-xl">{s.name}</h3>
                 <p className="text-muted-foreground mt-2 flex-1 text-sm">
                   {s.pitch}
                 </p>
@@ -132,6 +150,7 @@ const Hub = () => (
                   <span className="text-muted-foreground">From</span>
                   <span className="text-lg font-bold">{s.from}</span>
                 </p>
+                </div>
               </a>
             </Reveal>
           );

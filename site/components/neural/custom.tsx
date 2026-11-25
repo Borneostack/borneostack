@@ -2,24 +2,51 @@
 import { CheckIcon, Code2Icon, NetworkIcon, ServerIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
+import Photo from '@/components/neural/photo'
 import SectionHead from '@/components/neural/section-head'
 import Reveal from '@/components/neural/reveal'
 import { CUSTOM } from '@/lib/site'
 
 const ICONS = { frontend: Code2Icon, backend: ServerIcon, 'system-design': NetworkIcon }
+const STACK = ['Next.js', 'React', 'TypeScript', 'Node.js', 'Python', 'PostgreSQL', 'n8n', 'Google Workspace', 'OpenAI and Claude APIs', 'Vercel']
 
 const Custom = ({ id = 'custom' }: { id?: string }) => (
   <section id={id} className='py-20 sm:py-28'>
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>
-      <div className='grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end'>
-        <SectionHead
-          align='left'
-          title='Need something bigger? We build custom software too'
-          description='Frontend, backend and system design for work that does not fit a package. Same rules: a written scope and one fixed price before we start.'
-        />
-        <Button className='h-11 w-fit rounded-xl px-6' render={<a href='/contact' />} nativeButton={false}>
-          Ask for a fixed quote
-        </Button>
+      <div className='grid items-center gap-10 lg:grid-cols-[1.15fr_1fr]'>
+        <div>
+          <SectionHead
+            align='left'
+            title='Need something bigger? We build custom software too'
+            description='Frontend, backend and system design for work that does not fit a package. Same rules: a written scope and one fixed price before we start.'
+          />
+          <Button className='mt-8 h-11 w-fit rounded-xl px-6' render={<a href='/contact' />} nativeButton={false}>
+            Ask for a fixed quote
+          </Button>
+          <div className='mt-10'>
+            <p className='text-muted-foreground text-xs font-semibold tracking-wider uppercase'>What we build with</p>
+            <ul className='mt-3 flex flex-wrap gap-2'>
+              {STACK.map(t => (
+                <li key={t} className='rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-sm'>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <Reveal className='max-lg:order-first'>
+          <div className='relative mx-auto max-w-md lg:max-w-none'>
+            <div aria-hidden className='absolute inset-8 rounded-full bg-[#2b7bff] opacity-20 blur-3xl' />
+            <Photo
+              name='ill-custom'
+              large={1447}
+              ratio={4 / 3}
+              sizes='(min-width: 1024px) 480px, 100vw'
+              alt=''
+              className='relative [mask-image:radial-gradient(closest-side,black_70%,transparent)]'
+            />
+          </div>
+        </Reveal>
       </div>
 
       <div className='mt-12 grid gap-4 md:grid-cols-3'>

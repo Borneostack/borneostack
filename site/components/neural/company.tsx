@@ -1,7 +1,7 @@
 // Who the visitor is dealing with: plain company facts, so nothing about the business is hidden.
 import { Building2Icon, ClockIcon, MailIcon, MapPinIcon, ShieldCheckIcon, UserRoundCheckIcon } from 'lucide-react'
 
-import SectionHead from '@/components/neural/section-head'
+import Photo from '@/components/neural/photo'
 import Reveal from '@/components/neural/reveal'
 import { SITE } from '@/lib/site'
 
@@ -17,7 +17,26 @@ const FACTS = [
 const Company = () => (
   <section className='py-20 sm:py-28'>
     <div className='mx-auto max-w-6xl px-4 sm:px-6'>
-      <SectionHead align='left' title='Who you are dealing with' />
+      <Reveal>
+        <figure className='relative overflow-hidden rounded-3xl border border-white/10'>
+          <Photo
+            name='kk'
+            large={1600}
+            ratio={1600 / 687}
+            sizes='(min-width: 1152px) 1152px, 100vw'
+            alt='Kota Kinabalu waterfront at night with Mount Kinabalu in the distance'
+            className='min-h-64 sm:min-h-0'
+          />
+          <div aria-hidden className='absolute inset-0 bg-linear-to-r from-[#05070c] via-[#05070c]/60 to-transparent' />
+          <figcaption className='absolute inset-y-0 left-0 flex max-w-md flex-col justify-center p-6 sm:p-10'>
+            <p className='text-primary text-sm font-semibold'>Kota Kinabalu, Sabah</p>
+            <h2 className='mt-2 text-3xl sm:text-4xl lg:text-[2.75rem]'>Who you are dealing with</h2>
+            <p className='text-muted-foreground mt-3'>
+              A small studio in Borneo, building for businesses in Malaysia and abroad. Here is everything about us.
+            </p>
+          </figcaption>
+        </figure>
+      </Reveal>
       <Reveal>
         <dl className='glass mt-10 grid overflow-hidden rounded-3xl sm:grid-cols-2 lg:grid-cols-3'>
           {FACTS.map(({ icon: Icon, k, v, href }) => (
