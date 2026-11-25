@@ -3,7 +3,7 @@
 // The hero product panel: one window that shows all three systems we build, with sample data. It moves to the next
 // system on its own, and the visitor can pick one. The light beam lands on its top edge.
 import { useEffect, useState } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import {
   BarChart3Icon,
   BellRingIcon,
@@ -69,17 +69,16 @@ const LOG = [
   ['09:14:06', 'Delivery team notified']
 ]
 
-const AutomationView = ({ reduce }: { reduce: boolean }) => {
-  const [tick, setTick] = useState(reduce ? FLOW.length : 0)
+const AutomationView = () => {
+  const [tick, setTick] = useState(0)
   const step = Math.min(tick, FLOW.length)
 
   useEffect(() => {
-    if (reduce) return
     // Light one step at a time, hold the finished run for 3 ticks, then start again.
     const id = setInterval(() => setTick(t => (t >= FLOW.length + 3 ? 0 : t + 1)), 1000)
 
     return () => clearInterval(id)
-  }, [reduce])
+  }, [])
 
   return (
     <div className='grid h-full gap-5 lg:grid-cols-[1.3fr_1fr]'>
@@ -172,12 +171,11 @@ const Typing = () => (
   </span>
 )
 
-const AssistantView = ({ reduce }: { reduce: boolean }) => {
+const AssistantView = () => {
   const [i, setI] = useState(0)
-  const [stage, setStage] = useState<0 | 1 | 2>(reduce ? 2 : 0)
+  const [stage, setStage] = useState<0 | 1 | 2>(0)
 
   useEffect(() => {
-    if (reduce) return
     const t = [
       setTimeout(() => setStage(1), 700),
       setTimeout(() => setStage(2), 1900),
@@ -188,7 +186,7 @@ const AssistantView = ({ reduce }: { reduce: boolean }) => {
     ]
 
     return () => t.forEach(clearTimeout)
-  }, [i, reduce])
+  }, [i])
 
   const chat = CHATS[i]
 
@@ -218,7 +216,7 @@ const AssistantView = ({ reduce }: { reduce: boolean }) => {
           <motion.div
             key={i}
             className='flex flex-col gap-3'
-            initial={reduce ? false : { opacity: 0, y: 8 }}
+            initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.3 }}
@@ -233,7 +231,7 @@ const AssistantView = ({ reduce }: { reduce: boolean }) => {
             )}
             {stage === 2 && (
               <motion.div
-                initial={reduce ? false : { opacity: 0, y: 6 }}
+                initial={{ opacity: 0, y: 6 }}
                 animate={{ opacity: 1, y: 0 }}
                 className='bg-secondary max-w-xl rounded-2xl rounded-bl-md px-4 py-3 text-sm'
               >
@@ -332,19 +330,18 @@ const DashboardView = () => (
 /* ---------- The panel ---------- */
 
 const HeroPanel = () => {
-  const reduce = !!useReducedMotion()
   const [view, setView] = useState<ViewId>('automation')
   const [paused, setPaused] = useState(false)
 
   useEffect(() => {
-    if (reduce || paused) return
+    if (paused) return
     const id = setTimeout(() => {
       const n = VIEWS.findIndex(v => v.id === view)
       setView(VIEWS[(n + 1) % VIEWS.length].id)
     }, DWELL)
 
     return () => clearTimeout(id)
-  }, [view, paused, reduce])
+  }, [view, paused])
 
   return (
     <figure
@@ -376,7 +373,7 @@ const HeroPanel = () => {
                     <Icon className={cn('size-3.5 sm:size-4', active && 'text-primary')} />
                     <span className='sm:hidden'>{short}</span>
                     <span className='max-sm:hidden'>{label}</span>
-                    {active && !reduce && !paused && (
+                    {active && !paused && (
                       <span
                         key={id}
                         aria-hidden
@@ -398,13 +395,13 @@ const HeroPanel = () => {
               <motion.div
                 key={view}
                 className='h-full'
-                initial={reduce ? false : { opacity: 0, y: 10, filter: 'blur(6px)' }}
+                initial={{ opacity: 0, y: 10, filter: 'blur(6px)' }}
                 animate={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 exit={{ opacity: 0, y: -10, filter: 'blur(6px)' }}
                 transition={{ duration: 0.35 }}
               >
-                {view === 'automation' && <AutomationView reduce={reduce} />}
-                {view === 'assistant' && <AssistantView reduce={reduce} />}
+                {view === 'automation' && <AutomationView />}
+                {view === 'assistant' && <AssistantView />}
                 {view === 'dashboard' && <DashboardView />}
               </motion.div>
             </AnimatePresence>

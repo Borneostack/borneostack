@@ -6,6 +6,7 @@ import { ArrowRightIcon, ShieldCheckIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import Reveal from '@/components/neural/reveal'
+import Words from '@/components/neural/words'
 import HeroPanel from '@/components/neural/hero-panel'
 import { FOUNDING, foundingLeft } from '@/lib/site'
 
@@ -29,20 +30,25 @@ const Hero = () => (
         </p>
       </Reveal>
 
-      <Reveal delay={0.08}>
-        <h1 className='mt-6 max-w-3xl text-4xl font-extrabold sm:text-6xl lg:text-7xl'>
-          Hand the repetitive work to <span className='text-primary'>systems</span> that run themselves.
-        </h1>
-      </Reveal>
+      <h1 className='mt-6 max-w-3xl text-4xl font-extrabold sm:text-6xl lg:text-7xl'>
+        <Words
+          text='Hand the repetitive work to systems that run themselves.'
+          accent={['systems']}
+          delay={0.1}
+          stagger={0.07}
+          onMount
+        />
+      </h1>
 
-      <Reveal delay={0.16}>
+      <Reveal delay={0.55}>
         <p className='text-muted-foreground mt-6 max-w-2xl text-base sm:text-lg'>
           BorneoStack builds workflow automations, assistants that answer from your own documents, and live dashboards.
-          We also design and build custom frontends, backends and systems. One fixed price in writing before we start, and a care plan to keep it running after.
+          We also design and build custom frontends, backends and systems. One fixed price in writing before we start,
+          and a care plan to keep it running after.
         </p>
       </Reveal>
 
-      <Reveal delay={0.24}>
+      <Reveal delay={0.7}>
         <div className='mt-9 flex flex-wrap items-center gap-3'>
           <Button size='lg' className='h-11 rounded-xl px-6' render={<a href='/contact' />} nativeButton={false}>
             Book a free 30-minute call
@@ -67,12 +73,12 @@ const Hero = () => (
         </div>
         <p className='text-muted-foreground mt-5 flex items-start gap-2 text-sm sm:items-center'>
           <ShieldCheckIcon className='text-primary mt-0.5 size-4 shrink-0 sm:mt-0' />
-          Packages from USD 150. Written scope and price before any payment. 30 days of free fixes, then care plans
-          from USD 39 a month.
+          Packages from USD 150. Written scope and price before any payment. 30 days of free fixes, then care plans from
+          USD 39 a month.
         </p>
       </Reveal>
 
-      <Reveal delay={0.35} y={40}>
+      <Reveal delay={0.9} y={60}>
         <HeroPanel />
       </Reveal>
     </div>

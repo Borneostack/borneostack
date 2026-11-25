@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import Header from '@/components/site/header'
 import Footer from '@/components/site/footer'
+import SmoothScroll from '@/components/neural/smooth-scroll'
 import { SITE } from '@/lib/site'
 
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-jakarta' })
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           >
             Skip to content
           </a>
+          <SmoothScroll />
           <Header />
           <main id='main' className='overflow-x-clip'>{children}</main>
           <Footer />

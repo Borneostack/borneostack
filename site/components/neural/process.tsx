@@ -2,7 +2,7 @@
 
 // How a project runs: a timeline rail that fills with light as it scrolls into view, then one card per step with
 // when it happens, what the client receives and what they pay. Payment points sit next to the work they pay for.
-import { motion, useReducedMotion } from 'motion/react'
+import { motion } from 'motion/react'
 import { ArrowRightIcon, CalendarClockIcon, PackageCheckIcon, WalletIcon } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -13,7 +13,6 @@ import { cn } from '@/lib/utils'
 const EASE = [0.22, 1, 0.36, 1] as const
 
 const Process = () => {
-  const reduce = useReducedMotion()
   const view = { once: true, margin: '0px 0px -15% 0px' } as const
 
   return (
@@ -29,7 +28,7 @@ const Process = () => {
           <div aria-hidden className='absolute top-5 right-[12.5%] left-[12.5%] h-px bg-white/10 max-lg:hidden'>
             <motion.div
               className='h-full origin-left bg-linear-to-r from-[#2b7bff] via-[#7fb0ff] to-[#2b7bff] shadow-[0_0_12px_#2b7bff]'
-              initial={reduce ? false : { scaleX: 0 }}
+              initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={view}
               transition={{ duration: 1.6, ease: EASE, delay: 0.2 }}
@@ -41,7 +40,7 @@ const Process = () => {
             <motion.div
               className='w-full origin-top bg-linear-to-b from-[#2b7bff] to-[#7fb0ff]'
               style={{ height: '100%' }}
-              initial={reduce ? false : { scaleY: 0 }}
+              initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={view}
               transition={{ duration: 1.6, ease: EASE, delay: 0.2 }}
@@ -55,7 +54,7 @@ const Process = () => {
               <motion.li
                 key={step.id}
                 className='relative flex gap-4 lg:flex-col lg:gap-6'
-                initial={reduce ? false : { opacity: 0, y: 24, filter: 'blur(8px)' }}
+                initial={{ opacity: 0, y: 24, filter: 'blur(8px)' }}
                 whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
                 viewport={view}
                 transition={{ duration: 0.7, ease: EASE, delay: 0.25 + n * 0.3 }}

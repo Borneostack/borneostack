@@ -3,7 +3,7 @@
 // Live demo: a document assistant that answers from this site's own published content (lib/ask.ts). It quotes the
 // passage it found and links to it, and says plainly when the answer is not in the documents.
 import { useEffect, useRef, useState, type FormEvent } from 'react'
-import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
+import { AnimatePresence, motion } from 'motion/react'
 import { ArrowUpIcon, BookOpenTextIcon, CornerDownRightIcon, FileSearchIcon, QuoteIcon, SearchXIcon } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
@@ -109,7 +109,6 @@ const Answer = ({ result }: { result: Result }) => {
 }
 
 const TryAssistant = () => {
-  const reduce = useReducedMotion()
   const [query, setQuery] = useState('')
   const [turns, setTurns] = useState<(Turn & { q: string })[]>([])
   const log = useRef<HTMLDivElement>(null)
@@ -118,8 +117,8 @@ const TryAssistant = () => {
 
   useEffect(() => {
     const el = log.current
-    if (el) el.scrollTo({ top: el.scrollHeight, behavior: reduce ? 'auto' : 'smooth' })
-  }, [turns, reduce])
+    if (el) el.scrollTo({ top: el.scrollHeight, behavior: 'smooth' })
+  }, [turns])
 
   const run = (q: string) => {
     const text = q.trim().slice(0, 200)
@@ -130,7 +129,7 @@ const TryAssistant = () => {
     // A short pause so the search reads as a step; the search itself takes under a millisecond.
     window.setTimeout(
       () => setTurns(t => t.map(x => (x.id === id ? { ...x, result: ask(text) } : x))),
-      reduce ? 0 : 550
+      550
     )
   }
 
@@ -181,7 +180,7 @@ const TryAssistant = () => {
           <div className='flex items-center justify-between gap-3 border-b border-white/10 px-5 py-4'>
             <p className='flex items-center gap-2 text-sm font-semibold'>
               <span aria-hidden className='relative flex size-2'>
-                <span className='bg-primary absolute inline-flex size-full animate-ping rounded-full opacity-60 motion-reduce:animate-none' />
+                <span className='bg-primary absolute inline-flex size-full animate-ping rounded-full opacity-60' />
                 <span className='bg-primary relative inline-flex size-2 rounded-full' />
               </span>
               BorneoStack documents
@@ -222,7 +221,7 @@ const TryAssistant = () => {
                 <motion.div
                   key={t.id}
                   className='space-y-3'
-                  initial={reduce ? false : { opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 12 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, ease: EASE }}
                 >
@@ -231,7 +230,7 @@ const TryAssistant = () => {
                   </p>
                   {t.result ? (
                     <motion.div
-                      initial={reduce ? false : { opacity: 0, filter: 'blur(6px)' }}
+                      initial={{ opacity: 0, filter: 'blur(6px)' }}
                       animate={{ opacity: 1, filter: 'blur(0px)' }}
                       transition={{ duration: 0.45, ease: EASE }}
                     >
