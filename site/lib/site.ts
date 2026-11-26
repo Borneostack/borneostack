@@ -367,7 +367,7 @@ export const SOLUTIONS = [
     id: 'mapping',
     name: 'Maps and GIS',
     pitch: 'We work with GIS companies on their projects: polygon and boundary data, web maps, and delivery and routing tools.',
-    example: 'Built on MapLibre, Google Maps, Esri ArcGIS or QGIS, with PostgreSQL and PostGIS for the data, whichever suits your team.'
+    example: 'Delivered on the platform each client already uses.'
   }
 ] as const
 

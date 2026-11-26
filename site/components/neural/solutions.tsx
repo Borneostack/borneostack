@@ -1,6 +1,6 @@
 // Everything else we build, beyond the three fixed-price packages. A bento grid: the two AI front-desk systems
 // (chat and voice) get wide tiles with a small live illustration, the rest are compact tiles, and maps and GIS close
-// the grid full width with a small map. No prices are shown
+// the grid full width with the platforms we have worked on. No prices are shown
 // because each one is scoped and quoted in writing after a free call.
 import {
   ArrowRightIcon,
@@ -68,45 +68,6 @@ const VoiceArt = () => (
       <PhoneCallIcon className='text-primary size-3.5' /> Incoming call answered · booking taken for Tue, 3 pm
     </p>
   </div>
-)
-
-// The drawn map: a street grid, a road and site pins. Decoration only.
-const PINS = [
-  [92, 58],
-  [176, 34],
-  [238, 92],
-  [318, 52],
-  [402, 104],
-  [470, 40]
-]
-const MapArt = () => (
-  <svg aria-hidden viewBox='0 0 560 150' preserveAspectRatio='xMidYMid slice' className='size-full'>
-    <defs>
-      <pattern id='map-grid' width='28' height='28' patternUnits='userSpaceOnUse'>
-        <path d='M28 0H0V28' fill='none' stroke='rgb(255 255 255 / 0.06)' />
-      </pattern>
-    </defs>
-    <rect width='560' height='150' fill='url(#map-grid)' />
-    <path
-      d='M0 118 C120 96 170 140 280 112 S460 70 560 96'
-      fill='none'
-      stroke='rgb(43 123 255 / 0.35)'
-      strokeWidth='10'
-    />
-    <path
-      d='M92 58 L176 34 L238 92 L318 52 L402 104 L470 40'
-      fill='none'
-      stroke='#7fb0ff'
-      strokeWidth='1.5'
-      className='wire-pulse'
-    />
-    {PINS.map(([x, y], n) => (
-      <g key={n}>
-        <circle cx={x} cy={y} r='10' fill='#2b7bff' className='map-ping' style={{ animationDelay: `${n * 0.35}s` }} />
-        <circle cx={x} cy={y} r='4.5' fill='#fff' stroke='#2b7bff' strokeWidth='2.5' />
-      </g>
-    ))}
-  </svg>
 )
 
 const GIS_PLATFORMS = ['MapLibre', 'Google Maps', 'Esri ArcGIS', 'QGIS', 'PostGIS'] as const
@@ -201,14 +162,11 @@ const Solutions = () => (
                   {s.id === 'voice-agent' && <VoiceArt />}
                 </div>
                 {full && (
-                  <div className='relative h-36 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] sm:h-44'>
-                    <MapArt />
-                    <ul className='absolute inset-x-3 bottom-3 flex flex-wrap gap-2'>
+                  <div>
+                    <p className='text-muted-foreground text-xs font-medium tracking-wide uppercase'>Platforms we have worked on</p>
+                    <ul className='mt-3 flex flex-wrap gap-2'>
                       {GIS_PLATFORMS.map(p => (
-                        <li
-                          key={p}
-                          className='rounded-full border border-white/10 bg-[rgb(7_11_20/0.8)] px-3 py-1 text-xs font-medium backdrop-blur'
-                        >
+                        <li key={p} className='rounded-full border border-white/10 bg-white/[0.03] px-3.5 py-1.5 text-sm'>
                           {p}
                         </li>
                       ))}

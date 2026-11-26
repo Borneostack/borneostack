@@ -317,17 +317,6 @@
   to { transform: scaleY(1); }
 }
 
-/* Map pins in the maps and GIS tile: a soft ring grows and fades, repeating. */
-@utility map-ping {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: map-ping 2.4s cubic-bezier(0.65, 0, 0.35, 1) infinite;
-}
-@keyframes map-ping {
-  from { transform: scale(0.6); opacity: 0.6; }
-  to { transform: scale(2.4); opacity: 0; }
-}
-
 /* Logo strip in the solutions section: slides one copy of the list to the left, forever. */
 @utility marquee {
   animation: marquee 60s linear infinite;
