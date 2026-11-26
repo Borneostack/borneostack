@@ -19,7 +19,6 @@ import {
 } from 'lucide-react'
 
 import BrandLogo from '@/components/neural/brand-logo'
-import GisDemo from '@/components/neural/gis-demo'
 import Reveal from '@/components/neural/reveal'
 import SectionHead from '@/components/neural/section-head'
 import { SOLUTIONS } from '@/lib/site'
@@ -71,7 +70,7 @@ const VoiceArt = () => (
   </div>
 )
 
-// The drawn map: a street grid, a road and site pins. It shows while the live map loads, and stays if it cannot.
+// The drawn map: a street grid, a road and site pins. Decoration only.
 const PINS = [
   [92, 58],
   [176, 34],
@@ -109,6 +108,8 @@ const MapArt = () => (
     ))}
   </svg>
 )
+
+const GIS_PLATFORMS = ['MapLibre', 'Google Maps', 'Esri ArcGIS', 'QGIS', 'PostGIS'] as const
 
 const WORKS_WITH = [
   ['WhatsApp', 'whatsapp'],
@@ -199,7 +200,21 @@ const Solutions = () => (
                   {s.id === 'chatbot' && <ChatArt />}
                   {s.id === 'voice-agent' && <VoiceArt />}
                 </div>
-                {full && <GisDemo fallback={<MapArt />} />}
+                {full && (
+                  <div className='relative h-36 overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] sm:h-44'>
+                    <MapArt />
+                    <ul className='absolute inset-x-3 bottom-3 flex flex-wrap gap-2'>
+                      {GIS_PLATFORMS.map(p => (
+                        <li
+                          key={p}
+                          className='rounded-full border border-white/10 bg-[rgb(7_11_20/0.8)] px-3 py-1 text-xs font-medium backdrop-blur'
+                        >
+                          {p}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </article>
             </Reveal>
           )
