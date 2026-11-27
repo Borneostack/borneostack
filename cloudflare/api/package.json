@@ -1,0 +1,23 @@
+{
+  "name": "borneostack-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest --run",
+    "migrate:local": "wrangler d1 migrations apply borneostack-demos --local",
+    "migrate:remote": "wrangler d1 migrations apply borneostack-demos --remote"
+  },
+  "dependencies": {
+    "unpdf": "^2.2.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261127.1",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.2",
+    "wrangler": "^4.168.0"
+  }
+}

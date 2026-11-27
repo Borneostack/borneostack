@@ -1,0 +1,93 @@
+{
+  "question": "Komputer riba syarikat saya hilang. Berapa cepat saya perlu beritahu pihak IT?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 2,
+      "heading": "5. Personal data and breaches > 5.2 Reporting a breach",
+      "text": "A data breach is any loss, theft or exposure of personal or company data, for example a lost laptop, an email sent to the wrong person or a stolen password. Report it to the IT Manager immediately and in any case within 4 hours of finding out. IT contains the problem, and the General Manager decides within 72 hours whether customers or authorities must be told.",
+      "score": 0.682,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 1,
+      "heading": "2. Devices > 2.1 Company laptops and phones",
+      "text": "Company laptops have encrypted disks and lock after 5 minutes without use. Only IT installs software. Do not use removable USB drives, except encrypted drives issued by IT. If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.",
+      "score": 0.667,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 3,
+      "heading": "8. Getting help",
+      "text": "The IT helpdesk answers requests from Monday to Friday, 8:30 am to 5:30 pm. A system that is down for the whole office is urgent: the target is to respond within 4 working hours. Other requests are answered by the next working day. Staff may use the company internet for reasonable personal use during breaks. The guest Wi-Fi is kept separate from the office network and must not be used for company work.",
+      "score": 0.6,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 3,
+      "heading": "7. Software, licences and the network",
+      "text": "Staff request new software through the IT helpdesk. IT checks the licence and security, and installs it if approved. Pirated or unlicensed software is not allowed, and IT removes it when found. The office network has three parts: the office network for company laptops, a warehouse network for scanners and the order terminals, and a guest network. Nobody connects personal devices to the office or warehouse networks.\nIT installs security updates on company laptops every month. Staff must restart the laptop within 2 working days when asked, so the update can finish. IT may inspect company email and files to investigate a breach or a complaint, and will tell the staff member when it does.",
+      "score": 0.599,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-e6deafed43b2482aa8af8e32c2675197",
+    "object": "chat.completion",
+    "created": 1795757435,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Jika peranti hilang atau dicuri, beritahu meja bantuan IT dalam masa 1 jam.\", \"source\": 2, \"quote\": \"If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 705,
+      "completion_tokens": 70,
+      "total_tokens": 775,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 26.00674
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

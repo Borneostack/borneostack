@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "catalogue_id": "exchangerates_daily_1700",
+  "data_as_of": "2026-11-26 17:00",
+  "last_updated": "2026-11-26 17:30",
+  "next_update": "2026-11-27 17:30",
+  "data_source": [
+   "BNM"
+  ],
+  "update_frequency": "DAILY",
+  "total": 6,
+  "filter": "middle@rate_type",
+  "sort": "-date",
+  "limit": 6
+ },
+ "data": [
+  {
+   "usd": 4.116,
+   "date": "2026-11-26"
+  },
+  {
+   "usd": 4.1175,
+   "date": "2026-11-25"
+  },
+  {
+   "usd": 4.114,
+   "date": "2026-11-24"
+  },
+  {
+   "usd": 4.122,
+   "date": "2026-11-23"
+  },
+  {
+   "usd": 4.1138,
+   "date": "2026-11-20"
+  },
+  {
+   "usd": 4.1115,
+   "date": "2026-11-19"
+  }
+ ]
+}

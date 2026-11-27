@@ -1,0 +1,93 @@
+{
+  "question": "How soon must I report an accident to the Safety Officer?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "vehicle-safety-procedure",
+      "docTitle": "Vehicle and equipment safety procedure",
+      "file": "vehicle-safety-procedure.pdf",
+      "page": 3,
+      "heading": "5. Accidents and breakdowns > 5.1 After an accident or near miss",
+      "text": "- Stop, switch on the hazard lights and check for injuries. Call 999 if anyone is hurt.\n- Do not admit fault and do not agree to settle in cash at the scene.\n- Take photos of the vehicles, the road and the damage, and note the names of witnesses.\n- Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\n- Give a written report within 24 hours, on the incident form.",
+      "score": 0.711,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "vehicle-safety-procedure",
+      "docTitle": "Vehicle and equipment safety procedure",
+      "file": "vehicle-safety-procedure.pdf",
+      "page": 3,
+      "heading": "5. Accidents and breakdowns > 5.2 Breakdowns",
+      "text": "Move the vehicle off the road if you can and switch on the hazard lights. Place the warning triangle at least 50 metres behind the vehicle. Call the dispatch office. Do not attempt roadside repairs other than changing a tyre when it is safe.",
+      "score": 0.599,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 2,
+      "heading": "4. Problems > 4.1 Damage and shortages",
+      "text": "The customer must check the goods at delivery and write any damage or shortage on the DO before signing. Damage or shortage found later must be reported to dispatch@tanjungsampel.example with photos within 24 hours of delivery. Reports after 24 hours are accepted only for damage that could not be seen at delivery, and not later than 3 days after delivery.",
+      "score": 0.586,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 2,
+      "heading": "5. Personal data and breaches > 5.2 Reporting a breach",
+      "text": "A data breach is any loss, theft or exposure of personal or company data, for example a lost laptop, an email sent to the wrong person or a stolen password. Report it to the IT Manager immediately and in any case within 4 hours of finding out. IT contains the problem, and the General Manager decides within 72 hours whether customers or authorities must be told.",
+      "score": 0.572,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-63fad2fc8ca04ca2bf8ed9fd643eaaf6",
+    "object": "chat.completion",
+    "created": 1795757428,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\", \"source\": 1, \"quote\": \"Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 657,
+      "completion_tokens": 66,
+      "total_tokens": 723,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 24.27474
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

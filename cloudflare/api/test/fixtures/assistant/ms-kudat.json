@@ -1,0 +1,93 @@
+{
+  "question": "Berapakah caj penghantaran ke Kudat?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 1,
+      "heading": "2. Delivery zones, lead times and charges",
+      "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+      "score": 0.607,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 2,
+      "heading": "2. Delivery zones, lead times and charges",
+      "text": "Zone: D; Areas: Sandakan, Tawau, Lahad Datu; Lead time: 2 working days from branch stock; 5 working days from Kota Kinabalu; Delivery charge: Branch stock: Zone A charges. From Kota Kinabalu: RM180 per pallet\nZone D orders from Kota Kinabalu travel on the trunk truck, which leaves every Tuesday and Friday. An order confirmed after the Friday dispatch waits for the Tuesday truck.",
+      "score": 0.614,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 3,
+      "heading": "4. Problems > 4.3 Nobody to receive the goods",
+      "text": "The driver waits 15 minutes and calls the customer twice. If nobody can receive the goods, the driver returns them to the warehouse and the order is booked for redelivery. A redelivery charge of RM40 applies in Zone A, and the normal zone charge applies elsewhere. A customer can move a delivery once without charge, if they tell the dispatch office before 12:00 noon on the working day before.",
+      "score": 0.526,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 3,
+      "heading": "4. Claims and expenses > 4.1 What you can claim",
+      "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+      "score": 0.525,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-198c566592e64f18acc4ffe5af9fe8e2",
+    "object": "chat.completion",
+    "created": 1795757432,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Caj penghantaran ke Kudat ialah RM120.\", \"source\": 1, \"quote\": \"Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 885,
+      "completion_tokens": 72,
+      "total_tokens": 957,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 31.845396
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

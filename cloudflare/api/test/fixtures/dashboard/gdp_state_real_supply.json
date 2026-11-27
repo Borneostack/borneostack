@@ -1,0 +1,48 @@
+{
+ "meta": {
+  "catalogue_id": "gdp_state_real_supply",
+  "data_as_of": "2025",
+  "last_updated": "2026-07-01 12:30",
+  "next_update": "2027-07-01 12:30",
+  "data_source": [
+   "DOSM"
+  ],
+  "update_frequency": "YEARLY",
+  "total": 6,
+  "filter": "Sabah@state,p0@sector",
+  "sort": "-date",
+  "limit": 6
+ },
+ "data": [
+  {
+   "series": "growth_yoy",
+   "value": 5.1,
+   "date": "2025-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 88773.954,
+   "date": "2025-01-01"
+  },
+  {
+   "series": "growth_yoy",
+   "value": 1.2,
+   "date": "2024-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 84506.014,
+   "date": "2024-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 83470.946,
+   "date": "2023-01-01"
+  },
+  {
+   "series": "growth_yoy",
+   "value": 1.7,
+   "date": "2023-01-01"
+  }
+ ]
+}

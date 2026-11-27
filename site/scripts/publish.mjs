@@ -16,10 +16,9 @@ cpSync(resolve(import.meta.dirname, '..', 'vercel-api'), join(web, 'api'), { rec
 
 // Old pages from the research site, sent to their closest new page.
 const OLD = {
-  '/work': '/services',
   '/collaborate': '/about',
   '/research': '/services',
-  '/case-studies': '/services',
+  '/case-studies': '/work',
   '/publications': '/services',
   '/people': '/about',
   '/cs-kinabatangan-flood': '/services',

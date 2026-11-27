@@ -1,0 +1,48 @@
+{
+ "meta": {
+  "catalogue_id": "gdp_annual_real_supply",
+  "data_as_of": "2025",
+  "last_updated": "2026-05-15 12:00",
+  "next_update": "2027-05-31 12:30",
+  "data_source": [
+   "DOSM"
+  ],
+  "update_frequency": "YEARLY",
+  "total": 6,
+  "filter": "p0@sector",
+  "sort": "-date",
+  "limit": 6
+ },
+ "data": [
+  {
+   "series": "growth_yoy",
+   "value": 5.2,
+   "date": "2025-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 1736953.27,
+   "date": "2025-01-01"
+  },
+  {
+   "series": "growth_yoy",
+   "value": 5.2,
+   "date": "2024-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 1651872.788,
+   "date": "2024-01-01"
+  },
+  {
+   "series": "abs",
+   "value": 1570774.181,
+   "date": "2023-01-01"
+  },
+  {
+   "series": "growth_yoy",
+   "value": 3.6,
+   "date": "2023-01-01"
+  }
+ ]
+}

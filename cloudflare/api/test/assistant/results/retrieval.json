@@ -1,0 +1,530 @@
+{
+  "date": "2026-11-27",
+  "api": "http://localhost:8787",
+  "answerable": {
+    "questions": 29,
+    "foundInTop4": 29,
+    "foundAtRank1": 26,
+    "passedGate": 29
+  },
+  "english": {
+    "questions": 20,
+    "foundInTop4": 20,
+    "foundAtRank1": 18,
+    "passedGate": 20
+  },
+  "malay": {
+    "questions": 9,
+    "foundInTop4": 9,
+    "foundAtRank1": 8,
+    "passedGate": 9
+  },
+  "offTopic": {
+    "questions": 6,
+    "declinedBeforeModel": 6
+  },
+  "nearMiss": {
+    "questions": 3,
+    "passedToModel": 2
+  },
+  "bestScoreRange": {
+    "answerableMin": 0.572,
+    "offTopicMax": 0.524
+  },
+  "rows": [
+    {
+      "id": "en-leave-3y",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How many days of annual leave do I get after 3 years with the company?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.686,
+      "top": [
+        "staff-handbook p2 (0.686)",
+        "staff-handbook p2 (0.651)"
+      ]
+    },
+    {
+      "id": "en-mileage",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How much can I claim per kilometre when I use my own car for work?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.652,
+      "top": [
+        "staff-handbook p3 (0.652)",
+        "staff-handbook p4 (0.544)"
+      ]
+    },
+    {
+      "id": "en-claim-deadline",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What is the deadline for submitting an expense claim?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.678,
+      "top": [
+        "staff-handbook p4 (0.678)",
+        "staff-handbook p3 (0.618)"
+      ]
+    },
+    {
+      "id": "en-approver",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "Who has to approve a claim of RM1,500?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.74,
+      "top": [
+        "staff-handbook p4 (0.74)",
+        "staff-handbook p4 (0.666)"
+      ]
+    },
+    {
+      "id": "en-maternity",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How long is maternity leave?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.7,
+      "top": [
+        "staff-handbook p3 (0.7)",
+        "staff-handbook p2 (0.614)"
+      ]
+    },
+    {
+      "id": "en-gifts",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "Can I accept a gift from a supplier?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.711,
+      "top": [
+        "staff-handbook p4 (0.711)",
+        "staff-handbook p4 (0.53)"
+      ]
+    },
+    {
+      "id": "en-cutoff",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What time must an order be confirmed to be delivered the next day in Kota Kinabalu?",
+      "rank": 4,
+      "relevant": true,
+      "best": 0.707,
+      "top": [
+        "delivery-procedure p2 (0.707)",
+        "delivery-procedure p1 (0.682)"
+      ]
+    },
+    {
+      "id": "en-keningau",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How much is delivery to Keningau and how long does it take?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.605,
+      "top": [
+        "delivery-procedure p1 (0.605)",
+        "delivery-procedure p1 (0.483)"
+      ]
+    },
+    {
+      "id": "en-nobody-home",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What happens if nobody is at the site to receive the delivery?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.655,
+      "top": [
+        "delivery-procedure p3 (0.655)",
+        "delivery-procedure p1 (0.562)"
+      ]
+    },
+    {
+      "id": "en-credit-days",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How many days do credit customers have to pay an invoice?",
+      "rank": 2,
+      "relevant": true,
+      "best": 0.703,
+      "top": [
+        "price-list-and-terms p2 (0.703)",
+        "price-list-and-terms p2 (0.697)"
+      ]
+    },
+    {
+      "id": "en-return",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "Can I return unopened goods, and is there a fee?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.708,
+      "top": [
+        "price-list-and-terms p2 (0.708)",
+        "delivery-procedure p3 (0.569)"
+      ]
+    },
+    {
+      "id": "en-discount",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What discount do I get if I buy RM20,000 of goods in a month?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.716,
+      "top": [
+        "price-list-and-terms p2 (0.716)",
+        "price-list-and-terms p2 (0.573)"
+      ]
+    },
+    {
+      "id": "en-speed",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What is the speed limit for company lorries on the highway?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.674,
+      "top": [
+        "vehicle-safety-procedure p1 (0.674)",
+        "delivery-procedure p1 (0.508)"
+      ]
+    },
+    {
+      "id": "en-accident",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How soon must I report an accident to the Safety Officer?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.711,
+      "top": [
+        "vehicle-safety-procedure p3 (0.711)",
+        "vehicle-safety-procedure p3 (0.599)"
+      ]
+    },
+    {
+      "id": "en-tread",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "What is the minimum tyre tread depth before a lorry can leave?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.572,
+      "top": [
+        "vehicle-safety-procedure p1 (0.551)",
+        "vehicle-safety-procedure p3 (0.506)"
+      ]
+    },
+    {
+      "id": "en-password",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How long must a password be?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.678,
+      "top": [
+        "it-and-data-policy p1 (0.678)",
+        "it-and-data-policy p1 (0.508)"
+      ]
+    },
+    {
+      "id": "en-lost-laptop",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "I lost my company laptop. Who do I tell and how fast?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.696,
+      "top": [
+        "it-and-data-policy p1 (0.696)",
+        "it-and-data-policy p2 (0.683)"
+      ]
+    },
+    {
+      "id": "en-cctv",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How long does the company keep CCTV recordings?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.667,
+      "top": [
+        "it-and-data-policy p2 (0.667)",
+        "it-and-data-policy p2 (0.528)"
+      ]
+    },
+    {
+      "id": "en-breach",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "How quickly must a data breach be reported?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.744,
+      "top": [
+        "it-and-data-policy p2 (0.744)",
+        "delivery-procedure p2 (0.589)"
+      ]
+    },
+    {
+      "id": "en-backup",
+      "lang": "en",
+      "kind": "answerable",
+      "question": "When are backups made and how long are they kept?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.728,
+      "top": [
+        "it-and-data-policy p2 (0.728)",
+        "it-and-data-policy p2 (0.612)"
+      ]
+    },
+    {
+      "id": "ms-leave-6y",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapa hari cuti tahunan untuk pekerja yang telah bekerja selama 6 tahun?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.63,
+      "top": [
+        "staff-handbook p2 (0.63)",
+        "staff-handbook p3 (0.535)"
+      ]
+    },
+    {
+      "id": "ms-mileage",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapa bayaran sekilometer jika saya guna kereta sendiri untuk urusan kerja?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.636,
+      "top": [
+        "staff-handbook p3 (0.636)",
+        "vehicle-safety-procedure p2 (0.53)"
+      ]
+    },
+    {
+      "id": "ms-maternity",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapa hari cuti bersalin yang saya layak?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.637,
+      "top": [
+        "staff-handbook p3 (0.637)",
+        "staff-handbook p3 (0.595)"
+      ]
+    },
+    {
+      "id": "ms-payday",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Bilakah gaji dibayar setiap bulan?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.66,
+      "top": [
+        "staff-handbook p4 (0.66)",
+        "staff-handbook p2 (0.59)"
+      ]
+    },
+    {
+      "id": "ms-kudat",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapakah caj penghantaran ke Kudat?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.614,
+      "top": [
+        "delivery-procedure p1 (0.607)",
+        "delivery-procedure p2 (0.614)"
+      ]
+    },
+    {
+      "id": "ms-invoice",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapa lama pelanggan akaun kredit ada untuk membayar invois?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.711,
+      "top": [
+        "price-list-and-terms p2 (0.711)",
+        "price-list-and-terms p2 (0.675)"
+      ]
+    },
+    {
+      "id": "ms-speed",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Apakah had laju lori syarikat di lebuh raya?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.611,
+      "top": [
+        "vehicle-safety-procedure p1 (0.611)",
+        "vehicle-safety-procedure p2 (0.532)"
+      ]
+    },
+    {
+      "id": "ms-laptop",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Komputer riba syarikat saya hilang. Berapa cepat saya perlu beritahu pihak IT?",
+      "rank": 2,
+      "relevant": true,
+      "best": 0.682,
+      "top": [
+        "it-and-data-policy p2 (0.682)",
+        "it-and-data-policy p1 (0.667)"
+      ]
+    },
+    {
+      "id": "ms-cctv",
+      "lang": "ms",
+      "kind": "answerable",
+      "question": "Berapa lama rakaman CCTV disimpan?",
+      "rank": 1,
+      "relevant": true,
+      "best": 0.635,
+      "top": [
+        "it-and-data-policy p2 (0.635)",
+        "it-and-data-policy p2 (0.525)"
+      ]
+    },
+    {
+      "id": "no-ceo-salary",
+      "lang": "en",
+      "kind": "off_topic",
+      "question": "What is the chief executive's salary?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.519,
+      "top": [
+        "staff-handbook p4 (0.455)",
+        "staff-handbook p3 (0.451)"
+      ]
+    },
+    {
+      "id": "no-weather",
+      "lang": "en",
+      "kind": "off_topic",
+      "question": "What will the weather be like in Kota Kinabalu tomorrow?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.522,
+      "top": [
+        "delivery-procedure p2 (0.522)",
+        "delivery-procedure p1 (0.482)"
+      ]
+    },
+    {
+      "id": "no-dog",
+      "lang": "en",
+      "kind": "off_topic",
+      "question": "Can I bring my dog to the warehouse?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.483,
+      "top": [
+        "vehicle-safety-procedure p1 (0.461)",
+        "vehicle-safety-procedure p1 (0.452)"
+      ]
+    },
+    {
+      "id": "no-gym",
+      "lang": "en",
+      "kind": "off_topic",
+      "question": "Does the company pay for a gym membership?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.524,
+      "top": [
+        "staff-handbook p4 (0.463)",
+        "staff-handbook p4 (0.424)"
+      ]
+    },
+    {
+      "id": "no-chairman",
+      "lang": "ms",
+      "kind": "off_topic",
+      "question": "Siapakah pengerusi syarikat ini?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.432,
+      "top": [
+        "staff-handbook p4 (0.432)",
+        "staff-handbook p4 (0.431)"
+      ]
+    },
+    {
+      "id": "no-bonus",
+      "lang": "ms",
+      "kind": "off_topic",
+      "question": "Berapakah bonus tahunan untuk pengurus jualan?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.491,
+      "top": [
+        "price-list-and-terms p2 (0.491)",
+        "staff-handbook p4 (0.482)"
+      ]
+    },
+    {
+      "id": "no-study-leave",
+      "lang": "en",
+      "kind": "near_miss",
+      "question": "How many days of study leave do I get?",
+      "rank": null,
+      "relevant": true,
+      "best": 0.623,
+      "top": [
+        "staff-handbook p2 (0.623)",
+        "staff-handbook p2 (0.606)"
+      ]
+    },
+    {
+      "id": "no-marine-ply",
+      "lang": "en",
+      "kind": "near_miss",
+      "question": "What is the price of a 20 mm marine plywood sheet?",
+      "rank": null,
+      "relevant": true,
+      "best": 0.582,
+      "top": [
+        "price-list-and-terms p1 (0.582)",
+        "price-list-and-terms p1 (0.525)"
+      ]
+    },
+    {
+      "id": "no-tawau-address",
+      "lang": "en",
+      "kind": "near_miss",
+      "question": "What is the street address of the Tawau branch?",
+      "rank": null,
+      "relevant": false,
+      "best": 0.457,
+      "top": [
+        "delivery-procedure p1 (0.457)",
+        "delivery-procedure p2 (0.425)"
+      ]
+    }
+  ]
+}

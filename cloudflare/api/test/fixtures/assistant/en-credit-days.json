@@ -1,0 +1,93 @@
+{
+  "question": "How many days do credit customers have to pay an invoice?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "price-list-and-terms",
+      "docTitle": "Customer price list and terms of sale",
+      "file": "price-list-and-terms.pdf",
+      "page": 2,
+      "heading": "3. Payment terms > 3.3 Late payment",
+      "text": "Overdue invoices carry a late charge of 1.5% per month on the unpaid amount. Supply on credit stops when any invoice is more than 45 days overdue, until the overdue amount is paid. Price disputes must be raised within 7 days of the invoice date.",
+      "score": 0.703,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "price-list-and-terms",
+      "docTitle": "Customer price list and terms of sale",
+      "file": "price-list-and-terms.pdf",
+      "page": 2,
+      "heading": "3. Payment terms > 3.2 Credit accounts",
+      "text": "A customer may apply for a credit account after 3 months of regular purchases. Credit limits run from RM5,000 to RM50,000, depending on a review by the Finance Manager. Invoices on a credit account are due 30 days from the invoice date.",
+      "score": 0.697,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 2,
+      "heading": "5. Personal data and breaches > 5.1 Personal data",
+      "text": "The company collects personal data only to take orders, deliver goods, review credit applications and employ staff. Staff open customer records only when their job needs it. A customer or staff member who asks to see their own data receives an answer within 21 days.",
+      "score": 0.561,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "it-and-data-policy",
+      "docTitle": "IT and data policy",
+      "file": "it-and-data-policy.pdf",
+      "page": 2,
+      "heading": "4. Backups and keeping records > 4.2 How long records are kept",
+      "text": "Record: Customer, sales and finance records; Kept for: 7 years\nRecord: Staff records after leaving the company; Kept for: 7 years\nRecord: Proof-of-delivery photos; Kept for: 12 months\nRecord: CCTV recordings; Kept for: 30 days\nRecord: Credit applications that were declined; Kept for: 12 months\nAfter the period ends, the owner of the record deletes it and tells IT. Records needed for a dispute or an audit are kept until it is closed.",
+      "score": 0.54,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-5a2c42668c3d4544ace481304716db38",
+    "object": "chat.completion",
+    "created": 1795757427,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Invoices on a credit account are due 30 days from the invoice date.\", \"source\": 2, \"quote\": \"Invoices on a credit account are due 30 days from the invoice date.\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 641,
+      "completion_tokens": 58,
+      "total_tokens": 699,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 23.36082
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

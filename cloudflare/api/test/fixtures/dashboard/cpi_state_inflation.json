@@ -1,0 +1,42 @@
+{
+ "meta": {
+  "catalogue_id": "cpi_state_inflation",
+  "data_as_of": "2026-10",
+  "last_updated": "2026-11-19 13:09",
+  "next_update": "2026-12-18 13:00",
+  "data_source": [
+   "DOSM"
+  ],
+  "update_frequency": "MONTHLY",
+  "total": 6,
+  "filter": "Sabah@state,overall@division",
+  "sort": "-date",
+  "limit": 6
+ },
+ "data": [
+  {
+   "inflation_yoy": 1.9,
+   "date": "2026-10-01"
+  },
+  {
+   "inflation_yoy": 1.9,
+   "date": "2026-09-01"
+  },
+  {
+   "inflation_yoy": 1.8,
+   "date": "2026-08-01"
+  },
+  {
+   "inflation_yoy": 1.9,
+   "date": "2026-07-01"
+  },
+  {
+   "inflation_yoy": 1.9,
+   "date": "2026-06-01"
+  },
+  {
+   "inflation_yoy": 2,
+   "date": "2026-05-01"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+  "question": "How many days of annual leave do I get after 3 years with the company?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 2,
+      "heading": "3. Leave > 3.1 Annual leave",
+      "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+      "score": 0.685,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 2,
+      "heading": "3. Leave > 3.2 How to apply for annual leave",
+      "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+      "score": 0.651,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 3,
+      "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+      "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+      "score": 0.562,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 3,
+      "heading": "3. Leave > 3.3 Sick leave and hospitalisation",
+      "text": "The number of paid sick leave days without hospital stay is in the table in 3.1. You must tell your supervisor by 9:00 am on the first day of absence, by phone or message, and give a medical certificate from a registered doctor on your return. If you are admitted to hospital, you receive up to 60 days of paid sick leave in a year, which includes the outpatient days.",
+      "score": 0.597,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-69f031adfb2e4af29486c76cdc0840b3",
+    "object": "chat.completion",
+    "created": 1795757421,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"You get 12 days of annual leave after 3 years with the company.\", \"source\": 1, \"quote\": \"Length of service: 2 years to less than 5 years; Annual leave: 12 days\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 769,
+      "completion_tokens": 63,
+      "total_tokens": 832,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 27.693388000000002
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

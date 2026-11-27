@@ -1,0 +1,277 @@
+{
+  "tanjung-merpati": {
+    "text": "### Page 1\nTanjung Merpati Packaging Sdn BhdNo. 8, Lorong Industri 3\nKota Kinabalu, SabahINVOICEInvoice No: INV-20418\nDate: 21 Nov 2026\nDue date: 21 Dec 2026Bill toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDescription Qty Unit price (RM) Amount (RM)Corrugated carton 40 x 30 x 25 cm (pack of 25) 12 38.50 462.00\nBubble wrap roll, 100 m 6 42.00 252.00\nPacking tape 48 mm (6 rolls) 10 21.60 216.00\nDelivery, Kota Kinabalu 1 60.00 60.00Subtotal RM 990.00\nSales tax 10% RM 99.00Total RM 1,089.00Payment terms: Net 30 days. Bank transfer to the account on file.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+      "invoice_number": "INV-20418",
+      "invoice_date": "2026-11-21",
+      "due_date": "2026-12-21",
+      "currency": "MYR",
+      "payment_terms": "Net 30 days",
+      "lines": [
+        {
+          "description": "Corrugated carton 40 x 30 x 25 cm (pack of 25)",
+          "quantity": 12,
+          "unit_price": 38.5,
+          "amount": 462
+        },
+        {
+          "description": "Bubble wrap roll, 100 m",
+          "quantity": 6,
+          "unit_price": 42,
+          "amount": 252
+        },
+        {
+          "description": "Packing tape 48 mm (6 rolls)",
+          "quantity": 10,
+          "unit_price": 21.6,
+          "amount": 216
+        },
+        {
+          "description": "Delivery, Kota Kinabalu",
+          "quantity": 1,
+          "unit_price": 60,
+          "amount": 60
+        }
+      ],
+      "subtotal": 990,
+      "tax": 99,
+      "total": 1089
+    }
+  },
+  "lumut-biru": {
+    "text": "### Page 1\nLumut Biru Cold Storage Sdn BhdLot 5, Kawasan Perindustrian Kolombong, Kota Kinabalu, SabahTAX INVOICEInvoice number CS/2026/00931Issued 18/11/2026Payment due 18/12/2026Billed toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDESCRIPTION QTY RATE AMOUNTChilled pallet storage, November 2026 (pallet-days) 24 38.00 912.00\nGoods in and out handling (per pallet) 36 6.50 234.00\nTemperature log report 1 80.00 80.00\nSubtotal (RM) 1,226.00\nService tax 8% (RM) 98.08Amount payable (RM) 1,324.08Net 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Lumut Biru Cold Storage Sdn Bhd",
+      "invoice_number": "CS/2026/00931",
+      "invoice_date": "2026-11-18",
+      "due_date": "2026-12-18",
+      "currency": "MYR",
+      "payment_terms": "Net 30 days",
+      "lines": [
+        {
+          "description": "Chilled pallet storage, November 2026 (pallet-days)",
+          "quantity": 24,
+          "unit_price": 38,
+          "amount": 912
+        },
+        {
+          "description": "Goods in and out handling (per pallet)",
+          "quantity": 36,
+          "unit_price": 6.5,
+          "amount": 234
+        },
+        {
+          "description": "Temperature log report",
+          "quantity": 1,
+          "unit_price": 80,
+          "amount": 80
+        }
+      ],
+      "subtotal": 1226,
+      "tax": 98.08,
+      "total": 1324.08
+    }
+  },
+  "sungai-kerlap": {
+    "text": "### Page 1\nSUNGAI KERLAP PRINTING WORKS12 Jalan Percetakan\nSandakan, Sabah\n==================================================================INVOICERef : SKPW-7733\nDate : 2026-10-06\nPay by : 2026-11-05\nCustomer : Demo Buyer Sdn Bhd\nLot 12, Jalan Contoh, 88000 Kota Kinabalu, Sabah\n------------------------------------------------------------------ITEM QTY PRICE AMOUNT------------------------------------------------------------------\nBrochure A5, full colour\n1000 0.85 850.00\nRoll-up banner 85 x 200 cm\n2 120.00 240.00\nDelivery\n1 25.00 25.00\n------------------------------------------------------------------\nSUBTOTAL RM 1,115.00TOTAL DUE RM 1,115.00Terms: Net 30 days. Cheques payable to Sungai Kerlap Printing Works.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Sungai Kerlap Printing Works",
+      "invoice_number": "SKPW-7733",
+      "invoice_date": "2026-10-06",
+      "due_date": "2026-11-05",
+      "currency": "MYR",
+      "payment_terms": "Net 30 days. Cheques payable to Sungai Kerlap Printing Works.",
+      "lines": [
+        {
+          "description": "Brochure A5, full colour",
+          "quantity": 1000,
+          "unit_price": 0.85,
+          "amount": 850
+        },
+        {
+          "description": "Roll-up banner 85 x 200 cm",
+          "quantity": 2,
+          "unit_price": 120,
+          "amount": 240
+        },
+        {
+          "description": "Delivery",
+          "quantity": 1,
+          "unit_price": 25,
+          "amount": 25
+        }
+      ],
+      "subtotal": 1115,
+      "tax": null,
+      "total": 1115
+    }
+  },
+  "pulau-senja": {
+    "text": "### Page 1\nPulau Senja Linen SupplyLot 31, Jalan Kemajuan, Kota Kinabalu, SabahInvoiceInvoice no. PS-2026-0187Invoice date 18 November 2026Due date 2 December 2026Terms Net 14 daysCustomer Demo Buyer Sdn BhdItem Qty Unit RM Line RMBath towel, white, 70 x 140 cm 80 14.50 1,160.00\nPillowcase, white 120 4.20 504.00\nHand towel, white 100 5.90 590.00\nDelivery 1 40.00 40.00Total RM 2,294.00Please pay by 2 December 2026.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Pulau Senja Linen Supply",
+      "invoice_number": "PS-2026-0187",
+      "invoice_date": "2026-11-18",
+      "due_date": "2026-12-02",
+      "currency": "MYR",
+      "payment_terms": "Net 14 days",
+      "lines": [
+        {
+          "description": "Bath towel, white, 70 x 140 cm",
+          "quantity": 80,
+          "unit_price": 14.5,
+          "amount": 1160
+        },
+        {
+          "description": "Pillowcase, white",
+          "quantity": 120,
+          "unit_price": 4.2,
+          "amount": 504
+        },
+        {
+          "description": "Hand towel, white",
+          "quantity": 100,
+          "unit_price": 5.9,
+          "amount": 590
+        },
+        {
+          "description": "Delivery",
+          "quantity": 1,
+          "unit_price": 40,
+          "amount": 40
+        }
+      ],
+      "subtotal": null,
+      "tax": null,
+      "total": 2294
+    }
+  },
+  "batu-layar": {
+    "text": "### Page 1\nBatu Layar Electrical TradingLot 9, Jalan Elektrik | Tawau, SabahTax InvoiceInvoice number: BLE/11/0562\nDate of issue: 15 Nov 2026\nPayment due by: 15 Dec 2026Customer:Demo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahParticulars Quantity Price TotalLED panel light 18 W 20 22.00 440.00\nCable 2.5 mm2, 100 m roll 4 168.00 672.00\nCircuit breaker 20 A 12 15.50 186.00\nConduit 20 mm, 3 m length 30 3.40 102.00Sub-total (RM) 1,520.00\nSales tax 10% (RM) 152.00Total (RM) 1,672.00Terms of payment: Net 30 days.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Batu Layar Electrical Trading",
+      "invoice_number": "BLE/11/0562",
+      "invoice_date": "2026-11-15",
+      "due_date": "2026-12-15",
+      "currency": "MYR",
+      "payment_terms": "Net 30 days",
+      "lines": [
+        {
+          "description": "LED panel light 18 W",
+          "quantity": 20,
+          "unit_price": 22,
+          "amount": 440
+        },
+        {
+          "description": "Cable 2.5 mm2, 100 m roll",
+          "quantity": 4,
+          "unit_price": 168,
+          "amount": 672
+        },
+        {
+          "description": "Circuit breaker 20 A",
+          "quantity": 12,
+          "unit_price": 15.5,
+          "amount": 186
+        },
+        {
+          "description": "Conduit 20 mm, 3 m length",
+          "quantity": 30,
+          "unit_price": 3.4,
+          "amount": 102
+        }
+      ],
+      "subtotal": 1520,
+      "tax": 152,
+      "total": 1672
+    }
+  },
+  "tanjung-merpati-resent": {
+    "text": "### Page 1\nTanjung Merpati Packaging Sdn BhdNo. 8, Lorong Industri 3, Kota Kinabalu, SabahTAX INVOICERESENT COPYInvoice number INV-20418Issued 21/11/2026Payment due 21/12/2026Billed toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDESCRIPTION QTY RATE AMOUNTCorrugated carton 40 x 30 x 25 cm (pack of 25) 12 38.50 462.00\nBubble wrap roll, 100 m 6 42.00 252.00\nPacking tape 48 mm (6 rolls) 10 21.60 216.00\nDelivery, Kota Kinabalu 1 60.00 60.00\nSubtotal (RM) 990.00\nSales tax 10% (RM) 99.00Amount payable (RM) 1,089.00Net 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+      "invoice_number": "INV-20418",
+      "invoice_date": "2026-11-21",
+      "due_date": "2026-12-21",
+      "currency": "MYR",
+      "payment_terms": "Net 30 days",
+      "lines": [
+        {
+          "description": "Corrugated carton 40 x 30 x 25 cm (pack of 25)",
+          "quantity": 12,
+          "unit_price": 38.5,
+          "amount": 462
+        },
+        {
+          "description": "Bubble wrap roll, 100 m",
+          "quantity": 6,
+          "unit_price": 42,
+          "amount": 252
+        },
+        {
+          "description": "Packing tape 48 mm (6 rolls)",
+          "quantity": 10,
+          "unit_price": 21.6,
+          "amount": 216
+        },
+        {
+          "description": "Delivery, Kota Kinabalu",
+          "quantity": 1,
+          "unit_price": 60,
+          "amount": 60
+        }
+      ],
+      "subtotal": 990,
+      "tax": 99,
+      "total": 1089
+    }
+  },
+  "bukit-rembulan": {
+    "text": "### Page 1\nBukit Rembulan Stationery Sdn BhdG-14, Plaza Contoh\nKota Kinabalu, SabahInvoice BR-004219Date 23 Nov 2026\nTo: Demo Buyer Sdn Bhd\n60 x A4 paper 80 gsm (ream) @ 11.90 714.00\n8 x Ballpoint pen, blue (box of 50) @ 17.50 140.00\n3 x Stapler, heavy duty @ 28.00 84.00\n2 x Toner cartridge, compatible @ 145.00 290.00Total RM 1,228.00Payment terms: 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+    "fields": {
+      "is_invoice": true,
+      "supplier": "Bukit Rembulan Stationery Sdn Bhd",
+      "invoice_number": "BR-004219",
+      "invoice_date": "2026-11-23",
+      "due_date": null,
+      "currency": "MYR",
+      "payment_terms": "30 days",
+      "lines": [
+        {
+          "description": "A4 paper 80 gsm (ream)",
+          "quantity": 60,
+          "unit_price": 11.9,
+          "amount": 714
+        },
+        {
+          "description": "Ballpoint pen, blue (box of 50)",
+          "quantity": 8,
+          "unit_price": 17.5,
+          "amount": 140
+        },
+        {
+          "description": "Stapler, heavy duty",
+          "quantity": 3,
+          "unit_price": 28,
+          "amount": 84
+        },
+        {
+          "description": "Toner cartridge, compatible",
+          "quantity": 2,
+          "unit_price": 145,
+          "amount": 290
+        }
+      ],
+      "subtotal": null,
+      "tax": null,
+      "total": 1228
+    }
+  }
+}

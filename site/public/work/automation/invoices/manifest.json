@@ -1,0 +1,206 @@
+{
+  "generated": "2026-11-27",
+  "note": "Synthetic invoices from fictional suppliers. Dates are relative to the generated date.",
+  "samples": [
+    {
+      "id": "tanjung-merpati",
+      "file": "tanjung-merpati.pdf",
+      "thumb": "tanjung-merpati.jpg",
+      "bytes": 4590,
+      "sha256": "2300db3b9cd792110c380b981a81f097c1956c0b8bd10c4475e4efc9114607c3",
+      "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+      "case": "Clean invoice, due in the future",
+      "layout": "classic",
+      "expected": {
+        "outcome": "filed",
+        "reasons": [],
+        "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+        "invoice_number": "INV-20418",
+        "invoice_date": "2026-11-21",
+        "due_date": "2026-12-21",
+        "currency": "MYR",
+        "subtotal": 990,
+        "tax": 99,
+        "total": 1089,
+        "line_count": 4,
+        "lines_total": 990
+      }
+    },
+    {
+      "id": "lumut-biru",
+      "file": "lumut-biru.pdf",
+      "thumb": "lumut-biru.jpg",
+      "bytes": 4500,
+      "sha256": "550e4f6db53e85009770a6fd15f54504c7fd700c307e5c3663c74d7a1910f0dd",
+      "supplier": "Lumut Biru Cold Storage Sdn Bhd",
+      "case": "Clean invoice with service tax",
+      "layout": "modern",
+      "expected": {
+        "outcome": "filed",
+        "reasons": [],
+        "supplier": "Lumut Biru Cold Storage Sdn Bhd",
+        "invoice_number": "CS/2026/00931",
+        "invoice_date": "2026-11-18",
+        "due_date": "2026-12-18",
+        "currency": "MYR",
+        "subtotal": 1226,
+        "tax": 98.08,
+        "total": 1324.08,
+        "line_count": 3,
+        "lines_total": 1226
+      }
+    },
+    {
+      "id": "sungai-kerlap",
+      "file": "sungai-kerlap.pdf",
+      "thumb": "sungai-kerlap.jpg",
+      "bytes": 3637,
+      "sha256": "870f0051944be08ed914ff9e6b39f1531f93405fe7c54279de9f27f1ddce0037",
+      "supplier": "Sungai Kerlap Printing Works",
+      "case": "Already overdue",
+      "layout": "typewriter",
+      "expected": {
+        "outcome": "filed",
+        "reasons": [],
+        "supplier": "Sungai Kerlap Printing Works",
+        "invoice_number": "SKPW-7733",
+        "invoice_date": "2026-10-06",
+        "due_date": "2026-11-05",
+        "currency": "MYR",
+        "subtotal": 1115,
+        "tax": null,
+        "total": 1115,
+        "line_count": 3,
+        "lines_total": 1115
+      }
+    },
+    {
+      "id": "pulau-senja",
+      "file": "pulau-senja.pdf",
+      "thumb": "pulau-senja.jpg",
+      "bytes": 4218,
+      "sha256": "b928bcfeff5f865db84293d55f72012146dc012e63c3fde7257bdfc79be6051c",
+      "supplier": "Pulau Senja Linen Supply",
+      "case": "Clean invoice, due within 7 days",
+      "layout": "compact",
+      "expected": {
+        "outcome": "filed",
+        "reasons": [],
+        "supplier": "Pulau Senja Linen Supply",
+        "invoice_number": "PS-2026-0187",
+        "invoice_date": "2026-11-18",
+        "due_date": "2026-12-02",
+        "currency": "MYR",
+        "subtotal": null,
+        "tax": null,
+        "total": 2294,
+        "line_count": 4,
+        "lines_total": 2294
+      }
+    },
+    {
+      "id": "batu-layar",
+      "file": "batu-layar.pdf",
+      "thumb": "batu-layar.jpg",
+      "bytes": 4443,
+      "sha256": "d719f58304a392048f9f06a9190626e063b469f103bb84d635f7985882033db6",
+      "supplier": "Batu Layar Electrical Trading",
+      "case": "Total does not match its lines",
+      "layout": "serif",
+      "expected": {
+        "outcome": "review",
+        "reasons": [
+          "lines_vs_subtotal"
+        ],
+        "supplier": "Batu Layar Electrical Trading",
+        "invoice_number": "BLE/11/0562",
+        "invoice_date": "2026-11-15",
+        "due_date": "2026-12-15",
+        "currency": "MYR",
+        "subtotal": 1520,
+        "tax": 152,
+        "total": 1672,
+        "line_count": 4,
+        "lines_total": 1400
+      }
+    },
+    {
+      "id": "tanjung-merpati-resent",
+      "file": "tanjung-merpati-resent.pdf",
+      "thumb": "tanjung-merpati-resent.jpg",
+      "bytes": 4731,
+      "sha256": "1246e314cd289f74e81aca8a050c9cf67d44d2fe0244254d1c99284a8b14fc58",
+      "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+      "case": "Same invoice number as the first sample, sent again",
+      "layout": "modern",
+      "expected": {
+        "outcome": "duplicate",
+        "reasons": [
+          "duplicate"
+        ],
+        "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+        "invoice_number": "INV-20418",
+        "invoice_date": "2026-11-21",
+        "due_date": "2026-12-21",
+        "currency": "MYR",
+        "subtotal": 990,
+        "tax": 99,
+        "total": 1089,
+        "line_count": 4,
+        "lines_total": 990
+      }
+    },
+    {
+      "id": "bukit-rembulan",
+      "file": "bukit-rembulan.pdf",
+      "thumb": "bukit-rembulan.jpg",
+      "bytes": 3529,
+      "sha256": "bc1a2285877cd74cc8c28e278272af7cf5949c5d08dafcef0ef502c795d1d416",
+      "supplier": "Bukit Rembulan Stationery Sdn Bhd",
+      "case": "No due date on the invoice",
+      "layout": "minimal",
+      "expected": {
+        "outcome": "review",
+        "reasons": [
+          "due_date_missing"
+        ],
+        "supplier": "Bukit Rembulan Stationery Sdn Bhd",
+        "invoice_number": "BR-004219",
+        "invoice_date": "2026-11-23",
+        "due_date": null,
+        "currency": "MYR",
+        "subtotal": null,
+        "tax": null,
+        "total": 1228,
+        "line_count": 4,
+        "lines_total": 1228
+      }
+    },
+    {
+      "id": "teluk-pelita",
+      "file": "teluk-pelita.pdf",
+      "thumb": "teluk-pelita.jpg",
+      "bytes": 107601,
+      "sha256": "204ea875c656fb886867eee36da56f3e8fbae079e9843a686c6713136907e5be",
+      "supplier": "Teluk Pelita Hardware",
+      "case": "Photo of a paper invoice: goes to a person",
+      "layout": "scan",
+      "expected": {
+        "outcome": "scan",
+        "reasons": [
+          "scan"
+        ],
+        "supplier": "Teluk Pelita Hardware",
+        "invoice_number": "TPH-90127",
+        "invoice_date": "2026-11-12",
+        "due_date": "2026-12-12",
+        "currency": "MYR",
+        "subtotal": 4370,
+        "tax": null,
+        "total": 4370,
+        "line_count": 3,
+        "lines_total": 4370
+      }
+    }
+  ]
+}

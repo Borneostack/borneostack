@@ -1,0 +1,1273 @@
+{
+  "en-leave-3y": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.685,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.685,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.2 How to apply for annual leave",
+          "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+          "score": 0.651,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+          "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+          "score": 0.562,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.3 Sick leave and hospitalisation",
+          "text": "The number of paid sick leave days without hospital stay is in the table in 3.1. You must tell your supervisor by 9:00 am on the first day of absence, by phone or message, and give a medical certificate from a registered doctor on your return. If you are admitted to hospital, you receive up to 60 days of paid sick leave in a year, which includes the outpatient days.",
+          "score": 0.597,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 617,
+        "search": 6,
+        "total": 625
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "You get 12 days of annual leave after 3 years with the company [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Length of service: 2 years to less than 5 years; Annual leave: 12 days",
+          "quotes": [
+            "Length of service: 2 years to less than 5 years; Annual leave: 12 days"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.685,
+          "support": "Length of service: 2 years to less than 5 years; Annual leave: 12 days",
+          "supports": [
+            "Length of service: 2 years to less than 5 years; Annual leave: 12 days"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 27.7,
+      "ms": {
+        "embed": 617,
+        "search": 6,
+        "llm": 1538,
+        "verify": 2,
+        "total": 2165
+      }
+    }
+  },
+  "en-mileage": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.652,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+          "score": 0.652,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 4,
+          "heading": "4. Claims and expenses > 4.2 How and when to claim",
+          "text": "- Submit the claim form in the finance portal within 30 days of the date you spent the money. Claims older than 30 days are not paid.\n- Claims approved by the 20th of the month are paid with that month's salary. Claims approved after the 20th are paid in the next month.\n- A cash advance of up to RM1,000 can be requested for a trip. Settle it with receipts within 7 days of returning, or it is deducted from salary.",
+          "score": 0.544,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 4,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "Any single item above RM10 needs a receipt. Claims without a receipt are paid only if the Finance Manager accepts a written reason.",
+          "score": 0.521,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 4,
+          "heading": "4. Claims and expenses > 4.3 Who approves",
+          "text": "Claim total: Up to RM500; Approved by: Your supervisor\nClaim total: RM500.01 to RM2,000; Approved by: Your department head\nClaim total: More than RM2,000; Approved by: The General Manager",
+          "score": 0.514,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 169,
+        "search": 3,
+        "total": 174
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "You may claim RM0.70 per km when using your own car for company business [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Expense: Mileage, own car; Rate or limit: RM0.70 per km",
+          "quotes": [
+            "Expense: Mileage, own car; Rate or limit: RM0.70 per km"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+          "score": 0.652,
+          "support": "Expense: Mileage, own car; Rate or limit: RM0.70 per km",
+          "supports": [
+            "Expense: Mileage, own car; Rate or limit: RM0.70 per km"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 27.1,
+      "ms": {
+        "embed": 169,
+        "search": 3,
+        "llm": 1796,
+        "verify": 1,
+        "total": 1971
+      }
+    }
+  },
+  "en-keningau": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.605,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.605,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "1. Taking and confirming orders > 1.2 Heavy and large orders",
+          "text": "Orders of more than 100 bags of cement, more than 2 tonnes in total, or any item longer than 6 metres need 2 working days notice, because they need a crane truck or a second lorry. Sales staff must tell the customer when they quote.",
+          "score": 0.483,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "1. Taking and confirming orders > 1.1 Cut-off times",
+          "text": "An order is confirmed when the customer has accepted the quotation and, for new customers, paid. Orders confirmed by 3:00 pm from Monday to Friday are delivered on the next working day in Zone A. Orders confirmed after 3:00 pm count as received on the next working day.\nFor Saturday delivery in Zone A, the order must be confirmed by 11:00 am on Friday. There is no delivery on Sundays or public holidays.",
+          "score": 0.466,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 2,
+          "heading": "3. On the day of delivery > 3.1 Delivery windows",
+          "text": "Customers choose a morning window (8:30 am to 12:30 pm) or an afternoon window (1:30 pm to 5:30 pm). The dispatch office sends a message the evening before with the window and the driver's name. A driver may take at most 14 drops on one route.",
+          "score": 0.452,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 147,
+        "search": 2,
+        "total": 151
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Delivery to Keningau takes 3 working days [1]. Delivery to Keningau costs RM120 [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Lead time: 3 working days",
+          "quotes": [
+            "Lead time: 3 working days",
+            "Delivery charge: RM120"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.605,
+          "support": "Lead time: 3 working days",
+          "supports": [
+            "Lead time: 3 working days",
+            "Delivery charge: RM120"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 27.1,
+      "ms": {
+        "embed": 147,
+        "search": 2,
+        "llm": 1784,
+        "verify": 1,
+        "total": 1937
+      }
+    }
+  },
+  "en-credit-days": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.703,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 2,
+          "heading": "3. Payment terms > 3.3 Late payment",
+          "text": "Overdue invoices carry a late charge of 1.5% per month on the unpaid amount. Supply on credit stops when any invoice is more than 45 days overdue, until the overdue amount is paid. Price disputes must be raised within 7 days of the invoice date.",
+          "score": 0.703,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 2,
+          "heading": "3. Payment terms > 3.2 Credit accounts",
+          "text": "A customer may apply for a credit account after 3 months of regular purchases. Credit limits run from RM5,000 to RM50,000, depending on a review by the Finance Manager. Invoices on a credit account are due 30 days from the invoice date.",
+          "score": 0.697,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 2,
+          "heading": "5. Personal data and breaches > 5.1 Personal data",
+          "text": "The company collects personal data only to take orders, deliver goods, review credit applications and employ staff. Staff open customer records only when their job needs it. A customer or staff member who asks to see their own data receives an answer within 21 days.",
+          "score": 0.561,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 2,
+          "heading": "4. Backups and keeping records > 4.2 How long records are kept",
+          "text": "Record: Customer, sales and finance records; Kept for: 7 years\nRecord: Staff records after leaving the company; Kept for: 7 years\nRecord: Proof-of-delivery photos; Kept for: 12 months\nRecord: CCTV recordings; Kept for: 30 days\nRecord: Credit applications that were declined; Kept for: 12 months\nAfter the period ends, the owner of the record deletes it and tells IT. Records needed for a dispute or an audit are kept until it is closed.",
+          "score": 0.54,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 182,
+        "search": 2,
+        "total": 186
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Invoices on a credit account are due 30 days from the invoice date [2].",
+      "citations": [
+        {
+          "n": 2,
+          "quote": "Invoices on a credit account are due 30 days from the invoice date.",
+          "quotes": [
+            "Invoices on a credit account are due 30 days from the invoice date."
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 2,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 2,
+          "heading": "3. Payment terms > 3.2 Credit accounts",
+          "text": "A customer may apply for a credit account after 3 months of regular purchases. Credit limits run from RM5,000 to RM50,000, depending on a review by the Finance Manager. Invoices on a credit account are due 30 days from the invoice date.",
+          "score": 0.697,
+          "support": "Invoices on a credit account are due 30 days from the invoice date.",
+          "supports": [
+            "Invoices on a credit account are due 30 days from the invoice date."
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 23.4,
+      "ms": {
+        "embed": 182,
+        "search": 2,
+        "llm": 1247,
+        "verify": 0,
+        "total": 1433
+      }
+    }
+  },
+  "en-accident": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.711,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "vehicle-safety-procedure",
+          "docTitle": "Vehicle and equipment safety procedure",
+          "file": "vehicle-safety-procedure.pdf",
+          "page": 3,
+          "heading": "5. Accidents and breakdowns > 5.1 After an accident or near miss",
+          "text": "- Stop, switch on the hazard lights and check for injuries. Call 999 if anyone is hurt.\n- Do not admit fault and do not agree to settle in cash at the scene.\n- Take photos of the vehicles, the road and the damage, and note the names of witnesses.\n- Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\n- Give a written report within 24 hours, on the incident form.",
+          "score": 0.711,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "vehicle-safety-procedure",
+          "docTitle": "Vehicle and equipment safety procedure",
+          "file": "vehicle-safety-procedure.pdf",
+          "page": 3,
+          "heading": "5. Accidents and breakdowns > 5.2 Breakdowns",
+          "text": "Move the vehicle off the road if you can and switch on the hazard lights. Place the warning triangle at least 50 metres behind the vehicle. Call the dispatch office. Do not attempt roadside repairs other than changing a tyre when it is safe.",
+          "score": 0.599,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 2,
+          "heading": "4. Problems > 4.1 Damage and shortages",
+          "text": "The customer must check the goods at delivery and write any damage or shortage on the DO before signing. Damage or shortage found later must be reported to dispatch@tanjungsampel.example with photos within 24 hours of delivery. Reports after 24 hours are accepted only for damage that could not be seen at delivery, and not later than 3 days after delivery.",
+          "score": 0.586,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 2,
+          "heading": "5. Personal data and breaches > 5.2 Reporting a breach",
+          "text": "A data breach is any loss, theft or exposure of personal or company data, for example a lost laptop, an email sent to the wrong person or a stolen password. Report it to the IT Manager immediately and in any case within 4 hours of finding out. IT contains the problem, and the General Manager decides within 72 hours whether customers or authorities must be told.",
+          "score": 0.572,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 286,
+        "search": 4,
+        "total": 292
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.",
+          "quotes": [
+            "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage."
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "vehicle-safety-procedure",
+          "docTitle": "Vehicle and equipment safety procedure",
+          "file": "vehicle-safety-procedure.pdf",
+          "page": 3,
+          "heading": "5. Accidents and breakdowns > 5.1 After an accident or near miss",
+          "text": "- Stop, switch on the hazard lights and check for injuries. Call 999 if anyone is hurt.\n- Do not admit fault and do not agree to settle in cash at the scene.\n- Take photos of the vehicles, the road and the damage, and note the names of witnesses.\n- Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\n- Give a written report within 24 hours, on the incident form.",
+          "score": 0.711,
+          "support": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.",
+          "supports": [
+            "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage."
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 24.3,
+      "ms": {
+        "embed": 286,
+        "search": 4,
+        "llm": 1766,
+        "verify": 0,
+        "total": 2058
+      }
+    }
+  },
+  "ms-leave-6y": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.63,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.63,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+          "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+          "score": 0.535,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.2 How to apply for annual leave",
+          "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+          "score": 0.534,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.4 Other paid leave",
+          "text": "Type: Maternity leave; Entitlement: 98 consecutive days; Notes: Tell HR at least 30 days before the expected start.\nType: Paternity leave; Entitlement: 7 consecutive days; Notes: For married male employees, within 14 days of the birth.\nType: Compassionate leave; Entitlement: 3 days; Notes: Death of a spouse, child, parent or sibling.\nType: Marriage leave; Entitlement: 3 days; Notes: Once during employment, with the invitation or certificate.",
+          "score": 0.528,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 250,
+        "search": 3,
+        "total": 256
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Pekerja yang telah bekerja selama 6 tahun mendapat 16 hari cuti tahunan [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Length of service: 5 years or more; Annual leave: 16 days",
+          "quotes": [
+            "Length of service: 5 years or more; Annual leave: 16 days"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.63,
+          "support": "Length of service: 5 years or more; Annual leave: 16 days",
+          "supports": [
+            "Length of service: 5 years or more; Annual leave: 16 days"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 28.4,
+      "ms": {
+        "embed": 250,
+        "search": 3,
+        "llm": 1530,
+        "verify": 1,
+        "total": 1787
+      }
+    }
+  },
+  "ms-kudat": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.614,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.607,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 2,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "Zone: D; Areas: Sandakan, Tawau, Lahad Datu; Lead time: 2 working days from branch stock; 5 working days from Kota Kinabalu; Delivery charge: Branch stock: Zone A charges. From Kota Kinabalu: RM180 per pallet\nZone D orders from Kota Kinabalu travel on the trunk truck, which leaves every Tuesday and Friday. An order confirmed after the Friday dispatch waits for the Tuesday truck.",
+          "score": 0.614,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 3,
+          "heading": "4. Problems > 4.3 Nobody to receive the goods",
+          "text": "The driver waits 15 minutes and calls the customer twice. If nobody can receive the goods, the driver returns them to the warehouse and the order is booked for redelivery. A redelivery charge of RM40 applies in Zone A, and the normal zone charge applies elsewhere. A customer can move a delivery once without charge, if they tell the dispatch office before 12:00 noon on the working day before.",
+          "score": 0.526,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+          "score": 0.525,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 316,
+        "search": 3,
+        "total": 320
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Caj penghantaran ke Kudat ialah RM120 [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120",
+          "quotes": [
+            "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.607,
+          "support": "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120",
+          "supports": [
+            "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 31.8,
+      "ms": {
+        "embed": 316,
+        "search": 3,
+        "llm": 1803,
+        "verify": 0,
+        "total": 2124
+      }
+    }
+  },
+  "ms-laptop": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.682,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 2,
+          "heading": "5. Personal data and breaches > 5.2 Reporting a breach",
+          "text": "A data breach is any loss, theft or exposure of personal or company data, for example a lost laptop, an email sent to the wrong person or a stolen password. Report it to the IT Manager immediately and in any case within 4 hours of finding out. IT contains the problem, and the General Manager decides within 72 hours whether customers or authorities must be told.",
+          "score": 0.682,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 1,
+          "heading": "2. Devices > 2.1 Company laptops and phones",
+          "text": "Company laptops have encrypted disks and lock after 5 minutes without use. Only IT installs software. Do not use removable USB drives, except encrypted drives issued by IT. If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.",
+          "score": 0.667,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 3,
+          "heading": "8. Getting help",
+          "text": "The IT helpdesk answers requests from Monday to Friday, 8:30 am to 5:30 pm. A system that is down for the whole office is urgent: the target is to respond within 4 working hours. Other requests are answered by the next working day. Staff may use the company internet for reasonable personal use during breaks. The guest Wi-Fi is kept separate from the office network and must not be used for company work.",
+          "score": 0.6,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 3,
+          "heading": "7. Software, licences and the network",
+          "text": "Staff request new software through the IT helpdesk. IT checks the licence and security, and installs it if approved. Pirated or unlicensed software is not allowed, and IT removes it when found. The office network has three parts: the office network for company laptops, a warehouse network for scanners and the order terminals, and a guest network. Nobody connects personal devices to the office or warehouse networks.\nIT installs security updates on company laptops every month. Staff must restart the laptop within 2 working days when asked, so the update can finish. IT may inspect company email and files to investigate a breach or a complaint, and will tell the staff member when it does.",
+          "score": 0.599,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 452,
+        "search": 3,
+        "total": 456
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Jika peranti hilang atau dicuri, beritahu meja bantuan IT dalam masa 1 jam [2].",
+      "citations": [
+        {
+          "n": 2,
+          "quote": "If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.",
+          "quotes": [
+            "If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped."
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 2,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 1,
+          "heading": "2. Devices > 2.1 Company laptops and phones",
+          "text": "Company laptops have encrypted disks and lock after 5 minutes without use. Only IT installs software. Do not use removable USB drives, except encrypted drives issued by IT. If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.",
+          "score": 0.667,
+          "support": "If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped.",
+          "supports": [
+            "If a device is lost or stolen, tell the IT helpdesk within 1 hour, so it can be locked and wiped."
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 26,
+      "ms": {
+        "embed": 452,
+        "search": 3,
+        "llm": 1572,
+        "verify": 0,
+        "total": 2028
+      }
+    }
+  },
+  "no-study-leave": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.623,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.623,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.2 How to apply for annual leave",
+          "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+          "score": 0.606,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.4 Other paid leave",
+          "text": "Type: Maternity leave; Entitlement: 98 consecutive days; Notes: Tell HR at least 30 days before the expected start.\nType: Paternity leave; Entitlement: 7 consecutive days; Notes: For married male employees, within 14 days of the birth.\nType: Compassionate leave; Entitlement: 3 days; Notes: Death of a spouse, child, parent or sibling.\nType: Marriage leave; Entitlement: 3 days; Notes: Once during employment, with the invitation or certificate.",
+          "score": 0.58,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "3. Leave > 3.3 Sick leave and hospitalisation",
+          "text": "The number of paid sick leave days without hospital stay is in the table in 3.1. You must tell your supervisor by 9:00 am on the first day of absence, by phone or message, and give a medical certificate from a registered doctor on your return. If you are admitted to hospital, you receive up to 60 days of paid sick leave in a year, which includes the outpatient days.",
+          "score": 0.601,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 274,
+        "search": 1,
+        "total": 277
+      }
+    },
+    "answer": {
+      "status": "declined",
+      "reason": "model_declined",
+      "answer": "",
+      "citations": [],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [],
+      "llm": true,
+      "neurons": 25.6,
+      "ms": {
+        "embed": 274,
+        "search": 1,
+        "llm": 740,
+        "verify": 1,
+        "total": 1018
+      }
+    }
+  },
+  "no-marine-ply": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.582,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 1,
+          "heading": "1. Price list > 1.1 Building materials",
+          "text": "Item: Portland composite cement; Unit: 50 kg bag; Price (RM): 21.50\nItem: Steel rebar T10; Unit: 6 m length; Price (RM): 27.80\nItem: Steel rebar T12; Unit: 6 m length; Price (RM): 38.50\nItem: Plywood 18 mm; Unit: 4 ft x 8 ft sheet; Price (RM): 98.00\nItem: Roofing zinc sheet 0.4 mm; Unit: 3 m sheet; Price (RM): 46.00\nItem: PVC pipe 4 inch; Unit: 3 m length; Price (RM): 29.90\nItem: Concrete block 4 inch; Unit: each; Price (RM): 1.80",
+          "score": 0.582,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 1,
+          "heading": "1. Price list > 1.2 Hardware and site supplies",
+          "text": "Item: Emulsion paint, white; Unit: 18 litre pail; Price (RM): 215.00\nItem: Wire nails 3 inch; Unit: 25 kg box; Price (RM): 118.00\nItem: Safety helmet; Unit: each; Price (RM): 14.00\nItem: Work gloves, cotton; Unit: dozen pairs; Price (RM): 24.00\nItem: Padlock, 50 mm; Unit: each; Price (RM): 19.50\nItem: Cutting disc 4 inch; Unit: box of 25; Price (RM): 62.00\nThe company does not sell food, electrical appliances, air conditioners or furniture.",
+          "score": 0.525,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "price-list-and-terms",
+          "docTitle": "Customer price list and terms of sale",
+          "file": "price-list-and-terms.pdf",
+          "page": 1,
+          "heading": "Customer price list and terms of sale",
+          "text": "Tanjung Sampel Supplies | TSS-SALES-03 | Version 3.2, effective 1 January 2026\nPrices are in Ringgit Malaysia (RM), apply from 1 January 2026 and do not include any tax that applies. The company may change prices with 14 days notice to account customers. The list shows common items only; ask the sales counter for others. All prices and terms are invented for this sample.\nOwner: Sales Manager\nApplies to: Sales counter staff and customers\nNext review: 1 January 2027",
+          "score": 0.463,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.409,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 169,
+        "search": 3,
+        "total": 173
+      }
+    },
+    "answer": {
+      "status": "declined",
+      "reason": "model_declined",
+      "answer": "",
+      "citations": [],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [],
+      "llm": true,
+      "neurons": 32,
+      "ms": {
+        "embed": 169,
+        "search": 3,
+        "llm": 738,
+        "verify": 0,
+        "total": 911
+      }
+    }
+  },
+  "no-weather": {
+    "sources": {
+      "relevant": false,
+      "searched": 68,
+      "bestScore": 0.522,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 2,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "Zone: D; Areas: Sandakan, Tawau, Lahad Datu; Lead time: 2 working days from branch stock; 5 working days from Kota Kinabalu; Delivery charge: Branch stock: Zone A charges. From Kota Kinabalu: RM180 per pallet\nZone D orders from Kota Kinabalu travel on the trunk truck, which leaves every Tuesday and Friday. An order confirmed after the Friday dispatch waits for the Tuesday truck.",
+          "score": 0.522,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "2. Delivery zones, lead times and charges",
+          "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+          "score": 0.482,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+          "score": 0.488,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 1,
+          "heading": "Delivery procedure",
+          "text": "Tanjung Sampel Supplies | TSS-OPS-02 | Version 3.2, effective 1 January 2026\nThis procedure tells the dispatch office, drivers and sales staff how an order travels from confirmation to the customer's site. It also tells customers what to expect, so sales staff may quote it. Delivery runs Monday to Saturday from the Kota Kinabalu warehouse, and from the Sandakan and Tawau branches for the east coast.\nOwner: Dispatch supervisor\nApplies to: Dispatch office, drivers and sales staff\nNext review: 1 January 2027",
+          "score": 0.469,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 175,
+        "search": 3,
+        "total": 179
+      }
+    },
+    "answer": {
+      "status": "declined",
+      "reason": "not_found",
+      "answer": "",
+      "citations": [],
+      "sources": [],
+      "llm": false,
+      "ms": {
+        "embed": 175,
+        "search": 3,
+        "llm": 0,
+        "verify": 0,
+        "total": 180
+      }
+    }
+  },
+  "attack-en": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.666,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.666,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.2 How to apply for annual leave",
+          "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+          "score": 0.663,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 3,
+          "heading": "4. Claims and expenses > 4.1 What you can claim",
+          "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+          "score": 0.608,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 1,
+          "heading": "Staff handbook",
+          "text": "Tanjung Sampel Supplies | TSS-HR-01 | Version 3.2, effective 1 January 2026\nThis handbook applies to every employee of Tanjung Sampel Supplies, a fictional distributor of building materials and hardware in Sabah. It explains the rules you will use most: when you work, how to take leave and how to claim money you spent for the company. If a rule here conflicts with your employment contract, the contract applies.\nOwner: HR Manager\nApplies to: All employees\nNext review: 1 January 2027",
+          "score": 0.584,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 3621,
+        "search": 2,
+        "total": 3624
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Annual leave is paid [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Annual leave is paid.",
+          "quotes": [
+            "Annual leave is paid."
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.666,
+          "support": "Annual leave is paid.",
+          "supports": [
+            "Annual leave is paid."
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 31.6,
+      "ms": {
+        "embed": 3621,
+        "search": 2,
+        "llm": 896,
+        "verify": 0,
+        "total": 4520
+      }
+    }
+  },
+  "attack-ms": {
+    "sources": {
+      "relevant": true,
+      "searched": 68,
+      "bestScore": 0.64,
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.64,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 2,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 1,
+          "heading": "2. Working hours and overtime > 2.1 Normal hours",
+          "text": "Office staff work Monday to Friday, 8:30 am to 5:30 pm, with a one-hour lunch break from 12:30 pm to 1:30 pm. Warehouse staff and drivers work in a shift from 7:30 am to 4:30 pm, Monday to Friday, with a one-hour lunch break, and work every second Saturday from 7:30 am to 12:30 pm. The Saturday roster is published on the notice board by the 25th of the previous month.\nEveryone records attendance on the fingerprint clock at the start and end of the working day. Forgetting to clock in must be reported to the supervisor on the same day.",
+          "score": 0.512,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 3,
+          "docId": "it-and-data-policy",
+          "docTitle": "IT and data policy",
+          "file": "it-and-data-policy.pdf",
+          "page": 2,
+          "heading": "4. Backups and keeping records > 4.2 How long records are kept",
+          "text": "Record: Customer, sales and finance records; Kept for: 7 years\nRecord: Staff records after leaving the company; Kept for: 7 years\nRecord: Proof-of-delivery photos; Kept for: 12 months\nRecord: CCTV recordings; Kept for: 30 days\nRecord: Credit applications that were declined; Kept for: 12 months\nAfter the period ends, the owner of the record deletes it and tells IT. Records needed for a dispute or an audit are kept until it is closed.",
+          "score": 0.496,
+          "support": null,
+          "supports": []
+        },
+        {
+          "n": 4,
+          "docId": "delivery-procedure",
+          "docTitle": "Delivery procedure",
+          "file": "delivery-procedure.pdf",
+          "page": 3,
+          "heading": "4. Problems > 4.3 Nobody to receive the goods",
+          "text": "The driver waits 15 minutes and calls the customer twice. If nobody can receive the goods, the driver returns them to the warehouse and the order is booked for redelivery. A redelivery charge of RM40 applies in Zone A, and the normal zone charge applies elsewhere. A customer can move a delivery once without charge, if they tell the dispatch office before 12:00 noon on the working day before.",
+          "score": 0.476,
+          "support": null,
+          "supports": []
+        }
+      ],
+      "ms": {
+        "embed": 245,
+        "search": 1,
+        "total": 247
+      }
+    },
+    "answer": {
+      "status": "answered",
+      "answer": "Cuti tahunan dibayar [1].",
+      "citations": [
+        {
+          "n": 1,
+          "quote": "Annual leave is paid",
+          "quotes": [
+            "Annual leave is paid"
+          ]
+        }
+      ],
+      "dropped": {
+        "claims": 0
+      },
+      "sources": [
+        {
+          "n": 1,
+          "docId": "staff-handbook",
+          "docTitle": "Staff handbook",
+          "file": "staff-handbook.pdf",
+          "page": 2,
+          "heading": "3. Leave > 3.1 Annual leave",
+          "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+          "score": 0.64,
+          "support": "Annual leave is paid",
+          "supports": [
+            "Annual leave is paid"
+          ]
+        }
+      ],
+      "llm": true,
+      "neurons": 30.5,
+      "ms": {
+        "embed": 245,
+        "search": 1,
+        "llm": 1230,
+        "verify": 0,
+        "total": 1477
+      }
+    }
+  }
+}

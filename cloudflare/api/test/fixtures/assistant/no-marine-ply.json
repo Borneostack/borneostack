@@ -1,0 +1,93 @@
+{
+  "question": "What is the price of a 20 mm marine plywood sheet?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "price-list-and-terms",
+      "docTitle": "Customer price list and terms of sale",
+      "file": "price-list-and-terms.pdf",
+      "page": 1,
+      "heading": "1. Price list > 1.1 Building materials",
+      "text": "Item: Portland composite cement; Unit: 50 kg bag; Price (RM): 21.50\nItem: Steel rebar T10; Unit: 6 m length; Price (RM): 27.80\nItem: Steel rebar T12; Unit: 6 m length; Price (RM): 38.50\nItem: Plywood 18 mm; Unit: 4 ft x 8 ft sheet; Price (RM): 98.00\nItem: Roofing zinc sheet 0.4 mm; Unit: 3 m sheet; Price (RM): 46.00\nItem: PVC pipe 4 inch; Unit: 3 m length; Price (RM): 29.90\nItem: Concrete block 4 inch; Unit: each; Price (RM): 1.80",
+      "score": 0.582,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "price-list-and-terms",
+      "docTitle": "Customer price list and terms of sale",
+      "file": "price-list-and-terms.pdf",
+      "page": 1,
+      "heading": "1. Price list > 1.2 Hardware and site supplies",
+      "text": "Item: Emulsion paint, white; Unit: 18 litre pail; Price (RM): 215.00\nItem: Wire nails 3 inch; Unit: 25 kg box; Price (RM): 118.00\nItem: Safety helmet; Unit: each; Price (RM): 14.00\nItem: Work gloves, cotton; Unit: dozen pairs; Price (RM): 24.00\nItem: Padlock, 50 mm; Unit: each; Price (RM): 19.50\nItem: Cutting disc 4 inch; Unit: box of 25; Price (RM): 62.00\nThe company does not sell food, electrical appliances, air conditioners or furniture.",
+      "score": 0.525,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "price-list-and-terms",
+      "docTitle": "Customer price list and terms of sale",
+      "file": "price-list-and-terms.pdf",
+      "page": 1,
+      "heading": "Customer price list and terms of sale",
+      "text": "Tanjung Sampel Supplies | TSS-SALES-03 | Version 3.2, effective 1 January 2026\nPrices are in Ringgit Malaysia (RM), apply from 1 January 2026 and do not include any tax that applies. The company may change prices with 14 days notice to account customers. The list shows common items only; ask the sales counter for others. All prices and terms are invented for this sample.\nOwner: Sales Manager\nApplies to: Sales counter staff and customers\nNext review: 1 January 2027",
+      "score": 0.463,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 1,
+      "heading": "2. Delivery zones, lead times and charges",
+      "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+      "score": 0.409,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-bb16d64eecbc41a6a253a9d27228ec76",
+    "object": "chat.completion",
+    "created": 1795757437,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": false, \"claims\": []}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 985,
+      "completion_tokens": 11,
+      "total_tokens": 996,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 31.953228000000003
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "declined"
+}

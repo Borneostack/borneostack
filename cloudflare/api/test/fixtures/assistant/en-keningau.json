@@ -1,0 +1,93 @@
+{
+  "question": "How much is delivery to Keningau and how long does it take?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 1,
+      "heading": "2. Delivery zones, lead times and charges",
+      "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+      "score": 0.605,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 1,
+      "heading": "1. Taking and confirming orders > 1.2 Heavy and large orders",
+      "text": "Orders of more than 100 bags of cement, more than 2 tonnes in total, or any item longer than 6 metres need 2 working days notice, because they need a crane truck or a second lorry. Sales staff must tell the customer when they quote.",
+      "score": 0.483,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 1,
+      "heading": "1. Taking and confirming orders > 1.1 Cut-off times",
+      "text": "An order is confirmed when the customer has accepted the quotation and, for new customers, paid. Orders confirmed by 3:00 pm from Monday to Friday are delivered on the next working day in Zone A. Orders confirmed after 3:00 pm count as received on the next working day.\nFor Saturday delivery in Zone A, the order must be confirmed by 11:00 am on Friday. There is no delivery on Sundays or public holidays.",
+      "score": 0.466,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "delivery-procedure",
+      "docTitle": "Delivery procedure",
+      "file": "delivery-procedure.pdf",
+      "page": 2,
+      "heading": "3. On the day of delivery > 3.1 Delivery windows",
+      "text": "Customers choose a morning window (8:30 am to 12:30 pm) or an afternoon window (1:30 pm to 5:30 pm). The dispatch office sends a message the evening before with the window and the driver's name. A driver may take at most 14 drops on one route.",
+      "score": 0.452,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-5c5d1e5f2a1346e684e5acc1d4fc1807",
+    "object": "chat.completion",
+    "created": 1795757425,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Delivery to Keningau takes 3 working days.\", \"source\": 1, \"quote\": \"Lead time: 3 working days\"}, {\"text\": \"Delivery to Keningau costs RM120.\", \"source\": 1, \"quote\": \"Delivery charge: RM120\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 730,
+      "completion_tokens": 76,
+      "total_tokens": 806,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 27.106568000000003
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

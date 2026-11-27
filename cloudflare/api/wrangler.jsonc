@@ -1,0 +1,38 @@
+// BorneoStack demo API: one Worker behind api.borneostack.com that serves the three /work examples.
+// Everything here is on Cloudflare's free plan. See README.md for limits and deploy steps.
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "borneostack-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // The public address. Cloudflare creates the DNS record and the certificate for it.
+  "routes": [{ "pattern": "api.borneostack.com", "custom_domain": true }],
+  // No *.workers.dev address: the edge cache and the rate-limit rule only apply on the custom domain.
+  "workers_dev": false,
+  // Our own console lines are kept. The automatic per-request log, which would record request headers such as the
+  // visitor's IP address, is switched off.
+  "observability": { "enabled": true, "logs": { "invocation_logs": false } },
+
+  // Daily data refresh for the dashboard example: 22:00 UTC is 06:00 in Kota Kinabalu.
+  "triggers": { "crons": ["0 22 * * *"] },
+
+  "ai": { "binding": "AI" },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "borneostack-demos",
+      "database_id": "9104dff8-293e-448f-84af-4a81a8447d33",
+      "migrations_dir": "migrations"
+    }
+  ],
+  // No R2 bucket: R2 is not enabled on this account. Uploaded files are read in memory and never stored.
+
+  "vars": {
+    // Sites allowed to call this API from a browser.
+    // Local development adds http://localhost:3000 through .dev.vars.
+    "ALLOWED_ORIGINS": "https://borneostack.com,https://www.borneostack.com",
+    // Workers AI gives 10,000 free neurons a day. We stop below it so the account is never charged.
+    "DAILY_NEURON_BUDGET": "9000"
+  }
+}

@@ -1,0 +1,2129 @@
+{
+  "recordedAt": "2026-11-27",
+  "source": "local API run against Workers AI",
+  "runs": {
+    "tanjung-merpati": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 4.5 KB, one of the sample invoices",
+          "detail": {
+            "name": "tanjung-merpati.pdf",
+            "kind": "pdf",
+            "bytes": 4590,
+            "mime": "application/pdf",
+            "sha256": "2300db3b9cd79211",
+            "sample": "tanjung-merpati"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 1581,
+          "summary": "684 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 684,
+            "tokens": 273,
+            "text": "### Page 1\nTanjung Merpati Packaging Sdn BhdNo. 8, Lorong Industri 3\nKota Kinabalu, SabahINVOICEInvoice No: INV-20418\nDate: 21 Nov 2026\nDue date: 21 Dec 2026Bill toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDescription Qty Unit price (RM) Amount (RM)Corrugated carton 40 x 30 x 25 cm (pack of 25) 12 38.50 462.00\nBubble wrap roll, 100 m 6 42.00 252.00\nPacking tape 48 mm (6 rolls) 10 21.60 216.00\nDelivery, Kota Kinabalu 1 60.00 60.00Subtotal RM 990.00\nSales tax 10% RM 99.00Total RM 1,089.00Payment terms: Net 30 days. Bank transfer to the account on file.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 8751,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.84,
+            "tokens": {
+              "in": 504,
+              "out": 302
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+              "invoice_number": "INV-20418",
+              "invoice_date": "2026-11-21",
+              "due_date": "2026-12-21",
+              "currency": "MYR",
+              "payment_terms": "Net 30 days",
+              "lines": [
+                {
+                  "description": "Corrugated carton 40 x 30 x 25 cm (pack of 25)",
+                  "quantity": 12,
+                  "unit_price": 38.5,
+                  "amount": 462
+                },
+                {
+                  "description": "Bubble wrap roll, 100 m",
+                  "quantity": 6,
+                  "unit_price": 42,
+                  "amount": 252
+                },
+                {
+                  "description": "Packing tape 48 mm (6 rolls)",
+                  "quantity": 10,
+                  "unit_price": 21.6,
+                  "amount": 216
+                },
+                {
+                  "description": "Delivery, Kota Kinabalu",
+                  "quantity": 1,
+                  "unit_price": 60,
+                  "amount": 60
+                }
+              ],
+              "subtotal": 990,
+              "tax": 99,
+              "total": 1089
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "ok",
+          "ms": 1,
+          "summary": "All 7 checks passed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 21 Dec 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "4 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 990.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "pass",
+                "detail": "RM 990.00 + RM 99.00 = RM 1,089.00."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "later",
+            "daysToDue": 24,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 2,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Tanjung Merpati Packaging Sdn Bhd + INV-20418"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "ok",
+          "ms": 7,
+          "summary": "Row added to the ledger",
+          "detail": {
+            "outcome": "filed",
+            "rowId": 58,
+            "reasons": []
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice filed.\nTanjung Merpati Packaging Sdn Bhd, INV-20418.\nRM 1,089.00, due 21 Dec 2026.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "filed",
+          "row": {
+            "id": 58,
+            "status": "filed",
+            "source": "sample:tanjung-merpati",
+            "filename": "tanjung-merpati.pdf",
+            "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+            "invoice_no": "INV-20418",
+            "invoice_date": "2026-11-21",
+            "due_date": "2026-12-21",
+            "currency": "MYR",
+            "subtotal": 990,
+            "tax": 99,
+            "total": 1089,
+            "due_status": "later",
+            "reasons": [],
+            "created_at": 1795757267
+          },
+          "duplicateOf": null,
+          "reasons": [],
+          "alert": {
+            "text": "Invoice filed.\nTanjung Merpati Packaging Sdn Bhd, INV-20418.\nRM 1,089.00, due 21 Dec 2026.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.84,
+          "totalMs": 10348
+        }
+      }
+    ],
+    "lumut-biru": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 4.4 KB, one of the sample invoices",
+          "detail": {
+            "name": "lumut-biru.pdf",
+            "kind": "pdf",
+            "bytes": 4500,
+            "mime": "application/pdf",
+            "sha256": "550e4f6db53e8500",
+            "sample": "lumut-biru"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 95,
+          "summary": "632 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 632,
+            "tokens": 259,
+            "text": "### Page 1\nLumut Biru Cold Storage Sdn BhdLot 5, Kawasan Perindustrian Kolombong, Kota Kinabalu, SabahTAX INVOICEInvoice number CS/2026/00931Issued 18/11/2026Payment due 18/12/2026Billed toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDESCRIPTION QTY RATE AMOUNTChilled pallet storage, November 2026 (pallet-days) 24 38.00 912.00\nGoods in and out handling (per pallet) 36 6.50 234.00\nTemperature log report 1 80.00 80.00\nSubtotal (RM) 1,226.00\nService tax 8% (RM) 98.08Amount payable (RM) 1,324.08Net 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 7440,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.3,
+            "tokens": {
+              "in": 475,
+              "out": 253
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Lumut Biru Cold Storage Sdn Bhd",
+              "invoice_number": "CS/2026/00931",
+              "invoice_date": "2026-11-18",
+              "due_date": "2026-12-18",
+              "currency": "MYR",
+              "payment_terms": "Net 30 days",
+              "lines": [
+                {
+                  "description": "Chilled pallet storage, November 2026 (pallet-days)",
+                  "quantity": 24,
+                  "unit_price": 38,
+                  "amount": 912
+                },
+                {
+                  "description": "Goods in and out handling (per pallet)",
+                  "quantity": 36,
+                  "unit_price": 6.5,
+                  "amount": 234
+                },
+                {
+                  "description": "Temperature log report",
+                  "quantity": 1,
+                  "unit_price": 80,
+                  "amount": 80
+                }
+              ],
+              "subtotal": 1226,
+              "tax": 98.08,
+              "total": 1324.08
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "ok",
+          "ms": 0,
+          "summary": "All 7 checks passed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 18 Dec 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "3 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 1,226.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "pass",
+                "detail": "RM 1,226.00 + RM 98.08 = RM 1,324.08."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "later",
+            "daysToDue": 21,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 1,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Lumut Biru Cold Storage Sdn Bhd + CS/2026/00931"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "ok",
+          "ms": 3,
+          "summary": "Row added to the ledger",
+          "detail": {
+            "outcome": "filed",
+            "rowId": 59,
+            "reasons": []
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice filed.\nLumut Biru Cold Storage Sdn Bhd, CS/2026/00931.\nRM 1,324.08, due 18 Dec 2026.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "filed",
+          "row": {
+            "id": 59,
+            "status": "filed",
+            "source": "sample:lumut-biru",
+            "filename": "lumut-biru.pdf",
+            "supplier": "Lumut Biru Cold Storage Sdn Bhd",
+            "invoice_no": "CS/2026/00931",
+            "invoice_date": "2026-11-18",
+            "due_date": "2026-12-18",
+            "currency": "MYR",
+            "subtotal": 1226,
+            "tax": 98.08,
+            "total": 1324.08,
+            "due_status": "later",
+            "reasons": [],
+            "created_at": 1795757278
+          },
+          "duplicateOf": null,
+          "reasons": [],
+          "alert": {
+            "text": "Invoice filed.\nLumut Biru Cold Storage Sdn Bhd, CS/2026/00931.\nRM 1,324.08, due 18 Dec 2026.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.3,
+          "totalMs": 7540
+        }
+      }
+    ],
+    "sungai-kerlap": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 1,
+          "summary": "PDF file, 3.6 KB, one of the sample invoices",
+          "detail": {
+            "name": "sungai-kerlap.pdf",
+            "kind": "pdf",
+            "bytes": 3637,
+            "mime": "application/pdf",
+            "sha256": "870f0051944be08e",
+            "sample": "sungai-kerlap"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 106,
+          "summary": "824 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 824,
+            "tokens": 306,
+            "text": "### Page 1\nSUNGAI KERLAP PRINTING WORKS12 Jalan Percetakan\nSandakan, Sabah\n==================================================================INVOICERef : SKPW-7733\nDate : 2026-10-06\nPay by : 2026-11-05\nCustomer : Demo Buyer Sdn Bhd\nLot 12, Jalan Contoh, 88000 Kota Kinabalu, Sabah\n------------------------------------------------------------------ITEM QTY PRICE AMOUNT------------------------------------------------------------------\nBrochure A5, full colour\n1000 0.85 850.00\nRoll-up banner 85 x 200 cm\n2 120.00 240.00\nDelivery\n1 25.00 25.00\n------------------------------------------------------------------\nSUBTOTAL RM 1,115.00TOTAL DUE RM 1,115.00Terms: Net 30 days. Cheques payable to Sungai Kerlap Printing Works.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 7181,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.25,
+            "tokens": {
+              "in": 468,
+              "out": 249
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Sungai Kerlap Printing Works",
+              "invoice_number": "SKPW-7733",
+              "invoice_date": "2026-10-06",
+              "due_date": "2026-11-05",
+              "currency": "MYR",
+              "payment_terms": "Net 30 days. Cheques payable to Sungai Kerlap Printing Works.",
+              "lines": [
+                {
+                  "description": "Brochure A5, full colour",
+                  "quantity": 1000,
+                  "unit_price": 0.85,
+                  "amount": 850
+                },
+                {
+                  "description": "Roll-up banner 85 x 200 cm",
+                  "quantity": 2,
+                  "unit_price": 120,
+                  "amount": 240
+                },
+                {
+                  "description": "Delivery",
+                  "quantity": 1,
+                  "unit_price": 25,
+                  "amount": 25
+                }
+              ],
+              "subtotal": 1115,
+              "tax": null,
+              "total": 1115
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "ok",
+          "ms": 0,
+          "summary": "All 7 checks passed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 5 Nov 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "3 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 1,115.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "pass",
+                "detail": "RM 1,115.00 + RM 0.00 = RM 1,115.00."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "overdue",
+            "daysToDue": -22,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 3,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Sungai Kerlap Printing Works + SKPW-7733"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "ok",
+          "ms": 4,
+          "summary": "Row added to the ledger",
+          "detail": {
+            "outcome": "filed",
+            "rowId": 60,
+            "reasons": []
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Overdue invoice filed.\nSungai Kerlap Printing Works, SKPW-7733.\nRM 1,115.00, due 5 Nov 2026, overdue by 22 days.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "filed",
+          "row": {
+            "id": 60,
+            "status": "filed",
+            "source": "sample:sungai-kerlap",
+            "filename": "sungai-kerlap.pdf",
+            "supplier": "Sungai Kerlap Printing Works",
+            "invoice_no": "SKPW-7733",
+            "invoice_date": "2026-10-06",
+            "due_date": "2026-11-05",
+            "currency": "MYR",
+            "subtotal": 1115,
+            "tax": null,
+            "total": 1115,
+            "due_status": "overdue",
+            "reasons": [],
+            "created_at": 1795757288
+          },
+          "duplicateOf": null,
+          "reasons": [],
+          "alert": {
+            "text": "Overdue invoice filed.\nSungai Kerlap Printing Works, SKPW-7733.\nRM 1,115.00, due 5 Nov 2026, overdue by 22 days.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.25,
+          "totalMs": 7298
+        }
+      }
+    ],
+    "pulau-senja": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 4.1 KB, one of the sample invoices",
+          "detail": {
+            "name": "pulau-senja.pdf",
+            "kind": "pdf",
+            "bytes": 4218,
+            "mime": "application/pdf",
+            "sha256": "b928bcfeff5f865d",
+            "sample": "pulau-senja"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 84,
+          "summary": "522 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 522,
+            "tokens": 230,
+            "text": "### Page 1\nPulau Senja Linen SupplyLot 31, Jalan Kemajuan, Kota Kinabalu, SabahInvoiceInvoice no. PS-2026-0187Invoice date 18 November 2026Due date 2 December 2026Terms Net 14 daysCustomer Demo Buyer Sdn BhdItem Qty Unit RM Line RMBath towel, white, 70 x 140 cm 80 14.50 1,160.00\nPillowcase, white 120 4.20 504.00\nHand towel, white 100 5.90 590.00\nDelivery 1 40.00 40.00Total RM 2,294.00Please pay by 2 December 2026.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 7865,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.49,
+            "tokens": {
+              "in": 435,
+              "out": 278
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Pulau Senja Linen Supply",
+              "invoice_number": "PS-2026-0187",
+              "invoice_date": "2026-11-18",
+              "due_date": "2026-12-02",
+              "currency": "MYR",
+              "payment_terms": "Net 14 days",
+              "lines": [
+                {
+                  "description": "Bath towel, white, 70 x 140 cm",
+                  "quantity": 80,
+                  "unit_price": 14.5,
+                  "amount": 1160
+                },
+                {
+                  "description": "Pillowcase, white",
+                  "quantity": 120,
+                  "unit_price": 4.2,
+                  "amount": 504
+                },
+                {
+                  "description": "Hand towel, white",
+                  "quantity": 100,
+                  "unit_price": 5.9,
+                  "amount": 590
+                },
+                {
+                  "description": "Delivery",
+                  "quantity": 1,
+                  "unit_price": 40,
+                  "amount": 40
+                }
+              ],
+              "subtotal": null,
+              "tax": null,
+              "total": 2294
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "ok",
+          "ms": 0,
+          "summary": "All 6 checks passed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 2 Dec 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "4 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 2,294.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "skip",
+                "detail": "No subtotal printed, so this is covered by the check above."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "due_soon",
+            "daysToDue": 5,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 1,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Pulau Senja Linen Supply + PS-2026-0187"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "ok",
+          "ms": 4,
+          "summary": "Row added to the ledger",
+          "detail": {
+            "outcome": "filed",
+            "rowId": 61,
+            "reasons": []
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice filed, due soon.\nPulau Senja Linen Supply, PS-2026-0187.\nRM 2,294.00, due 2 Dec 2026, in 5 days.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "filed",
+          "row": {
+            "id": 61,
+            "status": "filed",
+            "source": "sample:pulau-senja",
+            "filename": "pulau-senja.pdf",
+            "supplier": "Pulau Senja Linen Supply",
+            "invoice_no": "PS-2026-0187",
+            "invoice_date": "2026-11-18",
+            "due_date": "2026-12-02",
+            "currency": "MYR",
+            "subtotal": null,
+            "tax": null,
+            "total": 2294,
+            "due_status": "due_soon",
+            "reasons": [],
+            "created_at": 1795757299
+          },
+          "duplicateOf": null,
+          "reasons": [],
+          "alert": {
+            "text": "Invoice filed, due soon.\nPulau Senja Linen Supply, PS-2026-0187.\nRM 2,294.00, due 2 Dec 2026, in 5 days.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.49,
+          "totalMs": 7955
+        }
+      }
+    ],
+    "batu-layar": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 1,
+          "summary": "PDF file, 4.3 KB, one of the sample invoices",
+          "detail": {
+            "name": "batu-layar.pdf",
+            "kind": "pdf",
+            "bytes": 4443,
+            "mime": "application/pdf",
+            "sha256": "d719f58304a39204",
+            "sample": "batu-layar"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 100,
+          "summary": "634 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 634,
+            "tokens": 259,
+            "text": "### Page 1\nBatu Layar Electrical TradingLot 9, Jalan Elektrik | Tawau, SabahTax InvoiceInvoice number: BLE/11/0562\nDate of issue: 15 Nov 2026\nPayment due by: 15 Dec 2026Customer:Demo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahParticulars Quantity Price TotalLED panel light 18 W 20 22.00 440.00\nCable 2.5 mm2, 100 m roll 4 168.00 672.00\nCircuit breaker 20 A 12 15.50 186.00\nConduit 20 mm, 3 m length 30 3.40 102.00Sub-total (RM) 1,520.00\nSales tax 10% (RM) 152.00Total (RM) 1,672.00Terms of payment: Net 30 days.Sample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 8326,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.74,
+            "tokens": {
+              "in": 489,
+              "out": 294
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Batu Layar Electrical Trading",
+              "invoice_number": "BLE/11/0562",
+              "invoice_date": "2026-11-15",
+              "due_date": "2026-12-15",
+              "currency": "MYR",
+              "payment_terms": "Net 30 days",
+              "lines": [
+                {
+                  "description": "LED panel light 18 W",
+                  "quantity": 20,
+                  "unit_price": 22,
+                  "amount": 440
+                },
+                {
+                  "description": "Cable 2.5 mm2, 100 m roll",
+                  "quantity": 4,
+                  "unit_price": 168,
+                  "amount": 672
+                },
+                {
+                  "description": "Circuit breaker 20 A",
+                  "quantity": 12,
+                  "unit_price": 15.5,
+                  "amount": 186
+                },
+                {
+                  "description": "Conduit 20 mm, 3 m length",
+                  "quantity": 30,
+                  "unit_price": 3.4,
+                  "amount": 102
+                }
+              ],
+              "subtotal": 1520,
+              "tax": 152,
+              "total": 1672
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "attention",
+          "ms": 1,
+          "summary": "1 of 7 checks failed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 15 Dec 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "4 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "fail",
+                "detail": "Lines add up to RM 1,400.00 but the invoice says RM 1,520.00."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "pass",
+                "detail": "RM 1,520.00 + RM 152.00 = RM 1,672.00."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "later",
+            "daysToDue": 18,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 3,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Batu Layar Electrical Trading + BLE/11/0562"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "attention",
+          "ms": 7,
+          "summary": "Routed to needs review",
+          "detail": {
+            "outcome": "review",
+            "rowId": 62,
+            "reasons": [
+              "The lines add up to RM 1,400.00 but the invoice says RM 1,520.00."
+            ]
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice needs a person.\nBatu Layar Electrical Trading, BLE/11/0562, RM 1,672.00.\n- The lines add up to RM 1,400.00 but the invoice says RM 1,520.00.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "review",
+          "row": {
+            "id": 62,
+            "status": "review",
+            "source": "sample:batu-layar",
+            "filename": "batu-layar.pdf",
+            "supplier": "Batu Layar Electrical Trading",
+            "invoice_no": "BLE/11/0562",
+            "invoice_date": "2026-11-15",
+            "due_date": "2026-12-15",
+            "currency": "MYR",
+            "subtotal": 1520,
+            "tax": 152,
+            "total": 1672,
+            "due_status": "later",
+            "reasons": [
+              "The lines add up to RM 1,400.00 but the invoice says RM 1,520.00."
+            ],
+            "created_at": 1795757310
+          },
+          "duplicateOf": null,
+          "reasons": [
+            "The lines add up to RM 1,400.00 but the invoice says RM 1,520.00."
+          ],
+          "alert": {
+            "text": "Invoice needs a person.\nBatu Layar Electrical Trading, BLE/11/0562, RM 1,672.00.\n- The lines add up to RM 1,400.00 but the invoice says RM 1,520.00.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.74,
+          "totalMs": 8441
+        }
+      }
+    ],
+    "tanjung-merpati-resent": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 4.6 KB, one of the sample invoices",
+          "detail": {
+            "name": "tanjung-merpati-resent.pdf",
+            "kind": "pdf",
+            "bytes": 4731,
+            "mime": "application/pdf",
+            "sha256": "1246e314cd289f74",
+            "sample": "tanjung-merpati-resent"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 100,
+          "summary": "650 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 650,
+            "tokens": 266,
+            "text": "### Page 1\nTanjung Merpati Packaging Sdn BhdNo. 8, Lorong Industri 3, Kota Kinabalu, SabahTAX INVOICERESENT COPYInvoice number INV-20418Issued 21/11/2026Payment due 21/12/2026Billed toDemo Buyer Sdn BhdLot 12, Jalan Contoh\n88000 Kota Kinabalu, SabahDESCRIPTION QTY RATE AMOUNTCorrugated carton 40 x 30 x 25 cm (pack of 25) 12 38.50 462.00\nBubble wrap roll, 100 m 6 42.00 252.00\nPacking tape 48 mm (6 rolls) 10 21.60 216.00\nDelivery, Kota Kinabalu 1 60.00 60.00\nSubtotal (RM) 990.00\nSales tax 10% (RM) 99.00Amount payable (RM) 1,089.00Net 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 8973,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.84,
+            "tokens": {
+              "in": 500,
+              "out": 302
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Tanjung Merpati Packaging Sdn Bhd",
+              "invoice_number": "INV-20418",
+              "invoice_date": "2026-11-21",
+              "due_date": "2026-12-21",
+              "currency": "MYR",
+              "payment_terms": "Net 30 days",
+              "lines": [
+                {
+                  "description": "Corrugated carton 40 x 30 x 25 cm (pack of 25)",
+                  "quantity": 12,
+                  "unit_price": 38.5,
+                  "amount": 462
+                },
+                {
+                  "description": "Bubble wrap roll, 100 m",
+                  "quantity": 6,
+                  "unit_price": 42,
+                  "amount": 252
+                },
+                {
+                  "description": "Packing tape 48 mm (6 rolls)",
+                  "quantity": 10,
+                  "unit_price": 21.6,
+                  "amount": 216
+                },
+                {
+                  "description": "Delivery, Kota Kinabalu",
+                  "quantity": 1,
+                  "unit_price": 60,
+                  "amount": 60
+                }
+              ],
+              "subtotal": 990,
+              "tax": 99,
+              "total": 1089
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "ok",
+          "ms": 1,
+          "summary": "All 7 checks passed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "pass",
+                "detail": "Due 21 Dec 2026."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "4 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 990.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "pass",
+                "detail": "RM 990.00 + RM 99.00 = RM 1,089.00."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "later",
+            "daysToDue": 24,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "attention",
+          "ms": 1,
+          "summary": "Already in the ledger",
+          "detail": {
+            "duplicate": true,
+            "row": 1,
+            "key": "Tanjung Merpati Packaging Sdn Bhd + INV-20418"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "attention",
+          "ms": 0,
+          "summary": "Not filed again: duplicate",
+          "detail": {
+            "outcome": "duplicate",
+            "row": 1,
+            "reasons": [
+              "This supplier and invoice number are already in the ledger (row 1)."
+            ]
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Duplicate invoice, not filed again.\nTanjung Merpati Packaging Sdn Bhd, INV-20418, RM 1,089.00.\nAlready in the ledger as row 1.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "duplicate",
+          "row": null,
+          "duplicateOf": 1,
+          "reasons": [
+            "This supplier and invoice number are already in the ledger (row 1)."
+          ],
+          "alert": {
+            "text": "Duplicate invoice, not filed again.\nTanjung Merpati Packaging Sdn Bhd, INV-20418, RM 1,089.00.\nAlready in the ledger as row 1.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.84,
+          "totalMs": 9076
+        }
+      }
+    ],
+    "bukit-rembulan": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 3.4 KB, one of the sample invoices",
+          "detail": {
+            "name": "bukit-rembulan.pdf",
+            "kind": "pdf",
+            "bytes": 3529,
+            "mime": "application/pdf",
+            "sha256": "bc1a2285877cd74c",
+            "sample": "bukit-rembulan"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "ok",
+          "ms": 82,
+          "summary": "463 characters of text",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "chars": 463,
+            "tokens": 217,
+            "text": "### Page 1\nBukit Rembulan Stationery Sdn BhdG-14, Plaza Contoh\nKota Kinabalu, SabahInvoice BR-004219Date 23 Nov 2026\nTo: Demo Buyer Sdn Bhd\n60 x A4 paper 80 gsm (ream) @ 11.90 714.00\n8 x Ballpoint pen, blue (box of 50) @ 17.50 140.00\n3 x Stapler, heavy duty @ 28.00 84.00\n2 x Toner cartridge, compatible @ 145.00 290.00Total RM 1,228.00Payment terms: 30 daysSample invoice. Fictional supplier and buyer, made for the BorneoStack demonstration. Not a real invoice.",
+            "truncated": false
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "ok",
+          "ms": 7846,
+          "summary": "Fields read as structured data",
+          "detail": {
+            "model": "@cf/ibm-granite/granite-4.0-h-micro",
+            "neurons": 3.46,
+            "tokens": {
+              "in": 422,
+              "out": 277
+            },
+            "fields": {
+              "is_invoice": true,
+              "supplier": "Bukit Rembulan Stationery Sdn Bhd",
+              "invoice_number": "BR-004219",
+              "invoice_date": "2026-11-23",
+              "due_date": null,
+              "currency": "MYR",
+              "payment_terms": "30 days",
+              "lines": [
+                {
+                  "description": "A4 paper 80 gsm (ream)",
+                  "quantity": 60,
+                  "unit_price": 11.9,
+                  "amount": 714
+                },
+                {
+                  "description": "Ballpoint pen, blue (box of 50)",
+                  "quantity": 8,
+                  "unit_price": 17.5,
+                  "amount": 140
+                },
+                {
+                  "description": "Stapler, heavy duty",
+                  "quantity": 3,
+                  "unit_price": 28,
+                  "amount": 84
+                },
+                {
+                  "description": "Toner cartridge, compatible",
+                  "quantity": 2,
+                  "unit_price": 145,
+                  "amount": 290
+                }
+              ],
+              "subtotal": null,
+              "tax": null,
+              "total": 1228
+            }
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "attention",
+          "ms": 1,
+          "summary": "1 of 7 checks failed",
+          "detail": {
+            "checks": [
+              {
+                "id": "required",
+                "label": "Required fields are present",
+                "status": "pass",
+                "detail": "Supplier, invoice number, invoice date and total are all there."
+              },
+              {
+                "id": "due_date_missing",
+                "label": "Due date is present",
+                "status": "fail",
+                "detail": "No due date on the invoice (it says: 30 days)."
+              },
+              {
+                "id": "currency",
+                "label": "Currency is Ringgit",
+                "status": "pass",
+                "detail": "MYR."
+              },
+              {
+                "id": "line_amounts",
+                "label": "Each line: quantity x price = amount",
+                "status": "pass",
+                "detail": "4 lines multiply out correctly."
+              },
+              {
+                "id": "lines_vs_subtotal",
+                "label": "Lines add up to the subtotal",
+                "status": "pass",
+                "detail": "Lines add up to RM 1,228.00, the same as the subtotal."
+              },
+              {
+                "id": "totals",
+                "label": "Subtotal plus tax equals the total",
+                "status": "skip",
+                "detail": "No subtotal printed, so this is covered by the check above."
+              },
+              {
+                "id": "dates",
+                "label": "Dates make sense",
+                "status": "pass",
+                "detail": "Invoice date and due date are in a sensible order."
+              }
+            ],
+            "dueStatus": "unknown",
+            "daysToDue": null,
+            "today": "2026-11-27"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "ok",
+          "ms": 2,
+          "summary": "Not in the ledger yet",
+          "detail": {
+            "duplicate": false,
+            "key": "Bukit Rembulan Stationery Sdn Bhd + BR-004219"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "attention",
+          "ms": 4,
+          "summary": "Routed to needs review",
+          "detail": {
+            "outcome": "review",
+            "rowId": 63,
+            "reasons": [
+              "The invoice has no due date, so the system cannot say when it is late."
+            ]
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 0,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice needs a person.\nBukit Rembulan Stationery Sdn Bhd, BR-004219, RM 1,228.00.\n- The invoice has no due date, so the system cannot say when it is late.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "review",
+          "row": {
+            "id": 63,
+            "status": "review",
+            "source": "sample:bukit-rembulan",
+            "filename": "bukit-rembulan.pdf",
+            "supplier": "Bukit Rembulan Stationery Sdn Bhd",
+            "invoice_no": "BR-004219",
+            "invoice_date": "2026-11-23",
+            "due_date": null,
+            "currency": "MYR",
+            "subtotal": null,
+            "tax": null,
+            "total": 1228,
+            "due_status": "unknown",
+            "reasons": [
+              "The invoice has no due date, so the system cannot say when it is late."
+            ],
+            "created_at": 1795757335
+          },
+          "duplicateOf": null,
+          "reasons": [
+            "The invoice has no due date, so the system cannot say when it is late."
+          ],
+          "alert": {
+            "text": "Invoice needs a person.\nBukit Rembulan Stationery Sdn Bhd, BR-004219, RM 1,228.00.\n- The invoice has no due date, so the system cannot say when it is late.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 3.46,
+          "totalMs": 7936
+        }
+      }
+    ],
+    "teluk-pelita": [
+      {
+        "event": "start",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "receive",
+          "label": "Receive the file",
+          "status": "ok",
+          "ms": 0,
+          "summary": "PDF file, 105.1 KB, one of the sample invoices",
+          "detail": {
+            "name": "teluk-pelita.pdf",
+            "kind": "pdf",
+            "bytes": 107601,
+            "mime": "application/pdf",
+            "sha256": "204ea875c656fb88",
+            "sample": "teluk-pelita"
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "read",
+          "label": "Read the text"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "read",
+          "label": "Read the text",
+          "status": "fail",
+          "ms": 147,
+          "summary": "No text in the file (a scan or photo)",
+          "detail": {
+            "method": "Workers AI toMarkdown",
+            "note": "The file has pages but no text in it, so it is probably a scan or a photo. A file that cannot be read is never guessed: it goes to a person. A client build can add text recognition (OCR) for scans."
+          }
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "extract",
+          "label": "Extract the fields",
+          "status": "skipped",
+          "ms": 0,
+          "summary": "Nothing to read",
+          "detail": {}
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "checks",
+          "label": "Check the numbers and dates",
+          "status": "skipped",
+          "ms": 0,
+          "summary": "Nothing was read",
+          "detail": {}
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "duplicate",
+          "label": "Look for a duplicate",
+          "status": "skipped",
+          "ms": 0,
+          "summary": "Nothing was read",
+          "detail": {}
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "file",
+          "label": "File the row"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "file",
+          "label": "File the row",
+          "status": "attention",
+          "ms": 5,
+          "summary": "Routed to needs review",
+          "detail": {
+            "outcome": "review",
+            "rowId": 64,
+            "reasons": [
+              "A scan or photo has no text to read. It is never guessed: a person needs to key it in."
+            ]
+          }
+        }
+      },
+      {
+        "event": "start",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert"
+        }
+      },
+      {
+        "event": "step",
+        "data": {
+          "id": "alert",
+          "label": "Write the alert",
+          "status": "ok",
+          "ms": 1,
+          "summary": "Written, not sent",
+          "detail": {
+            "text": "Invoice needs a person.\nFile: teluk-pelita.\n- A scan or photo has no text to read. It is never guessed: a person needs to key it in.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          }
+        }
+      },
+      {
+        "event": "result",
+        "data": {
+          "outcome": "review",
+          "row": {
+            "id": 64,
+            "status": "review",
+            "source": "sample:teluk-pelita",
+            "filename": "teluk-pelita.pdf",
+            "supplier": null,
+            "invoice_no": null,
+            "invoice_date": null,
+            "due_date": null,
+            "currency": null,
+            "subtotal": null,
+            "tax": null,
+            "total": null,
+            "due_status": null,
+            "reasons": [
+              "A scan or photo has no text to read. It is never guessed: a person needs to key it in."
+            ],
+            "created_at": 1795757339
+          },
+          "duplicateOf": null,
+          "reasons": [
+            "A scan or photo has no text to read. It is never guessed: a person needs to key it in."
+          ],
+          "alert": {
+            "text": "Invoice needs a person.\nFile: teluk-pelita.\n- A scan or photo has no text to read. It is never guessed: a person needs to key it in.",
+            "delivery": {
+              "state": "not_configured",
+              "note": "No Telegram bot is connected to this demo, so nothing was sent. This is the message it would send."
+            }
+          },
+          "neurons": 0,
+          "totalMs": 155
+        }
+      }
+    ]
+  }
+}

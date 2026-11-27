@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-27",
+  "fieldsPerSample": 9,
+  "samplesRead": 7,
+  "fieldsCorrect": 63,
+  "outcomesAsExpected": 8,
+  "samples": 8,
+  "avgNeurons": 3.56,
+  "avgSeconds": 8.4
+}

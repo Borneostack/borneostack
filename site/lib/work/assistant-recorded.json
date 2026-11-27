@@ -1,0 +1,730 @@
+{
+  "recordedAt": "2026-11-27",
+  "model": "gemma-sea-lion-v4-27b-it",
+  "runs": [
+    {
+      "id": "en-leave-3y",
+      "lang": "en",
+      "question": "How many days of annual leave do I get after 3 years with the company?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.685,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.1 Annual leave",
+            "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+            "score": 0.685,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.2 How to apply for annual leave",
+            "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+            "score": 0.651,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+            "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+            "score": 0.562,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.3 Sick leave and hospitalisation",
+            "text": "The number of paid sick leave days without hospital stay is in the table in 3.1. You must tell your supervisor by 9:00 am on the first day of absence, by phone or message, and give a medical certificate from a registered doctor on your return. If you are admitted to hospital, you receive up to 60 days of paid sick leave in a year, which includes the outpatient days.",
+            "score": 0.597,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 617,
+          "search": 6,
+          "total": 625
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "You get 12 days of annual leave after 3 years with the company [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Length of service: 2 years to less than 5 years; Annual leave: 12 days",
+            "quotes": [
+              "Length of service: 2 years to less than 5 years; Annual leave: 12 days"
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.1 Annual leave",
+            "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+            "score": 0.685,
+            "support": "Length of service: 2 years to less than 5 years; Annual leave: 12 days",
+            "supports": [
+              "Length of service: 2 years to less than 5 years; Annual leave: 12 days"
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 27.7,
+        "ms": {
+          "embed": 617,
+          "search": 6,
+          "llm": 1538,
+          "verify": 2,
+          "total": 2165
+        }
+      }
+    },
+    {
+      "id": "en-keningau",
+      "lang": "en",
+      "question": "How much is delivery to Keningau and how long does it take?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.605,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "2. Delivery zones, lead times and charges",
+            "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+            "score": 0.605,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "1. Taking and confirming orders > 1.2 Heavy and large orders",
+            "text": "Orders of more than 100 bags of cement, more than 2 tonnes in total, or any item longer than 6 metres need 2 working days notice, because they need a crane truck or a second lorry. Sales staff must tell the customer when they quote.",
+            "score": 0.483,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "1. Taking and confirming orders > 1.1 Cut-off times",
+            "text": "An order is confirmed when the customer has accepted the quotation and, for new customers, paid. Orders confirmed by 3:00 pm from Monday to Friday are delivered on the next working day in Zone A. Orders confirmed after 3:00 pm count as received on the next working day.\nFor Saturday delivery in Zone A, the order must be confirmed by 11:00 am on Friday. There is no delivery on Sundays or public holidays.",
+            "score": 0.466,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 2,
+            "heading": "3. On the day of delivery > 3.1 Delivery windows",
+            "text": "Customers choose a morning window (8:30 am to 12:30 pm) or an afternoon window (1:30 pm to 5:30 pm). The dispatch office sends a message the evening before with the window and the driver's name. A driver may take at most 14 drops on one route.",
+            "score": 0.452,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 147,
+          "search": 2,
+          "total": 151
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "Delivery to Keningau takes 3 working days [1]. Delivery to Keningau costs RM120 [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Lead time: 3 working days",
+            "quotes": [
+              "Lead time: 3 working days",
+              "Delivery charge: RM120"
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "2. Delivery zones, lead times and charges",
+            "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+            "score": 0.605,
+            "support": "Lead time: 3 working days",
+            "supports": [
+              "Lead time: 3 working days",
+              "Delivery charge: RM120"
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 27.1,
+        "ms": {
+          "embed": 147,
+          "search": 2,
+          "llm": 1784,
+          "verify": 1,
+          "total": 1937
+        }
+      }
+    },
+    {
+      "id": "en-return",
+      "lang": "en",
+      "question": "Can I return unopened goods, and is there a fee?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.708,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "price-list-and-terms",
+            "docTitle": "Customer price list and terms of sale",
+            "file": "price-list-and-terms.pdf",
+            "page": 2,
+            "heading": "5. Returns and warranty > 5.1 Returns",
+            "text": "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery with the delivery order. A restocking fee of 10% of the goods price applies. Cut-to-size items, mixed paint and special orders cannot be returned.",
+            "score": 0.708,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 3,
+            "heading": "4. Problems > 4.3 Nobody to receive the goods",
+            "text": "The driver waits 15 minutes and calls the customer twice. If nobody can receive the goods, the driver returns them to the warehouse and the order is booked for redelivery. A redelivery charge of RM40 applies in Zone A, and the normal zone charge applies elsewhere. A customer can move a delivery once without charge, if they tell the dispatch office before 12:00 noon on the working day before.",
+            "score": 0.569,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "price-list-and-terms",
+            "docTitle": "Customer price list and terms of sale",
+            "file": "price-list-and-terms.pdf",
+            "page": 3,
+            "heading": "5. Returns and warranty > 5.3 Counter hours",
+            "text": "Branch counters are open Monday to Friday from 8:00 am to 5:00 pm and Saturday from 8:00 am to 1:00 pm. They are closed on Sundays and public holidays.",
+            "score": 0.523,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 2,
+            "heading": "3. On the day of delivery > 3.2 Unloading",
+            "text": "Drivers unload goods at the kerb or at a ground-floor point named by the customer, and the customer must have people ready to unload. Carrying goods upstairs or over more than 30 metres is not included. A helper can be booked in advance for RM50 per hour.",
+            "score": 0.522,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 440,
+          "search": 2,
+          "total": 443
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "Unopened, undamaged goods in stock condition may be returned within 7 days of delivery [1]. A restocking fee of 10% of the goods price applies [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery",
+            "quotes": [
+              "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery",
+              "A restocking fee of 10% of the goods price applies."
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "price-list-and-terms",
+            "docTitle": "Customer price list and terms of sale",
+            "file": "price-list-and-terms.pdf",
+            "page": 2,
+            "heading": "5. Returns and warranty > 5.1 Returns",
+            "text": "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery with the delivery order. A restocking fee of 10% of the goods price applies. Cut-to-size items, mixed paint and special orders cannot be returned.",
+            "score": 0.708,
+            "support": "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery",
+            "supports": [
+              "Goods that are unopened, undamaged and in stock condition may be returned within 7 days of delivery",
+              "A restocking fee of 10% of the goods price applies."
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 24.3,
+        "ms": {
+          "embed": 440,
+          "search": 2,
+          "llm": 2075,
+          "verify": 0,
+          "total": 2518
+        }
+      }
+    },
+    {
+      "id": "en-accident",
+      "lang": "en",
+      "question": "How soon must I report an accident to the Safety Officer?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.711,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "vehicle-safety-procedure",
+            "docTitle": "Vehicle and equipment safety procedure",
+            "file": "vehicle-safety-procedure.pdf",
+            "page": 3,
+            "heading": "5. Accidents and breakdowns > 5.1 After an accident or near miss",
+            "text": "- Stop, switch on the hazard lights and check for injuries. Call 999 if anyone is hurt.\n- Do not admit fault and do not agree to settle in cash at the scene.\n- Take photos of the vehicles, the road and the damage, and note the names of witnesses.\n- Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\n- Give a written report within 24 hours, on the incident form.",
+            "score": 0.711,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "vehicle-safety-procedure",
+            "docTitle": "Vehicle and equipment safety procedure",
+            "file": "vehicle-safety-procedure.pdf",
+            "page": 3,
+            "heading": "5. Accidents and breakdowns > 5.2 Breakdowns",
+            "text": "Move the vehicle off the road if you can and switch on the hazard lights. Place the warning triangle at least 50 metres behind the vehicle. Call the dispatch office. Do not attempt roadside repairs other than changing a tyre when it is safe.",
+            "score": 0.599,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 2,
+            "heading": "4. Problems > 4.1 Damage and shortages",
+            "text": "The customer must check the goods at delivery and write any damage or shortage on the DO before signing. Damage or shortage found later must be reported to dispatch@tanjungsampel.example with photos within 24 hours of delivery. Reports after 24 hours are accepted only for damage that could not be seen at delivery, and not later than 3 days after delivery.",
+            "score": 0.586,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "it-and-data-policy",
+            "docTitle": "IT and data policy",
+            "file": "it-and-data-policy.pdf",
+            "page": 2,
+            "heading": "5. Personal data and breaches > 5.2 Reporting a breach",
+            "text": "A data breach is any loss, theft or exposure of personal or company data, for example a lost laptop, an email sent to the wrong person or a stolen password. Report it to the IT Manager immediately and in any case within 4 hours of finding out. IT contains the problem, and the General Manager decides within 72 hours whether customers or authorities must be told.",
+            "score": 0.572,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 286,
+          "search": 4,
+          "total": 292
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.",
+            "quotes": [
+              "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage."
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "vehicle-safety-procedure",
+            "docTitle": "Vehicle and equipment safety procedure",
+            "file": "vehicle-safety-procedure.pdf",
+            "page": 3,
+            "heading": "5. Accidents and breakdowns > 5.1 After an accident or near miss",
+            "text": "- Stop, switch on the hazard lights and check for injuries. Call 999 if anyone is hurt.\n- Do not admit fault and do not agree to settle in cash at the scene.\n- Take photos of the vehicles, the road and the damage, and note the names of witnesses.\n- Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.\n- Give a written report within 24 hours, on the incident form.",
+            "score": 0.711,
+            "support": "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage.",
+            "supports": [
+              "Report to the Safety Officer by phone within 1 hour, even for a near miss or minor damage."
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 24.3,
+        "ms": {
+          "embed": 286,
+          "search": 4,
+          "llm": 1766,
+          "verify": 0,
+          "total": 2058
+        }
+      }
+    },
+    {
+      "id": "ms-leave-6y",
+      "lang": "ms",
+      "question": "Berapa hari cuti tahunan untuk pekerja yang telah bekerja selama 6 tahun?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.63,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.1 Annual leave",
+            "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+            "score": 0.63,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+            "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+            "score": 0.535,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.2 How to apply for annual leave",
+            "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+            "score": 0.534,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.4 Other paid leave",
+            "text": "Type: Maternity leave; Entitlement: 98 consecutive days; Notes: Tell HR at least 30 days before the expected start.\nType: Paternity leave; Entitlement: 7 consecutive days; Notes: For married male employees, within 14 days of the birth.\nType: Compassionate leave; Entitlement: 3 days; Notes: Death of a spouse, child, parent or sibling.\nType: Marriage leave; Entitlement: 3 days; Notes: Once during employment, with the invitation or certificate.",
+            "score": 0.528,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 250,
+          "search": 3,
+          "total": 256
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "Pekerja yang telah bekerja selama 6 tahun mendapat 16 hari cuti tahunan [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Length of service: 5 years or more; Annual leave: 16 days",
+            "quotes": [
+              "Length of service: 5 years or more; Annual leave: 16 days"
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.1 Annual leave",
+            "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+            "score": 0.63,
+            "support": "Length of service: 5 years or more; Annual leave: 16 days",
+            "supports": [
+              "Length of service: 5 years or more; Annual leave: 16 days"
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 28.4,
+        "ms": {
+          "embed": 250,
+          "search": 3,
+          "llm": 1530,
+          "verify": 1,
+          "total": 1787
+        }
+      }
+    },
+    {
+      "id": "ms-kudat",
+      "lang": "ms",
+      "question": "Berapakah caj penghantaran ke Kudat?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.614,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "2. Delivery zones, lead times and charges",
+            "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+            "score": 0.607,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 2,
+            "heading": "2. Delivery zones, lead times and charges",
+            "text": "Zone: D; Areas: Sandakan, Tawau, Lahad Datu; Lead time: 2 working days from branch stock; 5 working days from Kota Kinabalu; Delivery charge: Branch stock: Zone A charges. From Kota Kinabalu: RM180 per pallet\nZone D orders from Kota Kinabalu travel on the trunk truck, which leaves every Tuesday and Friday. An order confirmed after the Friday dispatch waits for the Tuesday truck.",
+            "score": 0.614,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 3,
+            "heading": "4. Problems > 4.3 Nobody to receive the goods",
+            "text": "The driver waits 15 minutes and calls the customer twice. If nobody can receive the goods, the driver returns them to the warehouse and the order is booked for redelivery. A redelivery charge of RM40 applies in Zone A, and the normal zone charge applies elsewhere. A customer can move a delivery once without charge, if they tell the dispatch office before 12:00 noon on the working day before.",
+            "score": 0.526,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "4. Claims and expenses > 4.1 What you can claim",
+            "text": "You may claim money you spent for company business when it was approved before the trip or purchase. The rates below apply to every employee.\nExpense: Mileage, own car; Rate or limit: RM0.70 per km; Evidence needed: Trip log with start, end and purpose\nExpense: Meal allowance, outstation; Rate or limit: RM30 per day; Evidence needed: Outstation for more than 8 hours; no receipt\nExpense: Hotel, one night; Rate or limit: Up to RM180 in Kota Kinabalu, Sandakan or Tawau; up to RM150 elsewhere; Evidence needed: Hotel invoice\nExpense: Flights; Rate or limit: Economy class, booked by the admin office; Evidence needed: Booking confirmation\nExpense: Toll and parking; Rate or limit: Actual cost; Evidence needed: Receipt or e-wallet statement\nExpense: Mobile phone, sales staff; Rate or limit: RM50 per month; Evidence needed: None, paid with salary",
+            "score": 0.525,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 316,
+          "search": 3,
+          "total": 320
+        }
+      },
+      "answer": {
+        "status": "answered",
+        "answer": "Caj penghantaran ke Kudat ialah RM120 [1].",
+        "citations": [
+          {
+            "n": 1,
+            "quote": "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120",
+            "quotes": [
+              "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120"
+            ]
+          }
+        ],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [
+          {
+            "n": 1,
+            "docId": "delivery-procedure",
+            "docTitle": "Delivery procedure",
+            "file": "delivery-procedure.pdf",
+            "page": 1,
+            "heading": "2. Delivery zones, lead times and charges",
+            "text": "The zone is decided by the delivery address. Charges are before any tax and are separate from goods prices in the price list.\nZone: A; Areas: Kota Kinabalu, Penampang, Putatan, Inanam; Lead time: Next working day; Delivery charge: RM25; free for orders of RM800 or more\nZone: B; Areas: Tuaran, Papar, Kota Belud; Lead time: 2 working days; Delivery charge: RM60; free for orders of RM2,000 or more\nZone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120; free for orders of RM3,500 or more",
+            "score": 0.607,
+            "support": "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120",
+            "supports": [
+              "Zone: C; Areas: Ranau, Keningau, Kudat, Beaufort; Lead time: 3 working days; Delivery charge: RM120"
+            ]
+          }
+        ],
+        "llm": true,
+        "neurons": 31.8,
+        "ms": {
+          "embed": 316,
+          "search": 3,
+          "llm": 1803,
+          "verify": 0,
+          "total": 2124
+        }
+      }
+    },
+    {
+      "id": "no-study-leave",
+      "lang": "en",
+      "question": "How many days of study leave do I get?",
+      "sources": {
+        "relevant": true,
+        "searched": 68,
+        "bestScore": 0.623,
+        "sources": [
+          {
+            "n": 1,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.1 Annual leave",
+            "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+            "score": 0.623,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 2,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 2,
+            "heading": "3. Leave > 3.2 How to apply for annual leave",
+            "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+            "score": 0.606,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 3,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.4 Other paid leave",
+            "text": "Type: Maternity leave; Entitlement: 98 consecutive days; Notes: Tell HR at least 30 days before the expected start.\nType: Paternity leave; Entitlement: 7 consecutive days; Notes: For married male employees, within 14 days of the birth.\nType: Compassionate leave; Entitlement: 3 days; Notes: Death of a spouse, child, parent or sibling.\nType: Marriage leave; Entitlement: 3 days; Notes: Once during employment, with the invitation or certificate.",
+            "score": 0.58,
+            "support": null,
+            "supports": []
+          },
+          {
+            "n": 4,
+            "docId": "staff-handbook",
+            "docTitle": "Staff handbook",
+            "file": "staff-handbook.pdf",
+            "page": 3,
+            "heading": "3. Leave > 3.3 Sick leave and hospitalisation",
+            "text": "The number of paid sick leave days without hospital stay is in the table in 3.1. You must tell your supervisor by 9:00 am on the first day of absence, by phone or message, and give a medical certificate from a registered doctor on your return. If you are admitted to hospital, you receive up to 60 days of paid sick leave in a year, which includes the outpatient days.",
+            "score": 0.601,
+            "support": null,
+            "supports": []
+          }
+        ],
+        "ms": {
+          "embed": 274,
+          "search": 1,
+          "total": 277
+        }
+      },
+      "answer": {
+        "status": "declined",
+        "reason": "model_declined",
+        "answer": "",
+        "citations": [],
+        "dropped": {
+          "claims": 0
+        },
+        "sources": [],
+        "llm": true,
+        "neurons": 25.6,
+        "ms": {
+          "embed": 274,
+          "search": 1,
+          "llm": 740,
+          "verify": 1,
+          "total": 1018
+        }
+      }
+    }
+  ]
+}

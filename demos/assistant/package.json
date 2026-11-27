@@ -1,0 +1,15 @@
+{
+  "name": "borneostack-assistant-demo",
+  "private": true,
+  "type": "module",
+  "description": "Sample company PDFs and the ingest script for the /work/assistant example.",
+  "scripts": {
+    "build:docs": "node build-docs.mjs",
+    "ingest:local": "node ingest.mjs http://localhost:8787 dev-local-token",
+    "ingest": "node ingest.mjs"
+  },
+  "dependencies": {
+    "pdfkit": "^0.17.2",
+    "unpdf": "^2.2.3"
+  }
+}

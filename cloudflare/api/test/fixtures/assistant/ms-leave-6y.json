@@ -1,0 +1,93 @@
+{
+  "question": "Berapa hari cuti tahunan untuk pekerja yang telah bekerja selama 6 tahun?",
+  "supplied": [
+    {
+      "n": 1,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 2,
+      "heading": "3. Leave > 3.1 Annual leave",
+      "text": "Annual leave is paid. The number of days depends on your length of service on 1 January of each year, and is counted in working days.\nLength of service: Less than 2 years; Annual leave: 8 days; Sick leave (outpatient): 14 days\nLength of service: 2 years to less than 5 years; Annual leave: 12 days; Sick leave (outpatient): 18 days\nLength of service: 5 years or more; Annual leave: 16 days; Sick leave (outpatient): 22 days\nUnused annual leave of up to 5 days may be carried forward to the next year. Carried-forward days must be used by 31 March, after which they lapse without payment.",
+      "score": 0.63,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 2,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 3,
+      "heading": "3. Leave > 3.5 Public holidays and unpaid leave",
+      "text": "The company observes all federal and Sabah public holidays gazetted for the year, including the Kaamatan harvest festival on 30 and 31 May. The list is published every December. Unpaid leave of up to 30 days in a year may be approved by the General Manager. Emergency leave, for example after a serious accident at home, must be reported within 24 hours and is deducted from annual leave.",
+      "score": 0.535,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 3,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 2,
+      "heading": "3. Leave > 3.2 How to apply for annual leave",
+      "text": "- For 1 or 2 days, apply at least 3 working days before the first day of leave.\n- For 3 days or more, apply at least 14 days before the first day of leave.\n- Apply in the HR portal. Your supervisor approves or declines within 2 working days.\n- Leave is not approved during stocktake, which runs in the last week of June and the last week of December.",
+      "score": 0.534,
+      "support": null,
+      "supports": []
+    },
+    {
+      "n": 4,
+      "docId": "staff-handbook",
+      "docTitle": "Staff handbook",
+      "file": "staff-handbook.pdf",
+      "page": 3,
+      "heading": "3. Leave > 3.4 Other paid leave",
+      "text": "Type: Maternity leave; Entitlement: 98 consecutive days; Notes: Tell HR at least 30 days before the expected start.\nType: Paternity leave; Entitlement: 7 consecutive days; Notes: For married male employees, within 14 days of the birth.\nType: Compassionate leave; Entitlement: 3 days; Notes: Death of a spouse, child, parent or sibling.\nType: Marriage leave; Entitlement: 3 days; Notes: Once during employment, with the invitation or certificate.",
+      "score": 0.528,
+      "support": null,
+      "supports": []
+    }
+  ],
+  "raw": {
+    "id": "chatcmpl-470ad5c7250746fe99e7a78ece1efe3a",
+    "object": "chat.completion",
+    "created": 1795757431,
+    "model": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
+    "choices": [
+      {
+        "index": 0,
+        "message": {
+          "role": "assistant",
+          "content": "{\"found\": true, \"claims\": [{\"text\": \"Pekerja yang telah bekerja selama 6 tahun mendapat 16 hari cuti tahunan.\", \"source\": 1, \"quote\": \"Length of service: 5 years or more; Annual leave: 16 days\"}]}",
+          "refusal": null,
+          "annotations": null,
+          "audio": null,
+          "function_call": null,
+          "tool_calls": [],
+          "reasoning_content": null
+        },
+        "logprobs": null,
+        "finish_reason": "stop",
+        "stop_reason": null,
+        "token_ids": null
+      }
+    ],
+    "service_tier": null,
+    "system_fingerprint": null,
+    "usage": {
+      "prompt_tokens": 793,
+      "completion_tokens": 62,
+      "total_tokens": 855,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "neurons": 28.407924
+    },
+    "prompt_logprobs": null,
+    "prompt_token_ids": null,
+    "kv_transfer_params": null
+  },
+  "expectStatus": "answered"
+}

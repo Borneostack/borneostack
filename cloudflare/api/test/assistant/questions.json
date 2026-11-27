@@ -1,0 +1,360 @@
+{
+  "note": "Expected document and page for each answerable question; \"evidence\" is text that must appear in the retrieved passage. \"missing\" questions are not answered by the documents.",
+  "questions": [
+    {
+      "id": "en-leave-3y",
+      "lang": "en",
+      "question": "How many days of annual leave do I get after 3 years with the company?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 2
+      },
+      "evidence": "12 days"
+    },
+    {
+      "id": "en-mileage",
+      "lang": "en",
+      "question": "How much can I claim per kilometre when I use my own car for work?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 3
+      },
+      "evidence": "RM0.70"
+    },
+    {
+      "id": "en-claim-deadline",
+      "lang": "en",
+      "question": "What is the deadline for submitting an expense claim?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 4
+      },
+      "evidence": "within 30 days"
+    },
+    {
+      "id": "en-approver",
+      "lang": "en",
+      "question": "Who has to approve a claim of RM1,500?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 4
+      },
+      "evidence": "RM500.01 to RM2,000"
+    },
+    {
+      "id": "en-maternity",
+      "lang": "en",
+      "question": "How long is maternity leave?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 3
+      },
+      "evidence": "98 consecutive days"
+    },
+    {
+      "id": "en-gifts",
+      "lang": "en",
+      "question": "Can I accept a gift from a supplier?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 4
+      },
+      "evidence": "RM100"
+    },
+    {
+      "id": "en-cutoff",
+      "lang": "en",
+      "question": "What time must an order be confirmed to be delivered the next day in Kota Kinabalu?",
+      "expect": {
+        "doc": "delivery-procedure",
+        "page": 1
+      },
+      "evidence": "3:00 pm"
+    },
+    {
+      "id": "en-keningau",
+      "lang": "en",
+      "question": "How much is delivery to Keningau and how long does it take?",
+      "expect": {
+        "doc": "delivery-procedure",
+        "page": 1
+      },
+      "evidence": "RM120"
+    },
+    {
+      "id": "en-nobody-home",
+      "lang": "en",
+      "question": "What happens if nobody is at the site to receive the delivery?",
+      "expect": {
+        "doc": "delivery-procedure",
+        "page": 3
+      },
+      "evidence": "RM40"
+    },
+    {
+      "id": "en-credit-days",
+      "lang": "en",
+      "question": "How many days do credit customers have to pay an invoice?",
+      "expect": {
+        "doc": "price-list-and-terms",
+        "page": 2
+      },
+      "evidence": "30 days"
+    },
+    {
+      "id": "en-return",
+      "lang": "en",
+      "question": "Can I return unopened goods, and is there a fee?",
+      "expect": {
+        "doc": "price-list-and-terms",
+        "page": 2
+      },
+      "evidence": "10%"
+    },
+    {
+      "id": "en-discount",
+      "lang": "en",
+      "question": "What discount do I get if I buy RM20,000 of goods in a month?",
+      "expect": {
+        "doc": "price-list-and-terms",
+        "page": 2
+      },
+      "evidence": "6%"
+    },
+    {
+      "id": "en-speed",
+      "lang": "en",
+      "question": "What is the speed limit for company lorries on the highway?",
+      "expect": {
+        "doc": "vehicle-safety-procedure",
+        "page": 1
+      },
+      "evidence": "90 km/h"
+    },
+    {
+      "id": "en-accident",
+      "lang": "en",
+      "question": "How soon must I report an accident to the Safety Officer?",
+      "expect": {
+        "doc": "vehicle-safety-procedure",
+        "page": 3
+      },
+      "evidence": "within 1 hour"
+    },
+    {
+      "id": "en-tread",
+      "lang": "en",
+      "question": "What is the minimum tyre tread depth before a lorry can leave?",
+      "expect": {
+        "doc": "vehicle-safety-procedure",
+        "page": 1
+      },
+      "evidence": "1.6 mm"
+    },
+    {
+      "id": "en-password",
+      "lang": "en",
+      "question": "How long must a password be?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 1
+      },
+      "evidence": "12 characters"
+    },
+    {
+      "id": "en-lost-laptop",
+      "lang": "en",
+      "question": "I lost my company laptop. Who do I tell and how fast?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 1
+      },
+      "evidence": "within 1 hour"
+    },
+    {
+      "id": "en-cctv",
+      "lang": "en",
+      "question": "How long does the company keep CCTV recordings?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 2
+      },
+      "evidence": "30 days"
+    },
+    {
+      "id": "en-breach",
+      "lang": "en",
+      "question": "How quickly must a data breach be reported?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 2
+      },
+      "evidence": "4 hours"
+    },
+    {
+      "id": "en-backup",
+      "lang": "en",
+      "question": "When are backups made and how long are they kept?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 2
+      },
+      "evidence": "2:00 am"
+    },
+    {
+      "id": "ms-leave-6y",
+      "lang": "ms",
+      "question": "Berapa hari cuti tahunan untuk pekerja yang telah bekerja selama 6 tahun?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 2
+      },
+      "evidence": "16 days"
+    },
+    {
+      "id": "ms-mileage",
+      "lang": "ms",
+      "question": "Berapa bayaran sekilometer jika saya guna kereta sendiri untuk urusan kerja?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 3
+      },
+      "evidence": "RM0.70"
+    },
+    {
+      "id": "ms-maternity",
+      "lang": "ms",
+      "question": "Berapa hari cuti bersalin yang saya layak?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 3
+      },
+      "evidence": "98 consecutive days"
+    },
+    {
+      "id": "ms-payday",
+      "lang": "ms",
+      "question": "Bilakah gaji dibayar setiap bulan?",
+      "expect": {
+        "doc": "staff-handbook",
+        "page": 4
+      },
+      "evidence": "last working day"
+    },
+    {
+      "id": "ms-kudat",
+      "lang": "ms",
+      "question": "Berapakah caj penghantaran ke Kudat?",
+      "expect": {
+        "doc": "delivery-procedure",
+        "page": 1
+      },
+      "evidence": "RM120"
+    },
+    {
+      "id": "ms-invoice",
+      "lang": "ms",
+      "question": "Berapa lama pelanggan akaun kredit ada untuk membayar invois?",
+      "expect": {
+        "doc": "price-list-and-terms",
+        "page": 2
+      },
+      "evidence": "30 days"
+    },
+    {
+      "id": "ms-speed",
+      "lang": "ms",
+      "question": "Apakah had laju lori syarikat di lebuh raya?",
+      "expect": {
+        "doc": "vehicle-safety-procedure",
+        "page": 1
+      },
+      "evidence": "90 km/h"
+    },
+    {
+      "id": "ms-laptop",
+      "lang": "ms",
+      "question": "Komputer riba syarikat saya hilang. Berapa cepat saya perlu beritahu pihak IT?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 1
+      },
+      "evidence": "within 1 hour"
+    },
+    {
+      "id": "ms-cctv",
+      "lang": "ms",
+      "question": "Berapa lama rakaman CCTV disimpan?",
+      "expect": {
+        "doc": "it-and-data-policy",
+        "page": 2
+      },
+      "evidence": "30 days"
+    }
+  ],
+  "missing": [
+    {
+      "id": "no-ceo-salary",
+      "lang": "en",
+      "question": "What is the chief executive's salary?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-weather",
+      "lang": "en",
+      "question": "What will the weather be like in Kota Kinabalu tomorrow?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-dog",
+      "lang": "en",
+      "question": "Can I bring my dog to the warehouse?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-gym",
+      "lang": "en",
+      "question": "Does the company pay for a gym membership?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-chairman",
+      "lang": "ms",
+      "question": "Siapakah pengerusi syarikat ini?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-bonus",
+      "lang": "ms",
+      "question": "Berapakah bonus tahunan untuk pengurus jualan?",
+      "expect": null,
+      "kind": "off_topic"
+    },
+    {
+      "id": "no-study-leave",
+      "lang": "en",
+      "question": "How many days of study leave do I get?",
+      "expect": null,
+      "kind": "near_miss"
+    },
+    {
+      "id": "no-marine-ply",
+      "lang": "en",
+      "question": "What is the price of a 20 mm marine plywood sheet?",
+      "expect": null,
+      "kind": "near_miss"
+    },
+    {
+      "id": "no-tawau-address",
+      "lang": "en",
+      "question": "What is the street address of the Tawau branch?",
+      "expect": null,
+      "kind": "near_miss"
+    }
+  ]
+}

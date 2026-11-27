@@ -1,0 +1,14 @@
+{
+  "name": "borneostack-demo-invoice-samples",
+  "private": true,
+  "type": "module",
+  "description": "Generates the synthetic sample invoices for the /work/automation example.",
+  "scripts": {
+    "generate": "node generate.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.2.1",
+    "mupdf": "^1.28.6",
+    "pdf-lib": "^1.17.1"
+  }
+}
