@@ -31,7 +31,8 @@
   "vars": {
     // Sites allowed to call this API from a browser.
     // Local development adds http://localhost:3000 through .dev.vars.
-    "ALLOWED_ORIGINS": "https://borneostack.com,https://www.borneostack.com",
+    // The third entry is the Vercel preview of the feat/work-demos branch. Remove it once the branch is merged.
+    "ALLOWED_ORIGINS": "https://borneostack.com,https://www.borneostack.com,https://borneostack-website-git-feat-work-demos-dxlxz01-7056s-projects.vercel.app",
     // Workers AI gives 10,000 free neurons a day. We stop below it so the account is never charged.
     "DAILY_NEURON_BUDGET": "9000"
   }

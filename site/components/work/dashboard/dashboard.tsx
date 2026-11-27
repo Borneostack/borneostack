@@ -50,7 +50,7 @@ const Banner = ({ mode, snapshot, savedAt }: { mode: Mode; snapshot: Snapshot; s
       <p className='text-muted-foreground flex items-center gap-2 sm:text-right'>
         <DatabaseIcon aria-hidden className='size-4 shrink-0' />
         <span>
-          Last refreshed by the daily job: <span className='text-foreground'>{stamp(refreshed)}</span>
+          Data last refreshed: <span className='text-foreground'>{stamp(refreshed)}</span>
         </span>
       </p>
     </div>
